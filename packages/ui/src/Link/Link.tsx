@@ -26,6 +26,8 @@ export const Link = forwardRef(
     { href = "", to, underline = true, children, ...props }: LinkProps,
     ref: ForwardedRef<HTMLAnchorElement>
   ) => {
+    const test = 2;
+
     return (
       <StyledLink ref={ref} href={href} {...props}>
         {children}

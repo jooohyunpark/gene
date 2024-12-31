@@ -1,13 +1,10 @@
 {
+  "extends": "@gene/config/tsconfig.base.json",
   "compilerOptions": {
     "target": "ES2020",
-    "module": "ESNext",
     "moduleResolution": "node",
     "strict": true,
     "jsx": "react-jsx",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "declaration": true,
     "declarationDir": "./dist/types", // Output declaration files to dist/types
     "outDir": "./dist", // Output JS files to dist
     "resolveJsonModule": true
