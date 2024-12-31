@@ -1,6 +1,6 @@
-import { forwardRef, ForwardedRef } from "react";
-import styled from "styled-components";
-import { LinkProps } from "./Link.types";
+import { forwardRef, ForwardedRef } from 'react';
+import styled from 'styled-components';
+import { LinkProps } from './Link.types';
 
 const StyledLink = styled.a`
   text-decoration: none;
@@ -23,8 +23,8 @@ const StyledLink = styled.a`
 
 export const Link = forwardRef(
   (
-    { href = "", to, underline = true, children, ...props }: LinkProps,
-    ref: ForwardedRef<HTMLAnchorElement>
+    { href = '', to, underline = true, children, ...props }: LinkProps,
+    ref: ForwardedRef<HTMLAnchorElement>,
   ) => {
     const test = 2;
 
@@ -33,5 +33,5 @@ export const Link = forwardRef(
         {children}
       </StyledLink>
     );
-  }
+  },
 );
