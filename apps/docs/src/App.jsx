@@ -1,9 +1,12 @@
-import {} from "react";
-
+import { Link } from "@gene/ui";
 import "./App.css";
 
 function App() {
-  return <>ddd</>;
+  return (
+    <>
+      <Link href="google.com">hello</Link>
+    </>
+  );
 }
 
 export default App;
