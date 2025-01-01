@@ -1,10 +1,3 @@
-import config from '@gene/config/eslint.config.js';
+import config from '@gene/config/eslintConfig.js';
 
-export default {
-  ...config,
-  rules: {
-    ...config.rules,
-    // Add your custom rules here
-    'no-unused-vars': 'error',
-  },
-};
+export default config;
