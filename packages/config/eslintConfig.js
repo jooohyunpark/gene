@@ -8,9 +8,8 @@ const prettierConfig = require("./prettierConfig.js");
 const tseslint = require("typescript-eslint");
 
 module.exports = [
-  js.configs.recommended,
-  ...tseslint.configs.recommended,
   {
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
       ecmaVersion: 2020,
@@ -56,6 +55,7 @@ module.exports = [
         "warn",
         { allowConstantExport: true },
       ],
+      "no-unused-vars": "warn",
     },
   },
   {
