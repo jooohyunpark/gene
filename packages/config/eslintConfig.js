@@ -1,52 +1,61 @@
 const js = require("@eslint/js");
-const typescript = require("@typescript-eslint/eslint-plugin");
-const tsParser = require("@typescript-eslint/parser");
+const globals = require("globals");
 const prettierPlugin = require("eslint-plugin-prettier");
-const reactPlugin = require("eslint-plugin-react");
+const react = require("eslint-plugin-react");
 const reactHooks = require("eslint-plugin-react-hooks");
+const reactRefresh = require("eslint-plugin-react-refresh");
 const prettierConfig = require("./prettierConfig.js");
+const tseslint = require("typescript-eslint");
 
 module.exports = [
   js.configs.recommended,
+  ...tseslint.configs.recommended,
   {
-    files: ["**/*.ts", "**/*.tsx"],
+    files: ["**/*.{ts,tsx}"],
     languageOptions: {
-      parser: tsParser,
-      parserOptions: {
-        ecmaVersion: "latest",
-        sourceType: "module",
-        project: "./tsconfig.json",
-      },
+      ecmaVersion: 2020,
+      globals: globals.browser,
     },
     plugins: {
-      "@typescript-eslint": typescript,
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
     },
     rules: {
-      ...typescript.configs.recommended.rules,
-      "@typescript-eslint/no-unused-vars": [
+      ...reactHooks.configs.recommended.rules,
+      "react-refresh/only-export-components": [
         "warn",
-        { argsIgnorePattern: "^_" },
+        { allowConstantExport: true },
       ],
-      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/no-unused-vars": "off",
     },
   },
   {
-    files: ["**/*.jsx", "**/*.tsx"],
+    files: ["**/*.{js,jsx}"],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+      parserOptions: {
+        ecmaVersion: "latest",
+        ecmaFeatures: { jsx: true },
+        sourceType: "module",
+      },
+    },
+    settings: { react: { version: "18.3" } },
     plugins: {
-      react: reactPlugin,
+      react,
       "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
     },
     rules: {
-      ...reactPlugin.configs.recommended.rules,
+      ...js.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...react.configs["jsx-runtime"].rules,
       ...reactHooks.configs.recommended.rules,
-      "react/react-in-jsx-scope": "off",
-      "react/prop-types": "off",
-      "react/display-name": "off",
-    },
-    settings: {
-      react: {
-        version: "detect",
-      },
+      "react/jsx-no-target-blank": "off",
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true },
+      ],
     },
   },
   {

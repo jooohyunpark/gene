@@ -1,10 +1,10 @@
-import { Link } from "@gene/ui";
-import "./App.css";
+import { Link } from '@gene/ui';
+import './App.css';
 
 function App() {
   return (
     <>
-      <Link href="google.com">hello</Link>
+      <Link href="https://google.com">hello</Link>
     </>
   );
 }

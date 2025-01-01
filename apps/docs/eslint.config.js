@@ -1,3 +1,3 @@
-const geneConfig = require("@gene/config/eslint-config");
+import config from '@gene/config/eslintConfig.js';
 
-module.exports = [{ ignores: ["dist"] }, ...geneConfig];
+export default config;
