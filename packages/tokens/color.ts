@@ -38,16 +38,16 @@ export const blue30Hover = "#8ab6ff";
 export const blue20Hover = "#b8d3ff";
 export const blue10Hover = "#dbebff";
 export const blueHover = {
-  100: blue100Hover,
-  90: blue90Hover,
-  80: blue80Hover,
-  70: blue70Hover,
-  60: blue60Hover,
-  50: blue50Hover,
-  40: blue40Hover,
-  30: blue30Hover,
-  20: blue20Hover,
   10: blue10Hover,
+  20: blue20Hover,
+  30: blue30Hover,
+  40: blue40Hover,
+  50: blue50Hover,
+  60: blue60Hover,
+  70: blue70Hover,
+  80: blue80Hover,
+  90: blue90Hover,
+  100: blue100Hover,
 };
 
 export const gray10 = "#f4f4f4";

@@ -1,9 +1,9 @@
 import { Link } from '@gene/ui';
-import { color } from '@gene/tokens';
+import { spacing } from '@gene/tokens';
 import './App.css';
 
 function App() {
-  console.log(color);
+  console.log(spacing(3));
 
   return (
     <>

@@ -1,17 +1,31 @@
-const spacingbase = 8;
+export const spaceBase = 8;
 
-export const spacing = {
-  "025": spacingbase * 0.25,
-  "050": spacingbase * 0.5,
-  "100": spacingbase * 1,
-  "150": spacingbase * 1.5,
-  "200": spacingbase * 2,
-  "300": spacingbase * 3,
-  "400": spacingbase * 4,
-  "500": spacingbase * 5,
-  "600": spacingbase * 6,
-  "800": spacingbase * 8,
-  "1000": spacingbase * 10,
-  "1500": spacingbase * 15,
-  get: (multiplier = 1, base = 8) => base * multiplier,
+export const space025 = spaceBase * 0.25;
+export const space050 = spaceBase * 0.5;
+export const space100 = spaceBase * 1;
+export const space150 = spaceBase * 1.5;
+export const space200 = spaceBase * 2;
+export const space300 = spaceBase * 3;
+export const space400 = spaceBase * 4;
+export const space500 = spaceBase * 5;
+export const space600 = spaceBase * 6;
+export const space800 = spaceBase * 8;
+export const space1000 = spaceBase * 10;
+export const space1500 = spaceBase * 15;
+
+export const space = {
+  "025": space025,
+  "050": space050,
+  "100": space100,
+  "150": space150,
+  "200": space200,
+  "300": space300,
+  "400": space400,
+  "500": space500,
+  "600": space600,
+  "800": space800,
+  "1000": space1000,
+  "1500": space1500,
 };
+
+export const spacing = (multiplier = 1, base = 8) => base * multiplier;
