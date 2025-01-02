@@ -1,4 +1,4 @@
-import { Link } from '@gene/ui';
+import { Link, Button } from '@gene/ui';
 import { spacing } from '@gene/tokens';
 import './App.css';
 
@@ -8,6 +8,8 @@ function App() {
   return (
     <>
       <Link href="https://google.com">hello</Link>
+
+      <Button>ddddd</Button>
     </>
   );
 }

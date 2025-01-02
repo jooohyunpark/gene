@@ -1,8 +1,7 @@
 import { ReactNode } from 'react';
 
 export interface LinkProps {
-  href?: string;
-  to?: string;
+  href: string;
   underline?: boolean;
   children?: ReactNode;
 }
