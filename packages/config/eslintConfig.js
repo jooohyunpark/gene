@@ -9,6 +9,9 @@ const tseslint = require("typescript-eslint");
 
 module.exports = [
   {
+    ignores: ["node_modules", "dist", "build"],
+  },
+  ...tseslint.config({
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
@@ -25,9 +28,9 @@ module.exports = [
         "warn",
         { allowConstantExport: true },
       ],
-      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "warn",
     },
-  },
+  }),
   {
     files: ["**/*.{js,jsx}"],
     languageOptions: {
@@ -65,8 +68,5 @@ module.exports = [
     rules: {
       "prettier/prettier": ["warn", prettierConfig],
     },
-  },
-  {
-    ignores: ["node_modules", "dist", "build"],
   },
 ];
