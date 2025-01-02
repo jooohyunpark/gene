@@ -1,5 +1,6 @@
 import { forwardRef, ForwardedRef } from 'react';
 import styled from 'styled-components';
+import { colors } from '@gene/tokens';
 import { LinkProps } from './Link.types';
 
 const StyledLink = styled.a`
@@ -12,12 +13,12 @@ const StyledLink = styled.a`
 
   @media (hover: hover) {
     &:hover {
-      color: design-tokens.colors(blue, 60);
+      color: ${colors.blue[60]};
     }
   }
 
   &:focus {
-    outline-color: design-tokens.colors(blue, 60);
+    outline-color: ${colors.blue[60]};
   }
 `;
 
