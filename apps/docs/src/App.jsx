@@ -1,9 +1,9 @@
 import { Link } from '@gene/ui';
-import { colors } from '@gene/tokens';
+import { color } from '@gene/tokens';
 import './App.css';
 
 function App() {
-  console.log(colors);
+  console.log(color);
 
   return (
     <>
