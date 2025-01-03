@@ -5,3 +5,7 @@ export interface LinkProps {
   underline?: boolean;
   children?: ReactNode;
 }
+
+export interface StyledLinkProps {
+  $underline?: boolean;
+}

@@ -10,6 +10,7 @@ const StyledButton = styled.button`
   -webkit-user-select: none;
   user-select: none;
 
+  border-radius: ${spacing(0.5)}px;
   background: ${color.blue[60]};
   color: ${color.white};
 

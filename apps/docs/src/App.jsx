@@ -7,7 +7,15 @@ function App() {
 
   return (
     <>
-      <Link href="https://google.com">hello</Link>
+      <Link
+        href="https://google.com"
+        target="_blank"
+        onClick={() => {
+          console.log('ddd');
+        }}
+      >
+        hello
+      </Link>
 
       <Button>ddddd</Button>
     </>

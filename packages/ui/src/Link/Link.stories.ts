@@ -1,11 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 
-import { Button } from './Button';
+import { Link } from './Link';
 
 const meta = {
-  title: 'Gene/Button',
-  component: Button,
+  title: 'Gene/Link',
+  component: Link,
   parameters: {
     layout: 'centered',
   },
@@ -13,14 +12,11 @@ const meta = {
   argTypes: {
     children: { control: 'text' },
   },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof Link>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Playground: Story = {
-  args: {
-    children: 'Click me!',
-    onClick: action('onClick'),
-  },
+  args: { href: 'https://parkjoohyun.com', children: 'Link', underline: true },
 };

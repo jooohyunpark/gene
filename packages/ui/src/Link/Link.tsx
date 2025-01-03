@@ -1,15 +1,12 @@
 import { forwardRef, ForwardedRef } from 'react';
 import styled from 'styled-components';
 import { color } from '@gene/tokens';
-import { LinkProps } from './Link.types';
+import { LinkProps, StyledLinkProps } from './Link.types';
 
-const StyledLink = styled.a`
-  text-decoration: none;
+const StyledLink = styled.a<StyledLinkProps>`
+  text-decoration: ${({ $underline }) => ($underline ? 'underline' : 'none')};
+  color: ${color.black};
   transition: color 0.2s ease-in-out;
-
-  &.underline {
-    text-decoration: underline;
-  }
 
   @media (hover: hover) {
     &:hover {
@@ -28,7 +25,7 @@ export const Link = forwardRef(
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => {
     return (
-      <StyledLink ref={ref} href={href} {...props}>
+      <StyledLink ref={ref} href={href} $underline={underline} {...props}>
         {children}
       </StyledLink>
     );
