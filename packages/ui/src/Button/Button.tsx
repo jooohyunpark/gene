@@ -7,16 +7,19 @@ const StyledButton = styled.button`
   padding: ${spacing(1)}px ${spacing(3)}px;
   border: none;
   cursor: pointer;
-  transition: background 0.2s ease-in-out;
-  background: ${color.blue[60]};
-  color: ${color.white};
-
   -webkit-user-select: none;
   user-select: none;
 
+  background: ${color.blue[60]};
+  color: ${color.white};
+
+  transition-property: background;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+
   @media (hover: hover) {
     &:hover {
-      background: design-tokens.colors(blue-hover, 60);
+      background: ${color.blue[70]};
     }
   }
 
