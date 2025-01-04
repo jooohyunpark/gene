@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "build": "yarn --cwd packages/ui build",
-    "dev:docs": "yarn --cwd apps/docs dev"
+    "dev:docs": "yarn --cwd apps/docs dev",
+    "storybook": "yarn --cwd packages/ui storybook"
   },
   "license": "MIT",
   "workspaces": [

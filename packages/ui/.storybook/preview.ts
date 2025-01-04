@@ -11,4 +11,8 @@ const preview: Preview = {
   },
 };
 
+export const argTypes = {
+  children: { control: 'text' },
+};
+
 export default preview;
