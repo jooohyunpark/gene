@@ -14,9 +14,7 @@ const StyledButton = styled.button`
   background: ${color.blue[60]};
   color: ${color.white};
 
-  transition-property: background;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
+  transition: background 0.2s ease-in-out;
 
   @media (hover: hover) {
     &:hover {

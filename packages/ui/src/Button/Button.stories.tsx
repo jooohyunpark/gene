@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 import { Button } from './Button';
 
 const meta = {
-  title: 'Gene/Button',
+  title: 'Components/Button',
   component: Button,
   parameters: {
     layout: 'centered',
