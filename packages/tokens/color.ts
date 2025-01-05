@@ -2,27 +2,15 @@ export const black = "#000000";
 
 export const white = "#ffffff";
 
-export const blue10 = "#edf5ff";
-export const blue20 = "#d0e2ff";
-export const blue30 = "#a6c8ff";
-export const blue40 = "#78a9ff";
-export const blue50 = "#4589ff";
-export const blue60 = "#0f62fe";
-export const blue70 = "#0043ce";
-export const blue80 = "#002d9c";
-export const blue90 = "#001d6c";
-export const blue100 = "#001141";
+export const blue10 = "#f0f3ff";
+export const blue20 = "#ccd5ff";
+export const blue30 = "#0000bf";
+export const blue40 = "#00005e";
 export const blue = {
   10: blue10,
   20: blue20,
   30: blue30,
   40: blue40,
-  50: blue50,
-  60: blue60,
-  70: blue70,
-  80: blue80,
-  90: blue90,
-  100: blue100,
 };
 
 export const gray10 = "#f4f4f4";

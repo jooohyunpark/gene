@@ -10,12 +10,12 @@ const StyledLink = styled.a<StyledLinkProps>`
 
   @media (hover: hover) {
     &:hover {
-      color: ${color.blue[60]};
+      color: ${color.blue[30]};
     }
   }
 
   &:focus {
-    outline-color: ${color.blue[60]};
+    outline-color: ${color.blue[30]};
   }
 `;
 

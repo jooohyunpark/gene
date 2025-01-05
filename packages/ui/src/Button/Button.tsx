@@ -11,14 +11,14 @@ const StyledButton = styled.button`
   user-select: none;
 
   border-radius: ${spacing(0.5)}px;
-  background: ${color.blue[60]};
+  background: ${color.blue[30]};
   color: ${color.white};
 
   transition: background 0.2s ease-in-out;
 
   @media (hover: hover) {
     &:hover {
-      background: ${color.blue[70]};
+      background: ${color.blue[40]};
     }
   }
 
