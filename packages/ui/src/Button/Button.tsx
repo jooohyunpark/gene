@@ -9,12 +9,9 @@ const StyledButton = styled.button`
   cursor: pointer;
   -webkit-user-select: none;
   user-select: none;
-
-  border-radius: ${spacing(0.5)}px;
   background: ${color.blue[30]};
   color: ${color.white};
 
-  font-family: ${typography.fontFamily};
   ${typography.button01};
 
   transition: background 0.2s ease-in-out;

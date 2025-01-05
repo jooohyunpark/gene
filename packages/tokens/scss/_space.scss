@@ -1,0 +1,18 @@
+$base: 8px;
+
+$space025: $base * 0.25;
+$space050: $base * 0.5;
+$space100: $base * 1;
+$space150: $base * 1.5;
+$space200: $base * 2;
+$space300: $base * 3;
+$space400: $base * 4;
+$space500: $base * 5;
+$space600: $base * 6;
+$space800: $base * 8;
+$space1000: $base * 10;
+$space1500: $base * 15;
+
+@function spacing($multiplier: 1) {
+  @return $base * $multiplier;
+}

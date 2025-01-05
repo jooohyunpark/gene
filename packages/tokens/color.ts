@@ -1,5 +1,4 @@
 export const black = "#000000";
-
 export const white = "#ffffff";
 
 export const blue10 = "#f0f3ff";
@@ -38,7 +37,24 @@ export const gray = {
 
 export const color = {
   black,
+
   blue,
+  blue10,
+  blue20,
+  blue30,
+  blue40,
+
   gray,
+  gray10,
+  gray20,
+  gray30,
+  gray40,
+  gray50,
+  gray60,
+  gray70,
+  gray80,
+  gray90,
+  gray100,
+
   white,
 };

@@ -1,10 +1,12 @@
 import { createGlobalStyle, css } from 'styled-components';
-import { typography } from '@gene/tokens';
+import { typography, color } from '@gene/tokens';
 
-export const GlolbalStyle = createGlobalStyle`${css`
+export const GlolbalStyle = createGlobalStyle`
+${css`
   body {
     font-family: ${typography.fontFamily};
     ${typography.body01};
+    color: ${color.gray[100]};
   }
 
   h1 {
@@ -30,4 +32,5 @@ export const GlolbalStyle = createGlobalStyle`${css`
   h6 {
     ${typography.heading06};
   }
-`}`;
+`}
+`;

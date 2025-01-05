@@ -13,7 +13,7 @@ function App() {
       <h4>Heading 04</h4>
       <h5>Heading 05</h5>
       <h6>Heading 06</h6>
-      <body>
+      <p>
         Everyone has the right to freedom of thought, conscience and religion;
         this right includes freedom to change his religion or belief, and
         freedom, either alone or in community with others and in public or
@@ -24,7 +24,7 @@ function App() {
         through any media and regardless of frontiers. Everyone has the right to
         rest and leisure, including reasonable limitation of working hours and
         periodic holidays with pay.
-      </body>
+      </p>
 
       <Button>sdfsdf</Button>
 
