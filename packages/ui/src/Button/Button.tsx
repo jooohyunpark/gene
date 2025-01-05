@@ -14,6 +14,9 @@ const StyledButton = styled.button`
   background: ${color.blue[30]};
   color: ${color.white};
 
+  font-family: ${typography.fontFamily};
+  ${typography.button01};
+
   transition: background 0.2s ease-in-out;
 
   @media (hover: hover) {

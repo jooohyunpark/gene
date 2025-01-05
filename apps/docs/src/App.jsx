@@ -26,6 +26,10 @@ function App() {
         rest and leisure, including reasonable limitation of working hours and
         periodic holidays with pay.
       </body>
+
+      <Button>sdfsdf</Button>
+
+      <Button>sdfsdf</Button>
     </>
   );
 }
