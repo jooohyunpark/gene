@@ -5,7 +5,7 @@ import { LinkProps, StyledLinkProps } from './Link.types';
 
 const StyledLink = styled.a<StyledLinkProps>`
   text-decoration: ${({ $underline }) => ($underline ? 'underline' : 'none')};
-  color: ${color.black};
+  color: ${({ $color }) => ($color ? color.blue[30] : color.black)};
   transition: color 0.2s ease-in-out;
 
   @media (hover: hover) {
@@ -21,11 +21,23 @@ const StyledLink = styled.a<StyledLinkProps>`
 
 export const Link = forwardRef(
   (
-    { href = '', underline = true, children, ...props }: LinkProps,
+    {
+      href = '',
+      color = false,
+      underline = true,
+      children,
+      ...props
+    }: LinkProps,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => {
     return (
-      <StyledLink ref={ref} href={href} $underline={underline} {...props}>
+      <StyledLink
+        ref={ref}
+        href={href}
+        $color={color}
+        $underline={underline}
+        {...props}
+      >
         {children}
       </StyledLink>
     );

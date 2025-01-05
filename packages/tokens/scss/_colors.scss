@@ -1,0 +1,72 @@
+@use 'sass:map';
+
+$white: #ffffff !default;
+$black: #000000 !default;
+
+$blue-10: #f0f3ff !default;
+$blue-20: #ccd5ff !default;
+$blue-30: #0000bf !default;
+$blue-40: #00005e !default;
+
+$gray-10: #f4f4f4 !default;
+$gray-20: #e0e0e0 !default;
+$gray-30: #c6c6c6 !default;
+$gray-40: #a8a8a8 !default;
+$gray-50: #8d8d8d !default;
+$gray-60: #6f6f6f !default;
+$gray-70: #525252 !default;
+$gray-80: #393939 !default;
+$gray-90: #262626 !default;
+$gray-100: #161616 !default;
+
+$colors: (
+  black: (
+    100: $black,
+  ),
+  blue: (
+    10: $blue-10,
+    20: $blue-20,
+    30: $blue-30,
+    40: $blue-40,
+  ),
+  gray: (
+    10: $gray-10,
+    20: $gray-20,
+    30: $gray-30,
+    40: $gray-40,
+    50: $gray-50,
+    60: $gray-60,
+    70: $gray-70,
+    80: $gray-80,
+    90: $gray-90,
+    100: $gray-100,
+  ),
+  white: (
+    0: $white,
+  ),
+) !default;
+
+@function colors($token, $shade: 60) {
+  // Special case handling for black and white since they have no shades
+  @if $token == black {
+    @return $black;
+  } @else if $token == white {
+    @return $white;
+  }
+
+  // Check if the name exists in the map
+  @if map.has-key($colors, $token) {
+    $color-shades: map.get($colors, $token);
+
+    // Check if the shade exists for that color
+    @if map.has-key($color-shades, $shade) {
+      @return map.get($color-shades, $shade);
+    } @else {
+      @warn "Shade '#{$shade}' not found for color '#{$token}'.";
+      @return null;
+    }
+  } @else {
+    @warn "Color '#{$token}' not found in the colors map.";
+    @return null;
+  }
+}

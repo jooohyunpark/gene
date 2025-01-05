@@ -15,5 +15,10 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Playground: Story = {
-  args: { href: 'https://parkjoohyun.com', children: 'Link', underline: true },
+  args: {
+    href: 'https://parkjoohyun.com',
+    children: 'Link',
+    underline: true,
+    color: true,
+  },
 };
