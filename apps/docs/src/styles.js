@@ -2,40 +2,32 @@ import { createGlobalStyle, css } from 'styled-components';
 import { typography } from '@gene/tokens';
 
 export const GlolbalStyle = createGlobalStyle`${css`
-  @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
   body {
     font-family: ${typography.fontFamily};
     ${typography.body01};
   }
 
   h1 {
-    ${typography.h1};
+    ${typography.heading01};
   }
 
   h2 {
-    ${typography.h2};
+    ${typography.heading02};
   }
 
   h3 {
-    ${typography.h3};
+    ${typography.heading03};
   }
 
   h4 {
-    ${typography.h4};
+    ${typography.heading04};
   }
 
   h5 {
-    ${typography.h5};
+    ${typography.heading05};
   }
 
   h6 {
-    ${typography.h6};
+    ${typography.heading06};
   }
 `}`;

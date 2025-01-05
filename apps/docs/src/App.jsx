@@ -3,11 +3,10 @@ import { spacing } from '@gene/tokens';
 import { GlolbalStyle } from './styles';
 
 function App() {
-  console.log(spacing(3));
-
   return (
     <>
       <GlolbalStyle />
+
       <h1>Heading 01</h1>
       <h2>Heading 02</h2>
       <h3>Heading 03</h3>

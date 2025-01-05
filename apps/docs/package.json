@@ -10,8 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@gene/ui": "*",
     "@gene/tokens": "*",
+    "@gene/ui": "*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -21,6 +21,7 @@
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.17.0",
+    "sass": "^1.83.1",
     "vite": "^6.0.5"
   }
 }
