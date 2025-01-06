@@ -1,5 +1,5 @@
 import { Link, Button } from '@gene/ui';
-import { spacing } from '@gene/tokens';
+import { space } from '@gene/tokens';
 import { GlolbalStyle } from './styles';
 
 function App() {

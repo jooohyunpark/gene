@@ -1,15 +1,15 @@
 import { forwardRef, ForwardedRef } from 'react';
 import styled from 'styled-components';
-import { color, spacing, typography } from '@gene/tokens';
+import { color, space, typography } from '@gene/tokens';
 import { ButtonProps } from './Button.types';
 
 const StyledButton = styled.button`
-  padding: ${spacing(1)}px ${spacing(3)}px;
+  padding: ${space(1)}px ${space(3)}px;
   border: none;
   cursor: pointer;
   -webkit-user-select: none;
   user-select: none;
-  background: ${color.blue[30]};
+  background: ${color.blue30};
   color: ${color.white};
 
   ${typography.button01};
@@ -18,12 +18,12 @@ const StyledButton = styled.button`
 
   @media (hover: hover) {
     &:hover {
-      background: ${color.blue[40]};
+      background: ${color.blue40};
     }
   }
 
   &:focus-visible {
-    outline-color: ${color.gray[100]};
+    outline-color: ${color.gray100};
   }
 `;
 

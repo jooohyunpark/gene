@@ -6,7 +6,7 @@ ${css`
   body {
     font-family: ${typography.fontFamily};
     ${typography.body01};
-    color: ${color.gray[100]};
+    color: ${color.gray100};
   }
 
   h1 {

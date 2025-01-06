@@ -1,22 +1,22 @@
 import { forwardRef, ForwardedRef } from 'react';
 import styled from 'styled-components';
-import { color, typography } from '@gene/tokens';
+import { color } from '@gene/tokens';
 import { LinkProps, StyledLinkProps } from './Link.types';
 
 const StyledLink = styled.a<StyledLinkProps>`
   text-decoration: ${({ $underline }) => ($underline ? 'underline' : 'none')};
-  color: ${({ $color }) => ($color ? color.blue[30] : color.black)};
+  color: ${({ $color }) => ($color ? color.blue30 : color.black)};
 
   transition: color 0.2s ease-in-out;
 
   @media (hover: hover) {
     &:hover {
-      color: ${color.blue[30]};
+      color: ${color.blue30};
     }
   }
 
   &:focus {
-    outline-color: ${color.blue[30]};
+    outline-color: ${color.blue30};
   }
 `;
 

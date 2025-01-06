@@ -1,18 +1,18 @@
-$base: 8px;
+$spaceBase: 8px !default;
 
-$space025: $base * 0.25;
-$space050: $base * 0.5;
-$space100: $base * 1;
-$space150: $base * 1.5;
-$space200: $base * 2;
-$space300: $base * 3;
-$space400: $base * 4;
-$space500: $base * 5;
-$space600: $base * 6;
-$space800: $base * 8;
-$space1000: $base * 10;
-$space1500: $base * 15;
+$space25: $spaceBase * 0.25 !default;
+$space50: $spaceBase * 0.5 !default;
+$space100: $spaceBase * 1 !default;
+$space150: $spaceBase * 1.5 !default;
+$space200: $spaceBase * 2 !default;
+$space300: $spaceBase * 3 !default;
+$space400: $spaceBase * 4 !default;
+$space500: $spaceBase * 5 !default;
+$space600: $spaceBase * 6 !default;
+$space800: $spaceBase * 8 !default;
+$space1000: $spaceBase * 10 !default;
+$space1500: $spaceBase * 15 !default;
 
-@function spacing($multiplier: 1) {
+@function space($multiplier: 1, $base: $spaceBase) {
   @return $base * $multiplier;
 }
