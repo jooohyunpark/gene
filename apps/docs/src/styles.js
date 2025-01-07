@@ -1,9 +1,11 @@
-import { createGlobalStyle, css } from 'styled-components';
+import styled, { createGlobalStyle, css } from 'styled-components';
 import { typography, color } from '@gene/tokens';
 
 export const GlolbalStyle = createGlobalStyle`
 ${css`
   body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-family: ${typography.fontFamily};
     ${typography.body01};
     color: ${color.gray100};
@@ -34,3 +36,5 @@ ${css`
   }
 `}
 `;
+
+export const AppLayout = styled.div``;
