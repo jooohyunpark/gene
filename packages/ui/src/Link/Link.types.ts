@@ -7,7 +7,7 @@ export interface LinkProps {
   children?: ReactNode;
 }
 
-export interface StyledLinkProps {
+export interface GeneLinkProps {
   $underline?: boolean;
   $color?: boolean;
 }

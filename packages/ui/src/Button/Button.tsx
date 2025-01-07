@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { color, space, typography } from '@gene/tokens';
 import { ButtonProps } from './Button.types';
 
-const StyledButton = styled.button`
+const GeneButton = styled.button`
   padding: ${space(1)}px ${space(3)}px;
   border: none;
   cursor: pointer;
@@ -33,9 +33,9 @@ export const Button = forwardRef(
     ref: ForwardedRef<HTMLButtonElement>,
   ) => {
     return (
-      <StyledButton ref={ref} onClick={onClick} {...props}>
+      <GeneButton ref={ref} onClick={onClick} {...props}>
         {children}
-      </StyledButton>
+      </GeneButton>
     );
   },
 );

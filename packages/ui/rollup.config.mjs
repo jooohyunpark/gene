@@ -27,11 +27,23 @@ export default {
   plugins: [
     resolve(), // Resolves dependencies from node_modules
     commonjs(), // Converts CommonJS modules to ES6
-    typescript({ useTsconfigDeclarationDir: true }), // Uses TypeScript plugin
+    typescript({
+      useTsconfigDeclarationDir: true,
+    }),
     babel({
-      exclude: 'node_modules/**', // Don't transpile node_modules
-      presets: ['@babel/preset-react'], // Transpiles JSX for React
+      exclude: 'node_modules/**',
+      presets: ['@babel/preset-react', '@babel/preset-typescript'],
+      plugins: [
+        [
+          'babel-plugin-styled-components',
+          {
+            displayName: true,
+            fileName: false,
+          },
+        ],
+      ],
       babelHelpers: 'bundled',
+      extensions: ['.js', '.jsx', '.ts', '.tsx'],
     }),
     styles(), // Bundle CSS (including for styled-components)
     terser(), // Minify the output for production builds

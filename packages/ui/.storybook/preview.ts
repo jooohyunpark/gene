@@ -12,7 +12,7 @@ const preview: Preview = {
 };
 
 export const argTypes = {
-  children: { control: 'text' },
+  children: { control: false },
 };
 
 export default preview;

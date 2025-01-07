@@ -1,9 +1,9 @@
 import { forwardRef, ForwardedRef } from 'react';
 import styled from 'styled-components';
 import { color } from '@gene/tokens';
-import { LinkProps, StyledLinkProps } from './Link.types';
+import { LinkProps, GeneLinkProps } from './Link.types';
 
-const StyledLink = styled.a<StyledLinkProps>`
+const GeneLink = styled.a<GeneLinkProps>`
   text-decoration: ${({ $underline }) => ($underline ? 'underline' : 'none')};
   color: ${({ $color }) => ($color ? color.blue30 : color.black)};
 
@@ -32,7 +32,7 @@ export const Link = forwardRef(
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => {
     return (
-      <StyledLink
+      <GeneLink
         ref={ref}
         href={href}
         $color={color}
@@ -40,7 +40,7 @@ export const Link = forwardRef(
         {...props}
       >
         {children}
-      </StyledLink>
+      </GeneLink>
     );
   },
 );
