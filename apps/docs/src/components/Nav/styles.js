@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { headerHeight, navWidth } from '@/styles/js';
+import { headerHeight, navWidth, ContentPadding } from '@/styles/js';
 import { space } from '@gene/tokens';
 
 export const StyledNav = styled.nav`
@@ -9,6 +9,7 @@ export const StyledNav = styled.nav`
   width: ${navWidth}px;
   height: calc(100vh - ${headerHeight}px);
   overflow-y: hidden;
-  padding: ${space(5)}px ${space(2)}px;
   background: gray;
+
+  ${ContentPadding()};
 `;

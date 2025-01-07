@@ -1,6 +1,11 @@
 import styled, { createGlobalStyle, css } from 'styled-components';
 import { typography, color, space } from '@gene/tokens';
-import { headerHeight, navWidth } from '@/styles/js';
+import {
+  headerHeight,
+  navWidth,
+  MediaAbove,
+  ContentPadding,
+} from '@/styles/js';
 
 export const GlolbalStyle = createGlobalStyle`
 ${css`
@@ -48,11 +53,15 @@ export const AppLayout = styled.div`
 
 export const MainLayout = styled.main`
   margin-top: ${headerHeight}px;
-  margin-left: ${navWidth}px;
+
+  ${MediaAbove('md')} {
+    margin-left: ${navWidth}px;
+  }
 `;
 
 export const PageLayout = styled.div`
   max-width: ${space(120)}px;
-  padding: ${space(5)}px ${space(2)}px;
   margin: 0 auto;
+
+  ${ContentPadding()};
 `;

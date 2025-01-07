@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { color } from '@gene/tokens';
-import { headerHeight } from '@/styles/js';
+import { headerHeight, ContentPadding } from '@/styles/js';
 
 export const StyledHeader = styled.header`
   position: fixed;
@@ -14,4 +14,6 @@ export const StyledHeader = styled.header`
 
   background-color: ${color.blue30};
   color: ${color.white};
+
+  ${ContentPadding({ x: true, y: false })};
 `;

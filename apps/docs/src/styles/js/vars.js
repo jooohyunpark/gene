@@ -9,5 +9,13 @@ export const breakpoints = {
 };
 
 export const headerHeight = space(6);
-
 export const navWidth = space(35);
+
+export const paddingX = {
+  mobile: space(2),
+  desktop: space(4),
+};
+export const paddingY = {
+  mobile: space(5),
+  desktop: space(8),
+};
