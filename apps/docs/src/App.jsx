@@ -1,19 +1,23 @@
+import { BrowserRouter as Router } from 'react-router';
 import Nav from '@/components/Nav';
 import Pages from '@/pages';
-
-import { GlolbalStyle, AppLayout } from './styles';
+import { GlolbalStyle, AppLayout, NavLayout, PageLayout } from './styles';
 
 const App = () => {
   return (
-    <>
+    <AppLayout>
       <GlolbalStyle />
 
-      <Nav />
+      <Router>
+        <NavLayout>
+          <Nav />
+        </NavLayout>
 
-      <AppLayout>
-        <Pages />
-      </AppLayout>
-    </>
+        <PageLayout>
+          <Pages />
+        </PageLayout>
+      </Router>
+    </AppLayout>
   );
 };
 

@@ -1,19 +1,18 @@
-import { BrowserRouter, Routes, Route } from 'react-router';
+import { Routes, Route } from 'react-router';
 
 import Home from '@/pages/Home';
-import Color from '@/pages/Color';
+import Colors from '@/pages/Colors';
+import Typography from '@/pages/Typography';
+import Spacing from '@/pages/Spacing';
 
 const Pages = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/color" element={<Color />} />
-      </Routes>
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/typography" element={<Typography />} />
+      <Route path="/spacing" element={<Spacing />} />
+      <Route path="/colors" element={<Colors />} />
+      <Route path="/" element={<Home />} />
+    </Routes>
   );
 };
 

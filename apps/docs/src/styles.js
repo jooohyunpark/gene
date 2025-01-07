@@ -37,4 +37,19 @@ ${css`
 `}
 `;
 
-export const AppLayout = styled.div``;
+export const AppLayout = styled.div`
+  display: flex;
+`;
+
+export const PageLayout = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  flex-shrink: 1;
+`;
+
+export const NavLayout = styled.div`
+  flex-grow: 1;
+  flex-shrink: 0;
+`;
