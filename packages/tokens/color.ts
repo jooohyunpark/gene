@@ -19,6 +19,7 @@ export const gray100 = "#161616";
 
 export const color = {
   black,
+  white,
 
   blue10,
   blue20,
@@ -35,6 +36,4 @@ export const color = {
   gray80,
   gray90,
   gray100,
-
-  white,
 };
