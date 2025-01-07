@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle, css } from 'styled-components';
-import { typography, color } from '@gene/tokens';
+import { typography, color, space } from '@gene/tokens';
+import { headerHeight, navWidth } from '@/styles/js';
 
 export const GlolbalStyle = createGlobalStyle`
 ${css`
@@ -39,17 +40,19 @@ ${css`
 
 export const AppLayout = styled.div`
   display: flex;
-`;
-
-export const PageLayout = styled.main`
-  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  flex-grow: 1;
-  flex-shrink: 1;
+  min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
 `;
 
-export const NavLayout = styled.div`
-  flex-grow: 1;
-  flex-shrink: 0;
+export const MainLayout = styled.main`
+  margin-top: ${headerHeight}px;
+  margin-left: ${navWidth}px;
+`;
+
+export const PageLayout = styled.div`
+  max-width: ${space(120)}px;
+  padding: ${space(5)}px ${space(2)}px;
+  margin: 0 auto;
 `;

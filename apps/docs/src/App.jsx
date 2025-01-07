@@ -1,7 +1,8 @@
 import { BrowserRouter as Router } from 'react-router';
 import Nav from '@/components/Nav';
+import Header from '@/components/Header';
 import Pages from '@/pages';
-import { GlolbalStyle, AppLayout, NavLayout, PageLayout } from './styles';
+import { GlolbalStyle, AppLayout, PageLayout, MainLayout } from './styles';
 
 const App = () => {
   return (
@@ -9,13 +10,14 @@ const App = () => {
       <GlolbalStyle />
 
       <Router>
-        <NavLayout>
-          <Nav />
-        </NavLayout>
+        <Header />
+        <Nav />
 
-        <PageLayout>
-          <Pages />
-        </PageLayout>
+        <MainLayout>
+          <PageLayout>
+            <Pages />
+          </PageLayout>
+        </MainLayout>
       </Router>
     </AppLayout>
   );
