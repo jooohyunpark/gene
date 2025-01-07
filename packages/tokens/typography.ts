@@ -12,7 +12,7 @@ export const fontSize90 = 48;
 export const fontSize100 = 64;
 
 export const lineHeight10 = 1;
-export const lineHeight20 = 1.25;
+export const lineHeight20 = 1.2;
 export const lineHeight30 = 1.5;
 export const lineHeight40 = 1.6;
 
@@ -26,24 +26,24 @@ export const fontWeight700 = 700;
 export const fontWeight800 = 800;
 export const fontWeight900 = 900;
 
-export const letterSpacingNegative30 = -0.03;
-export const letterSpacingNegative20 = -0.02;
-export const letterSpacingNegative10 = -0.01;
+export const letterSpacingNegative30 = "-0.03em";
+export const letterSpacingNegative20 = "-0.02em";
+export const letterSpacingNegative10 = "-0.01em";
 export const letterSpacing0 = 0;
-export const letterSpacing10 = 0.01;
-export const letterSpacing20 = 0.02;
-export const letterSpacing30 = 0.03;
+export const letterSpacing10 = "0.01em";
+export const letterSpacing20 = "0.02em";
+export const letterSpacing30 = "0.03em";
 
 export const heading01 = {
   fontSize: fontSize100,
-  lineHeight: lineHeight20,
+  lineHeight: lineHeight10,
   fontWeight: fontWeight600,
   letterSpacing: letterSpacingNegative30,
 };
 
 export const heading02 = {
   fontSize: fontSize90,
-  lineHeight: lineHeight20,
+  lineHeight: lineHeight10,
   fontWeight: fontWeight600,
   letterSpacing: letterSpacingNegative30,
 };
@@ -52,7 +52,7 @@ export const heading03 = {
   fontSize: fontSize80,
   lineHeight: lineHeight20,
   fontWeight: fontWeight600,
-  letterSpacing: letterSpacingNegative30,
+  letterSpacing: letterSpacingNegative20,
 };
 
 export const heading04 = {
