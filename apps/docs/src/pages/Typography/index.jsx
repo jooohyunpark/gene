@@ -7,14 +7,20 @@ const Typography = () => (
     <Section>
       <h1>Typography</h1>
       <p>
-        The type system is used to define typographic style of headings, body
-        text, and GDS components. Font size tokens enable different scales to be
-        applied flexibly for responsive screens.
+        The type system is used to define the typographic style of headings,
+        body text, and GDS components. GDS typography is based on the{' '}
+        <Link href="https://rsms.me/inter/">Inter typeface</Link>, offering a
+        refined aesthetic and optimal legibility.
       </p>
     </Section>
 
     <Section>
       <h2>Type scale</h2>
+      <p>
+        The type scale ensures consistent type usage across the design and can
+        be easily customized with typography tokens as needed. It is recommended
+        to use different scales for responsive screens.
+      </p>
 
       <TypographyLayout>
         <h1>Heading 01</h1>
