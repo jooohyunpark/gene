@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { headerHeight, ContentPadding } from '@/styles/js';
+import { headerHeight, ContentPadding, borderColor } from '@/styles/js';
 import { color } from '@gene/token';
 
 export const StyledHeader = styled.header`
@@ -12,7 +12,7 @@ export const StyledHeader = styled.header`
   align-items: center;
   justify-content: flex-start;
 
-  border-bottom: 1px solid ${color.gray60};
+  border-bottom: 1px solid ${borderColor};
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
   z-index: 1;

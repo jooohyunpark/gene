@@ -1,4 +1,4 @@
-import { space } from '@gene/token';
+import { space, color } from '@gene/token';
 
 export const breakpoints = {
   xs: 0,
@@ -19,3 +19,6 @@ export const paddingY = {
   mobile: space(5),
   desktop: space(8),
 };
+
+export const textColor = color.gray100;
+export const borderColor = color.gray30;

@@ -1,6 +1,6 @@
 import styled, { createGlobalStyle, css } from 'styled-components';
 import { typography, color, space } from '@gene/token';
-import { navWidth, MediaAbove, ContentPadding } from '@/styles/js';
+import { navWidth, MediaAbove, ContentPadding, textColor } from '@/styles/js';
 
 export const GlolbalStyle = createGlobalStyle`
 ${css`
@@ -9,7 +9,7 @@ ${css`
     -moz-osx-font-smoothing: grayscale;
     font-family: ${typography.fontFamily};
     ${typography.body01};
-    color: ${color.gray100};
+    color: ${textColor};
   }
 
   ::selection {

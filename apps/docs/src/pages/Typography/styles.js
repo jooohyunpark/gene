@@ -1,5 +1,6 @@
 import { color, space, typography } from '@gene/token';
 import styled from 'styled-components';
+import { borderColor } from '@/styles/js';
 
 export const TableLayout = styled.div`
   overflow-x: auto;
@@ -25,7 +26,7 @@ export const StyledTable = styled.table`
   }
 
   tbody tr {
-    border-bottom: 1px solid ${color.gray60};
+    border-bottom: 1px solid ${borderColor};
   }
 
   th,

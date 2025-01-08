@@ -1,10 +1,16 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router';
 import Drawer from '@mui/material/Drawer';
 
 import useMediaAbove from '@/hooks/useMediaAbove';
 import Header from '@/components/Header';
-import { StyledNav } from './styles';
+import { borderColor } from '@/styles/js/vars';
+import {
+  StyledNav,
+  StyledLink,
+  StyledLi,
+  StyledUl,
+  StyledLabel,
+} from './styles';
 
 const Nav = () => {
   const isDesktop = useMediaAbove('md');
@@ -35,37 +41,43 @@ const Nav = () => {
         onClose={close}
         elevation={0}
         variant={isDesktop ? 'permanent' : 'temporary'}
+        sx={{
+          '& .MuiDrawer-paper': {
+            borderRightColor: borderColor,
+          },
+        }}
       >
         <StyledNav>
-          <Link to="/" onClick={close}>
+          <StyledLink to="/" onClick={close}>
             Gene Design System
-          </Link>
+          </StyledLink>
 
-          <div>Foundation</div>
-          <ul>
-            <li>
-              <Link to="/foundation/color" onClick={close}>
+          <StyledLabel>Foundation</StyledLabel>
+
+          <StyledUl>
+            <StyledLi>
+              <StyledLink to="/foundation/color" onClick={close}>
                 Color
-              </Link>
-            </li>
-            <li>
-              <Link to="/foundation/typography" onClick={close}>
+              </StyledLink>
+            </StyledLi>
+            <StyledLi>
+              <StyledLink to="/foundation/typography" onClick={close}>
                 Typography
-              </Link>
-            </li>
-            <li>
-              <Link to="/foundation/spacing" onClick={close}>
+              </StyledLink>
+            </StyledLi>
+            <StyledLi>
+              <StyledLink to="/foundation/spacing" onClick={close}>
                 Spacing
-              </Link>
-            </li>
-            <li>
-              <Link to="/foundation/design-tokens" onClick={close}>
+              </StyledLink>
+            </StyledLi>
+            <StyledLi>
+              <StyledLink to="/foundation/design-tokens" onClick={close}>
                 Design Tokens
-              </Link>
-            </li>
-          </ul>
+              </StyledLink>
+            </StyledLi>
+          </StyledUl>
 
-          <div>Components</div>
+          <StyledLabel>Components</StyledLabel>
           <ul>
             <li>d </li>
             <li>d</li>
