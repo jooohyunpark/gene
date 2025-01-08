@@ -4,6 +4,7 @@ import { space } from '@gene/token';
 export const StyledSection = styled.section`
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   row-gap: ${space(3)}px;
 
   margin: ${space(10)}px 0;

@@ -17,6 +17,10 @@ ${css`
     color: ${color.gray100};
   }
 
+  ::selection {
+    background-color: ${color.blue20};
+  }
+
   h1 {
     ${typography.heading01};
   }

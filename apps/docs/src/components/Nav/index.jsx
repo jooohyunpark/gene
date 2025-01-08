@@ -4,32 +4,26 @@ import { StyledNav } from './styles';
 const Nav = () => {
   return (
     <StyledNav>
-      <Link to="/">Introduction</Link>
+      <Link to="/">Principle</Link>
 
       <div>Foundation</div>
       <ul>
         <li>
-          <Link to="/color">Color</Link>
+          <Link to="/foundation/color">Color</Link>
         </li>
         <li>
-          <Link to="/typography">Typography</Link>
+          <Link to="/foundation/typography">Typography</Link>
         </li>
         <li>
-          <Link to="/spacing">Spacing</Link>
+          <Link to="/foundation/spacing">Spacing</Link>
         </li>
       </ul>
 
       <div>Components</div>
       <ul>
-        <li>
-          <Link to="/color">Color</Link>
-        </li>
-        <li>
-          <Link to="/typography">Typography</Link>
-        </li>
-        <li>
-          <Link to="/spacing">Spacing</Link>
-        </li>
+        <li>d </li>
+        <li>d</li>
+        <li>1123 </li>
       </ul>
     </StyledNav>
   );

@@ -33,14 +33,14 @@ $letterSpacing20: 0.02em !default;
 $letterSpacing30: 0.03em !default;
 
 @mixin heading-01 {
-  font-size: $fontSize90;
+  font-size: $fontSize100;
   line-height: $lineHeight10;
   font-weight: $fontWeight600;
   letter-spacing: $letterSpacingNegative20;
 }
 
 @mixin heading-02 {
-  font-size: $fontSize80;
+  font-size: $fontSize90;
   line-height: $lineHeight10;
   font-weight: $fontWeight600;
   letter-spacing: $letterSpacingNegative20;

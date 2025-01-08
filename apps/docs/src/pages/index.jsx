@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router';
 
-import Home from '@/pages/Home';
+import Principle from '@/pages/Principle';
 import Color from '@/pages/Color';
 import Typography from '@/pages/Typography';
 import Spacing from '@/pages/Spacing';
@@ -8,10 +8,10 @@ import Spacing from '@/pages/Spacing';
 const Pages = () => {
   return (
     <Routes>
-      <Route path="/typography" element={<Typography />} />
-      <Route path="/spacing" element={<Spacing />} />
-      <Route path="/color" element={<Color />} />
-      <Route path="/" element={<Home />} />
+      <Route path="/foundation/typography" element={<Typography />} />
+      <Route path="/foundation/spacing" element={<Spacing />} />
+      <Route path="/foundation/color" element={<Color />} />
+      <Route path="/" element={<Principle />} />
     </Routes>
   );
 };
