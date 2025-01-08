@@ -18,6 +18,7 @@ export const Box = styled.div`
 export const BoxRow = styled.div`
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 `;
 
 export const Break = styled.div`
