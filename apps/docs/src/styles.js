@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle, css } from 'styled-components';
-import { typography, color, space } from '@gene/tokens';
+import { typography, color, space } from '@gene/token';
 import {
   headerHeight,
   navWidth,

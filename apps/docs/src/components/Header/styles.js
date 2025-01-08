@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { color } from '@gene/tokens';
+import { color } from '@gene/token';
 import { headerHeight, ContentPadding } from '@/styles/js';
 
 export const StyledHeader = styled.header`

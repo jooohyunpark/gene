@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { headerHeight, navWidth, ContentPadding } from '@/styles/js';
-import { space } from '@gene/tokens';
+import { space } from '@gene/token';
 
 export const StyledNav = styled.nav`
   position: fixed;

@@ -1,4 +1,4 @@
-import { space } from '@gene/tokens';
+import { space } from '@gene/token';
 
 export const breakpoints = {
   xs: 0,
