@@ -1,7 +1,7 @@
 import { StyledHeader } from './styles';
 
-const Header = () => {
-  return <StyledHeader>header</StyledHeader>;
+const Header = ({ children }) => {
+  return <StyledHeader>{children}</StyledHeader>;
 };
 
 export default Header;

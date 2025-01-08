@@ -1,26 +1,16 @@
 import styled from 'styled-components';
-import {
-  headerHeight,
-  navWidth,
-  ContentPadding,
-  MediaAbove,
-} from '@/styles/js';
+import { motion } from 'motion/react';
+import { navWidth, ContentPadding, MediaAbove } from '@/styles/js';
 import { space } from '@gene/token';
 
-export const StyledNav = styled.nav`
-  position: fixed;
-  left: 0;
-  top: ${headerHeight}px;
+export const StyledNav = styled(motion.nav)`
   width: ${navWidth}px;
-  height: calc(100vh - ${headerHeight}px);
-  overflow-y: hidden;
+  height: 100%;
+  overflow-y: scroll;
   background: gray;
 
   ${ContentPadding()};
 
-  display: none;
-
   ${MediaAbove('md')} {
-    display: block;
   }
 `;

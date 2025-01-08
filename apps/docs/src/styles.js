@@ -1,11 +1,6 @@
 import styled, { createGlobalStyle, css } from 'styled-components';
 import { typography, color, space } from '@gene/token';
-import {
-  headerHeight,
-  navWidth,
-  MediaAbove,
-  ContentPadding,
-} from '@/styles/js';
+import { navWidth, MediaAbove, ContentPadding } from '@/styles/js';
 
 export const GlolbalStyle = createGlobalStyle`
 ${css`
@@ -51,13 +46,9 @@ export const AppLayout = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  max-width: 100vw;
-  overflow-x: hidden;
 `;
 
 export const MainLayout = styled.main`
-  margin-top: ${headerHeight}px;
-
   ${MediaAbove('md')} {
     margin-left: ${navWidth}px;
   }

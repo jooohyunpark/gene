@@ -5,6 +5,8 @@ export const StyledSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  max-width: 100vw;
+  overflow-x: hidden;
   margin: ${space(15)}px 0;
 
   &:first-child {
