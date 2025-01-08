@@ -9,7 +9,7 @@ export const StyledSection = styled.section`
 
   > {
     * + * {
-      margin-block-end: ${space(2)}px;
+      margin-block-end: ${space(3)}px;
     }
 
     *:first-child {
@@ -27,12 +27,12 @@ export const StyledSection = styled.section`
 
     h2 {
       margin-block-start: ${space(6)}px;
-      margin-block-end: ${space(3)}px;
+      margin-block-end: ${space(4)}px;
     }
 
     h3 {
       margin-block-start: ${space(4)}px;
-      margin-block-end: ${space(2)}px;
+      margin-block-end: ${space(1.5)}px;
     }
 
     h4 {
