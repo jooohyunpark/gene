@@ -1,17 +1,18 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Link } from 'react-router';
-import { navWidth, ContentPadding, MediaAbove } from '@/styles/js';
+import { navWidth, textColor, padding, SetPadding } from '@/styles/js';
 import { color, space, typography } from '@gene/token';
-import { borderColor } from '@/styles/js/vars';
 
 export const StyledNav = styled.nav`
   width: ${navWidth}px;
   height: 100%;
   overflow-y: scroll;
 
-  ${ContentPadding()};
+  ${SetPadding({ x: true, y: true })}
 
-  ${MediaAbove('md')} {
+  && {
+    padding-left: ${padding.x.sm}px;
+    padding-right: ${padding.x.sm}px;
   }
 `;
 
@@ -25,17 +26,37 @@ export const StyledLabel = styled.div`
 `;
 
 export const StyledLink = styled(Link)`
+  position: relative;
   display: block;
   text-decoration: none;
-  color: inherit;
+  color: ${textColor};
   padding: ${space(1)}px ${space(2)}px;
   transition: background 0.2s;
+  ${typography.body02};
 
   @media (hover: hover) {
     &:hover {
-      background: ${color.gray20};
+      background: ${color.gray10};
     }
   }
+
+  ${({ $isActive }) =>
+    $isActive &&
+    css`
+      font-weight: 700;
+      background: ${color.gray10};
+
+      &::before {
+        content: '';
+        display: block;
+        width: ${space(0.5)}px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: ${color.blue30};
+      }
+    `}
 `;
 
 export const StyledUl = styled.ul`

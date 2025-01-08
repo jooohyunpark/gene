@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Drawer from '@mui/material/Drawer';
+import { useLocation } from 'react-router';
 
 import useMediaAbove from '@/hooks/useMediaAbove';
 import Header from '@/components/Header';
@@ -11,6 +12,20 @@ import {
   StyledUl,
   StyledLabel,
 } from './styles';
+
+const CustomLink = ({ to, children }) => {
+  const location = useLocation();
+
+  const isActive = location.pathname === to;
+
+  console.log(to, isActive);
+
+  return (
+    <StyledLink to={to} $isActive={isActive}>
+      {children}
+    </StyledLink>
+  );
+};
 
 const Nav = () => {
   const isDesktop = useMediaAbove('md');
@@ -48,32 +63,32 @@ const Nav = () => {
         }}
       >
         <StyledNav>
-          <StyledLink to="/" onClick={close}>
+          <CustomLink to="/" onClick={close}>
             Gene Design System
-          </StyledLink>
+          </CustomLink>
 
           <StyledLabel>Foundation</StyledLabel>
 
           <StyledUl>
             <StyledLi>
-              <StyledLink to="/foundation/color" onClick={close}>
+              <CustomLink to="/foundation/color" onClick={close}>
                 Color
-              </StyledLink>
+              </CustomLink>
             </StyledLi>
             <StyledLi>
-              <StyledLink to="/foundation/typography" onClick={close}>
+              <CustomLink to="/foundation/typography" onClick={close}>
                 Typography
-              </StyledLink>
+              </CustomLink>
             </StyledLi>
             <StyledLi>
-              <StyledLink to="/foundation/spacing" onClick={close}>
+              <CustomLink to="/foundation/spacing" onClick={close}>
                 Spacing
-              </StyledLink>
+              </CustomLink>
             </StyledLi>
             <StyledLi>
-              <StyledLink to="/foundation/design-tokens" onClick={close}>
+              <CustomLink to="/foundation/design-tokens" onClick={close}>
                 Design Tokens
-              </StyledLink>
+              </CustomLink>
             </StyledLi>
           </StyledUl>
 

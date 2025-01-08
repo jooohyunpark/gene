@@ -1,6 +1,6 @@
 import styled, { createGlobalStyle, css } from 'styled-components';
 import { typography, color, space } from '@gene/token';
-import { navWidth, MediaAbove, ContentPadding, textColor } from '@/styles/js';
+import { navWidth, MediaAbove, SetPadding, textColor } from '@/styles/js';
 
 export const GlolbalStyle = createGlobalStyle`
 ${css`
@@ -58,5 +58,5 @@ export const PageLayout = styled.div`
   max-width: ${space(120)}px;
   margin: 0 auto;
 
-  ${ContentPadding()};
+  ${SetPadding()};
 `;

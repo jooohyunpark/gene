@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { headerHeight, ContentPadding, borderColor } from '@/styles/js';
+import { headerHeight, SetPadding, borderColor } from '@/styles/js';
 import { color } from '@gene/token';
 
 export const StyledHeader = styled.header`
@@ -17,5 +17,5 @@ export const StyledHeader = styled.header`
   backdrop-filter: blur(10px);
   z-index: 1;
 
-  ${ContentPadding({ x: true, y: false })};
+  ${SetPadding({ x: true, y: false })};
 `;

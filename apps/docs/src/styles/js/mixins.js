@@ -1,31 +1,39 @@
 import { css } from 'styled-components';
-import { breakpoints, paddingX, paddingY } from './vars';
+import { breakpoints, padding } from './vars';
 
 export const MediaBelow = (key) =>
   `@media (max-width: ${breakpoints[key] - 1}px)`;
 
 export const MediaAbove = (key) => `@media (min-width: ${breakpoints[key]}px)`;
 
-export const ContentPadding = (config = { x: true, y: true }) => css`
+export const SetPadding = (config = { x: true, y: true }) => css`
   ${config?.x &&
   css`
-    padding-left: ${paddingX.mobile}px;
-    padding-right: ${paddingX.mobile}px;
+    padding-left: ${padding.x.sm}px;
+    padding-right: ${padding.x.sm}px;
 
     ${MediaAbove('md')} {
-      padding-left: ${paddingX.desktop}px;
-      padding-right: ${paddingX.desktop}px;
+      padding-left: ${padding.x.md}px;
+      padding-right: ${padding.x.md}px;
     }
   `}
 
   ${config?.y &&
   css`
-    padding-top: ${paddingY.mobile}px;
-    padding-bottom: ${paddingY.mobile}px;
+    padding-top: ${padding.y.sm}px;
+    padding-bottom: ${padding.y.sm}px;
 
     ${MediaAbove('md')} {
-      padding-top: ${paddingY.desktop}px;
-      padding-bottom: ${paddingY.desktop}px;
+      padding-top: ${padding.y.md}px;
+      padding-bottom: ${padding.y.md}px;
     }
   `}
+`;
+
+export const OnHover = (styles) => css`
+  @media (hover: hover) {
+    &:hover {
+      ${styles};
+    }
+  }
 `;
