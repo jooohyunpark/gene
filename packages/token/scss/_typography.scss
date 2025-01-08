@@ -33,42 +33,42 @@ $letterSpacing20: 0.02em !default;
 $letterSpacing30: 0.03em !default;
 
 @mixin heading-01 {
-  font-size: $fontSize100;
-  line-height: $lineHeight10;
-  font-weight: $fontWeight600;
-  letter-spacing: $letterSpacingNegative20;
-}
-
-@mixin heading-02 {
   font-size: $fontSize90;
   line-height: $lineHeight10;
   font-weight: $fontWeight600;
   letter-spacing: $letterSpacingNegative20;
 }
 
-@mixin heading-03 {
+@mixin heading-02 {
   font-size: $fontSize70;
-  line-height: $lineHeight20;
+  line-height: $lineHeight10;
   font-weight: $fontWeight600;
-  letter-spacing: $letterSpacingNegative10;
+  letter-spacing: $letterSpacingNegative20;
 }
 
-@mixin heading-04 {
+@mixin heading-03 {
   font-size: $fontSize60;
   line-height: $lineHeight20;
   font-weight: $fontWeight600;
   letter-spacing: $letterSpacingNegative10;
 }
 
-@mixin heading-05 {
+@mixin heading-04 {
   font-size: $fontSize50;
+  line-height: $lineHeight20;
+  font-weight: $fontWeight600;
+  letter-spacing: $letterSpacingNegative10;
+}
+
+@mixin heading-05 {
+  font-size: $fontSize40;
   line-height: $lineHeight20;
   font-weight: $fontWeight700;
   letter-spacing: $letterSpacing0;
 }
 
 @mixin heading-06 {
-  font-size: $fontSize40;
+  font-size: $fontSize30;
   line-height: $lineHeight20;
   font-weight: $fontWeight700;
   letter-spacing: $letterSpacing0;

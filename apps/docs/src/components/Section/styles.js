@@ -7,6 +7,14 @@ export const StyledSection = styled.section`
   align-items: flex-start;
   margin: ${space(15)}px 0;
 
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   > {
     * + * {
       margin-block-end: ${space(3)}px;
@@ -44,13 +52,5 @@ export const StyledSection = styled.section`
       margin-block-start: ${space(2)}px;
       margin-block-end: ${space(1)}px;
     }
-  }
-
-  &:first-child {
-    margin-top: 0;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
   }
 `;

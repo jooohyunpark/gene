@@ -7,14 +7,14 @@ const Typography = () => (
     <Section>
       <h1>Typography</h1>
       <p>
-        Typography is used to define typographic style of headings, body text,
-        and GDS components. Font size tokens allow different scales to be used
-        for responsive screen sizes.
+        The type system is used to define typographic style of headings, body
+        text, and GDS components. Font size tokens enable different scales to be
+        applied flexibly for responsive screens.
       </p>
     </Section>
 
     <Section>
-      <h2>Type Scale</h2>
+      <h2>Type scale</h2>
 
       <TypographyLayout>
         <h1>Heading 01</h1>

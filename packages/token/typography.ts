@@ -35,42 +35,42 @@ export const letterSpacing20 = "0.02em";
 export const letterSpacing30 = "0.03em";
 
 export const heading01 = {
-  fontSize: fontSize100,
-  lineHeight: lineHeight10,
-  fontWeight: fontWeight600,
-  letterSpacing: letterSpacingNegative20,
-};
-
-export const heading02 = {
   fontSize: fontSize90,
   lineHeight: lineHeight10,
   fontWeight: fontWeight600,
   letterSpacing: letterSpacingNegative20,
 };
 
-export const heading03 = {
+export const heading02 = {
   fontSize: fontSize70,
-  lineHeight: lineHeight20,
+  lineHeight: lineHeight10,
   fontWeight: fontWeight600,
-  letterSpacing: letterSpacingNegative10,
+  letterSpacing: letterSpacingNegative20,
 };
 
-export const heading04 = {
+export const heading03 = {
   fontSize: fontSize60,
   lineHeight: lineHeight20,
   fontWeight: fontWeight600,
   letterSpacing: letterSpacingNegative10,
 };
 
-export const heading05 = {
+export const heading04 = {
   fontSize: fontSize50,
+  lineHeight: lineHeight20,
+  fontWeight: fontWeight600,
+  letterSpacing: letterSpacingNegative10,
+};
+
+export const heading05 = {
+  fontSize: fontSize40,
   lineHeight: lineHeight20,
   fontWeight: fontWeight700,
   letterSpacing: letterSpacing0,
 };
 
 export const heading06 = {
-  fontSize: fontSize40,
+  fontSize: fontSize30,
   lineHeight: lineHeight20,
   fontWeight: fontWeight700,
   letterSpacing: letterSpacing0,
