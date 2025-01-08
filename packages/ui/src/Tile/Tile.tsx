@@ -1,6 +1,6 @@
 import { forwardRef, ForwardedRef } from 'react';
 import styled, { css } from 'styled-components';
-import { color, space } from '@gene/tokens';
+import { color, space } from '@gene/token';
 import { TileProps, GeneTileProps } from './Tile.types';
 
 const GeneTile = styled.div<GeneTileProps>`

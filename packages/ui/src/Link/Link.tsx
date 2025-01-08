@@ -1,6 +1,6 @@
 import { forwardRef, ForwardedRef } from 'react';
 import styled from 'styled-components';
-import { color } from '@gene/tokens';
+import { color } from '@gene/token';
 import { LinkProps, GeneLinkProps } from './Link.types';
 
 const GeneLink = styled.a<GeneLinkProps>`

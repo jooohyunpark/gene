@@ -49,7 +49,7 @@
     "react": "^18.0.0"
   },
   "dependencies": {
-    "@gene/tokens": "*",
+    "@gene/token": "*",
     "styled-components": "^6.1.13"
   }
 }

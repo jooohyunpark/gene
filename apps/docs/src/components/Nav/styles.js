@@ -1,5 +1,10 @@
 import styled from 'styled-components';
-import { headerHeight, navWidth, ContentPadding } from '@/styles/js';
+import {
+  headerHeight,
+  navWidth,
+  ContentPadding,
+  MediaAbove,
+} from '@/styles/js';
 import { space } from '@gene/token';
 
 export const StyledNav = styled.nav`
@@ -12,4 +17,10 @@ export const StyledNav = styled.nav`
   background: gray;
 
   ${ContentPadding()};
+
+  display: none;
+
+  ${MediaAbove('md')} {
+    display: block;
+  }
 `;

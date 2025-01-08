@@ -1,13 +1,13 @@
-$fontSize10: 12px !default;
-$fontSize20: 14px !default;
-$fontSize30: 16px !default;
-$fontSize40: 18px !default;
-$fontSize50: 20px !default;
-$fontSize60: 24px !default;
-$fontSize70: 32px !default;
-$fontSize80: 40px !default;
-$fontSize90: 48px !default;
-$fontSize100: 64px !default;
+$fontSize10: (12 / 16) * 1rem !default;
+$fontSize20: (14 / 16) * 1rem !default;
+$fontSize30: (16 / 16) * 1rem !default;
+$fontSize40: (18 / 16) * 1rem !default;
+$fontSize50: (20 / 16) * 1rem !default;
+$fontSize60: (24 / 16) * 1rem !default;
+$fontSize70: (32 / 16) * 1rem !default;
+$fontSize80: (40 / 16) * 1rem !default;
+$fontSize90: (48 / 16) * 1rem !default;
+$fontSize100: (64 / 16) * 1rem !default;
 
 $lineHeight10: 1 !default;
 $lineHeight20: 1.2 !default;
@@ -33,42 +33,42 @@ $letterSpacing20: 0.02em !default;
 $letterSpacing30: 0.03em !default;
 
 @mixin heading-01 {
-  font-size: $fontSize100;
-  line-height: $lineHeight10;
-  font-weight: $fontWeight600;
-  letter-spacing: $letterSpacingNegative30;
-}
-
-@mixin heading-02 {
   font-size: $fontSize90;
   line-height: $lineHeight10;
   font-weight: $fontWeight600;
-  letter-spacing: $letterSpacingNegative30;
+  letter-spacing: $letterSpacingNegative20;
+}
+
+@mixin heading-02 {
+  font-size: $fontSize80;
+  line-height: $lineHeight10;
+  font-weight: $fontWeight600;
+  letter-spacing: $letterSpacingNegative20;
 }
 
 @mixin heading-03 {
-  font-size: $fontSize80;
-  line-height: $lineHeight20;
-  font-weight: $fontWeight600;
-  letter-spacing: $letterSpacingNegative20;
-}
-
-@mixin heading-04 {
   font-size: $fontSize70;
   line-height: $lineHeight20;
   font-weight: $fontWeight600;
-  letter-spacing: $letterSpacingNegative20;
+  letter-spacing: $letterSpacingNegative10;
+}
+
+@mixin heading-04 {
+  font-size: $fontSize60;
+  line-height: $lineHeight20;
+  font-weight: $fontWeight600;
+  letter-spacing: $letterSpacingNegative10;
 }
 
 @mixin heading-05 {
-  font-size: $fontSize60;
+  font-size: $fontSize50;
   line-height: $lineHeight20;
   font-weight: $fontWeight700;
   letter-spacing: $letterSpacing0;
 }
 
 @mixin heading-06 {
-  font-size: $fontSize50;
+  font-size: $fontSize40;
   line-height: $lineHeight20;
   font-weight: $fontWeight700;
   letter-spacing: $letterSpacing0;

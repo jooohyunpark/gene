@@ -9,7 +9,7 @@ const Nav = () => {
       <div>Foundation</div>
       <ul>
         <li>
-          <Link to="/colors">Colors</Link>
+          <Link to="/color">Color</Link>
         </li>
         <li>
           <Link to="/typography">Typography</Link>
@@ -22,7 +22,7 @@ const Nav = () => {
       <div>Components</div>
       <ul>
         <li>
-          <Link to="/colors">Colors</Link>
+          <Link to="/color">Color</Link>
         </li>
         <li>
           <Link to="/typography">Typography</Link>

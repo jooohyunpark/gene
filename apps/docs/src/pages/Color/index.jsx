@@ -1,30 +1,72 @@
 import { color } from '@gene/token';
-import { Box, BoxRow } from './styles';
+import Section from '@/components/Section';
+import { Box, BoxRow, Break } from './styles';
 
 const Color = () => (
   <>
-    <h1>Color</h1>
-    <p>
-      Color highlights key content and provides a consistent experience. The
-      Gene Design System intentionally uses minimal colors to direct attention
-      to the content and media.
-    </p>
+    <Section>
+      <h1>Color</h1>
+      <p>
+        Color highlights key content and provides a consistent experience. The
+        Gene Design System intentionally uses minimal colors to direct attention
+        to the content and media.
+      </p>
+    </Section>
 
-    <h2>Primary</h2>
-    <BoxRow>
-      <Box $background={color.blue10} $color={color.gray100}>
-        10
-      </Box>
-      <Box $background={color.blue20} $color={color.gray100}>
-        20
-      </Box>
-      <Box $background={color.blue30} $color={color.white}>
-        30
-      </Box>
-      <Box $background={color.blue40} $color={color.white}>
-        40
-      </Box>
-    </BoxRow>
+    <Section>
+      <h2>Primary</h2>
+      <BoxRow>
+        <Box $background={color.blue10} $color={color.gray100}>
+          10
+        </Box>
+        <Box $background={color.blue20} $color={color.gray100}>
+          20
+        </Box>
+        <Box $background={color.blue30} $color={color.white}>
+          30
+        </Box>
+        <Box $background={color.blue40} $color={color.white}>
+          40
+        </Box>
+      </BoxRow>
+    </Section>
+
+    <Section>
+      <h2>Neutral</h2>
+      <BoxRow>
+        <Box $background={color.gray10} $color={color.gray100}>
+          10
+        </Box>
+        <Box $background={color.gray20} $color={color.gray100}>
+          20
+        </Box>
+        <Box $background={color.gray30} $color={color.gray100}>
+          30
+        </Box>
+        <Box $background={color.gray40} $color={color.gray100}>
+          40
+        </Box>
+        <Box $background={color.gray50} $color={color.gray100}>
+          50
+        </Box>
+        <Break />
+        <Box $background={color.gray60} $color={color.white}>
+          60
+        </Box>
+        <Box $background={color.gray70} $color={color.white}>
+          70
+        </Box>
+        <Box $background={color.gray80} $color={color.white}>
+          80
+        </Box>
+        <Box $background={color.gray90} $color={color.white}>
+          90
+        </Box>
+        <Box $background={color.gray100} $color={color.white}>
+          100
+        </Box>
+      </BoxRow>
+    </Section>
   </>
 );
 

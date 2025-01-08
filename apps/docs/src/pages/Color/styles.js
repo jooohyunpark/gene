@@ -2,8 +2,9 @@ import { space, typography } from '@gene/token';
 import styled from 'styled-components';
 
 export const Box = styled.div`
-  width: ${space(15)}px;
-  height: ${space(15)}px;
+  width: 20%;
+  max-width: ${space(15)}px;
+  aspect-ratio: 1 / 1;
   background-color: ${({ $background }) => $background};
   color: ${({ $color }) => $color};
   display: flex;
@@ -16,4 +17,11 @@ export const Box = styled.div`
 
 export const BoxRow = styled.div`
   display: flex;
+  flex-wrap: wrap;
+`;
+
+export const Break = styled.div`
+  flex-basis: 100%;
+  height: 0;
+  margin: 0;
 `;

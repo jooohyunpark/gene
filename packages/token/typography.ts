@@ -1,15 +1,15 @@
 export const fontFamily = '"Inter", sans-serif';
 
-export const fontSize10 = 12;
-export const fontSize20 = 14;
-export const fontSize30 = 16;
-export const fontSize40 = 18;
-export const fontSize50 = 20;
-export const fontSize60 = 24;
-export const fontSize70 = 32;
-export const fontSize80 = 40;
-export const fontSize90 = 48;
-export const fontSize100 = 64;
+export const fontSize10 = `${12 / 16}rem`;
+export const fontSize20 = `${14 / 16}rem`;
+export const fontSize30 = `${16 / 16}rem`;
+export const fontSize40 = `${18 / 16}rem`;
+export const fontSize50 = `${20 / 16}rem`;
+export const fontSize60 = `${24 / 16}rem`;
+export const fontSize70 = `${32 / 16}rem`;
+export const fontSize80 = `${40 / 16}rem`;
+export const fontSize90 = `${48 / 16}rem`;
+export const fontSize100 = `${64 / 16}rem`;
 
 export const lineHeight10 = 1;
 export const lineHeight20 = 1.2;
@@ -35,42 +35,42 @@ export const letterSpacing20 = "0.02em";
 export const letterSpacing30 = "0.03em";
 
 export const heading01 = {
-  fontSize: fontSize100,
-  lineHeight: lineHeight10,
-  fontWeight: fontWeight600,
-  letterSpacing: letterSpacingNegative30,
-};
-
-export const heading02 = {
   fontSize: fontSize90,
   lineHeight: lineHeight10,
   fontWeight: fontWeight600,
-  letterSpacing: letterSpacingNegative30,
+  letterSpacing: letterSpacingNegative20,
+};
+
+export const heading02 = {
+  fontSize: fontSize80,
+  lineHeight: lineHeight10,
+  fontWeight: fontWeight600,
+  letterSpacing: letterSpacingNegative20,
 };
 
 export const heading03 = {
-  fontSize: fontSize80,
-  lineHeight: lineHeight20,
-  fontWeight: fontWeight600,
-  letterSpacing: letterSpacingNegative20,
-};
-
-export const heading04 = {
   fontSize: fontSize70,
   lineHeight: lineHeight20,
   fontWeight: fontWeight600,
-  letterSpacing: letterSpacingNegative20,
+  letterSpacing: letterSpacingNegative10,
+};
+
+export const heading04 = {
+  fontSize: fontSize60,
+  lineHeight: lineHeight20,
+  fontWeight: fontWeight600,
+  letterSpacing: letterSpacingNegative10,
 };
 
 export const heading05 = {
-  fontSize: fontSize60,
+  fontSize: fontSize50,
   lineHeight: lineHeight20,
   fontWeight: fontWeight700,
   letterSpacing: letterSpacing0,
 };
 
 export const heading06 = {
-  fontSize: fontSize50,
+  fontSize: fontSize40,
   lineHeight: lineHeight20,
   fontWeight: fontWeight700,
   letterSpacing: letterSpacing0,

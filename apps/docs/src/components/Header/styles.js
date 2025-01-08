@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { color } from '@gene/token';
 import { headerHeight, ContentPadding } from '@/styles/js';
 
 export const StyledHeader = styled.header`
@@ -12,8 +11,9 @@ export const StyledHeader = styled.header`
   display: flex;
   align-items: center;
 
-  background-color: ${color.blue30};
-  color: ${color.white};
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1;
 
   ${ContentPadding({ x: true, y: false })};
 `;
