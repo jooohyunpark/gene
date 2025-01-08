@@ -44,6 +44,23 @@ ${css`
   h6 {
     ${typography.heading06};
   }
+
+  /* * + :is(h1, h2, h3, h4, h5, h6) {
+    margin-block-start: 1em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-block-end: 0.5em;
+  }
+
+  p {
+    margin-block-end: 1em;
+  } */
 `}
 `;
 

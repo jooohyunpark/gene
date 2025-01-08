@@ -17,29 +17,23 @@ const About = () => (
     <Section>
       <h2>Principles</h2>
 
-      <PrincipleLayout>
-        <h3>Human</h3>
-        <p>
-          GDS is committed to human intelligence. It creates consistent user
-          experiences that work for everyone.
-        </p>
-      </PrincipleLayout>
+      <h3>Human</h3>
+      <p>
+        GDS is committed to human intelligence. It creates consistent user
+        experiences that work for everyone.
+      </p>
 
-      <PrincipleLayout>
-        <h3>Rational</h3>
-        <p>
-          GDS values simplicity and purpose. Every element and pattern is
-          designed to be clear and intuitive, enhancing productivity.
-        </p>
-      </PrincipleLayout>
+      <h3>Rational</h3>
+      <p>
+        GDS values simplicity and purpose. Every element and pattern is designed
+        to be clear and intuitive, enhancing productivity.
+      </p>
 
-      <PrincipleLayout>
-        <h3>Curious</h3>
-        <p>
-          GDS encourages exploration. It crafts spaces that spark curiosity,
-          enabling users to embrace creativity in their works.
-        </p>
-      </PrincipleLayout>
+      <h3>Curious</h3>
+      <p>
+        GDS encourages exploration. It crafts spaces that spark curiosity,
+        enabling users to embrace creativity in their works.
+      </p>
     </Section>
 
     <Section>
