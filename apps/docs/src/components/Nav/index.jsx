@@ -4,7 +4,7 @@ import { StyledNav } from './styles';
 const Nav = () => {
   return (
     <StyledNav>
-      <Link to="/">Principle</Link>
+      <Link to="/">About GDS</Link>
 
       <div>Foundation</div>
       <ul>
