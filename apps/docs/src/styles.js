@@ -6,6 +6,7 @@ import {
   SetPadding,
   textColor,
   headerHeight,
+  contentMaxWidth,
 } from '@/styles/js';
 
 export const GlolbalStyle = createGlobalStyle`
@@ -48,12 +49,15 @@ ${css`
 `}
 `;
 
-export const StyledApp = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+export const StyledApp = styled.div``;
 
 export const StyledLayout = styled.div`
+  ${MediaAbove('md')} {
+    padding-left: ${navWidth}px;
+  }
+`;
+
+export const StyledContentArea = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -62,17 +66,16 @@ export const StyledLayout = styled.div`
   min-height: calc(100vh - ${headerHeight}px);
 
   ${MediaAbove('md')} {
-    padding-left: ${navWidth}px;
     min-height: 100vh;
     min-height: 100dvh;
   }
+
+  max-width: ${contentMaxWidth}px;
+  margin: 0 auto;
 `;
 
 export const StyledMain = styled.main``;
 
 export const StyledArticle = styled.article`
-  max-width: ${space(120)}px;
-  margin: 0 auto;
-
   ${SetPadding()};
 `;

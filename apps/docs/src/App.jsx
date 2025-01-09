@@ -8,6 +8,7 @@ import {
   StyledMain,
   StyledArticle,
   StyledLayout,
+  StyledContentArea,
 } from './styles';
 
 const App = () => {
@@ -19,13 +20,15 @@ const App = () => {
         <Nav />
 
         <StyledLayout>
-          <StyledMain>
-            <StyledArticle>
-              <Pages />
-            </StyledArticle>
-          </StyledMain>
+          <StyledContentArea>
+            <StyledMain>
+              <StyledArticle>
+                <Pages />
+              </StyledArticle>
+            </StyledMain>
 
-          <Footer />
+            <Footer />
+          </StyledContentArea>
         </StyledLayout>
       </Router>
     </StyledApp>

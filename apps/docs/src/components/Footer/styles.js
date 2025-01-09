@@ -3,6 +3,8 @@ import { space, typography } from '@gene/token';
 import { SetPadding, borderColor } from '@/styles/js';
 
 export const StyledFooter = styled.footer`
+  display: flex;
+  justify-content: flex-end;
   border-top: 1px solid ${borderColor};
 
   ${SetPadding({ x: true, y: false })};

@@ -8,6 +8,7 @@ export const breakpoints = {
   xl: 1600,
 };
 
+export const contentMaxWidth = space(120);
 export const headerHeight = space(6);
 export const navWidth = space(35);
 
