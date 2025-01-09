@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { headerHeight, SetPadding, borderColor } from '@/styles/js';
-import { color } from '@gene/token';
 
 export const StyledHeader = styled.header`
   position: sticky;

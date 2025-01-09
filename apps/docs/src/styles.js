@@ -42,19 +42,19 @@ ${css`
 `}
 `;
 
-export const AppLayout = styled.div`
+export const StyledApp = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 `;
 
-export const MainLayout = styled.main`
+export const StyledMain = styled.main`
   ${MediaAbove('md')} {
     margin-left: ${navWidth}px;
   }
 `;
 
-export const PageLayout = styled.div`
+export const StyledArticle = styled.article`
   max-width: ${space(120)}px;
   margin: 0 auto;
 

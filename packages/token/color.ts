@@ -6,7 +6,7 @@ export const blue20 = "#ccd5ff";
 export const blue30 = "#0000bf";
 export const blue40 = "#00005e";
 
-export const gray10 = "#f2f2f2";
+export const gray10 = "#f4f4f4";
 export const gray20 = "#e0e0e0";
 export const gray30 = "#c6c6c6";
 export const gray40 = "#a8a8a8";

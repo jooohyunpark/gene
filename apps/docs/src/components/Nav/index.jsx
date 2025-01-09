@@ -13,15 +13,13 @@ import {
   StyledLabel,
 } from './styles';
 
-const CustomLink = ({ to, children }) => {
+const CustomLink = ({ to, children, ...props }) => {
   const location = useLocation();
 
   const isActive = location.pathname === to;
 
-  console.log(to, isActive);
-
   return (
-    <StyledLink to={to} $isActive={isActive}>
+    <StyledLink to={to} $isActive={isActive} {...props}>
       {children}
     </StyledLink>
   );
