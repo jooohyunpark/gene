@@ -16,12 +16,8 @@ export const StyledNav = styled.nav`
   }
 `;
 
-export const StyledItem = styled.div`
-  padding: ${space(1)}px ${space(2)}px;
-`;
-
 export const StyledLabel = styled.div`
-  padding: ${space(1)}px ${space(2)}px;
+  padding: ${space(1)}px ${space(3)}px;
   ${typography.label01};
 `;
 
@@ -30,13 +26,13 @@ export const StyledLink = styled(Link)`
   display: block;
   text-decoration: none;
   color: ${textColor};
-  padding: ${space(1)}px ${space(2)}px;
+  padding: ${space(1)}px ${space(3)}px;
   transition: background 0.2s;
   ${typography.body02};
 
   @media (hover: hover) {
     &:hover {
-      background: ${color.gray10};
+      background: ${color.gray20};
     }
   }
 
@@ -44,7 +40,7 @@ export const StyledLink = styled(Link)`
     $isActive &&
     css`
       font-weight: 700;
-      background: ${color.gray10};
+      background: ${color.gray20};
 
       &::before {
         content: '';

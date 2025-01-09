@@ -8,9 +8,9 @@ const GDS = () => (
       <h1>Gene Design System</h1>
       <p>
         Gene Design System (GDS) is a concise, intelligent framework for
-        showcasing creative works. It started as a side project by{' '}
-        <Link href="https://dev.parkjoohyun.com/">Joohyun Park</Link> and is
-        intended for his personal use only.
+        showcasing creative works. It is a side project by{' '}
+        <Link href="https://dev.parkjoohyun.com/">Joohyun Park</Link>, intended
+        for his personal use only.
       </p>
     </Section>
 
