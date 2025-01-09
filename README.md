@@ -1,3 +1,3 @@
 # Gene
 
-Concise, intelligent design system to showcase creative works.
+Concise, intelligent design system for showcasing creative works.
