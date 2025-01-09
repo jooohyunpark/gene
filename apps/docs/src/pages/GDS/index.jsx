@@ -2,7 +2,7 @@ import { Link } from '@gene/ui';
 import Section from '@/components/Section';
 import {} from './styles';
 
-const About = () => (
+const GDS = () => (
   <>
     <Section>
       <h1>Gene Design System</h1>
@@ -38,4 +38,4 @@ const About = () => (
   </>
 );
 
-export default About;
+export default GDS;

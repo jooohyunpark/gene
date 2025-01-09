@@ -8,13 +8,18 @@ const Color = () => (
       <h1>Color</h1>
       <p>
         Color highlights key content and provides a consistent experience. The
-        Gene Design System intentionally uses minimal colors to direct attention
-        to the content and media.
+        Gene Design System purposefully uses a minimal color palette to direct
+        attention to the content and media.
       </p>
     </Section>
 
     <Section>
       <h2>Primary</h2>
+      <p>
+        Blue is the primary color across experiences. It evokes focus,
+        inspiration, and curiosity. When combined with the simplicity of black
+        and white, it creates a distinctive asthetic.
+      </p>
       <BoxRow>
         <Box $background={color.blue10} $color={color.gray100}>
           10
@@ -33,6 +38,10 @@ const Color = () => (
 
     <Section>
       <h2>Neutral</h2>
+      <p>
+        Neutral gray color families give each design the opportunity for nuance
+        and meaningful moments.
+      </p>
       <BoxRow>
         <Box $background={color.gray10} $color={color.gray100}>
           10
