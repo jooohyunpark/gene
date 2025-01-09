@@ -18,8 +18,8 @@ export const padding = {
     md: space(4),
   },
   y: {
-    sm: space(5),
-    md: space(8),
+    sm: space(6),
+    md: space(10),
   },
 };
 

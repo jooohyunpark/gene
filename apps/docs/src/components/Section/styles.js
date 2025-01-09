@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { space } from '@gene/token';
+import { MediaAbove } from '@/styles/js';
 
 export const StyledSection = styled.section`
   display: flex;
@@ -7,7 +8,11 @@ export const StyledSection = styled.section`
   align-items: flex-start;
   max-width: 100vw;
   overflow-x: hidden;
-  margin: ${space(15)}px 0;
+  margin: ${space(10)}px 0;
+
+  ${MediaAbove('md')} {
+    margin: ${space(15)}px 0;
+  }
 
   &:first-child {
     margin-top: 0;
