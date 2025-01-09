@@ -22,11 +22,20 @@ const Spacing = () => {
     <>
       <Section>
         <h1>Spacing</h1>
-        <p>ddd</p>
+        <p>
+          GDS provides space tokens and utilities to help deliver clear,
+          functional layouts.
+        </p>
       </Section>
 
       <Section>
-        <h2>Primary</h2>
+        <h2>Spacing scale</h2>
+        <p>
+          The spacing scale complements the typography scale, using multiples of
+          2, 4, and 8. It provides the precise increments necessary to establish
+          balanced spatial relationships within design compositions. This scale
+          is consistently applied across all GDS components.
+        </p>
 
         <CustomTable>
           <thead>
