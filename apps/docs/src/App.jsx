@@ -1,7 +1,14 @@
 import { BrowserRouter as Router } from 'react-router';
 import Nav from '@/components/Nav';
+import Footer from '@/components/Footer';
 import Pages from '@/pages';
-import { GlolbalStyle, StyledApp, StyledMain, StyledArticle } from './styles';
+import {
+  GlolbalStyle,
+  StyledApp,
+  StyledMain,
+  StyledArticle,
+  StyledLayout,
+} from './styles';
 
 const App = () => {
   return (
@@ -11,11 +18,15 @@ const App = () => {
       <Router>
         <Nav />
 
-        <StyledMain>
-          <StyledArticle>
-            <Pages />
-          </StyledArticle>
-        </StyledMain>
+        <StyledLayout>
+          <StyledMain>
+            <StyledArticle>
+              <Pages />
+            </StyledArticle>
+          </StyledMain>
+
+          <Footer />
+        </StyledLayout>
       </Router>
     </StyledApp>
   );

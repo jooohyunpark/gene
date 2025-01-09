@@ -1,6 +1,12 @@
 import styled, { createGlobalStyle, css } from 'styled-components';
 import { typography, color, space } from '@gene/token';
-import { navWidth, MediaAbove, SetPadding, textColor } from '@/styles/js';
+import {
+  navWidth,
+  MediaAbove,
+  SetPadding,
+  textColor,
+  headerHeight,
+} from '@/styles/js';
 
 export const GlolbalStyle = createGlobalStyle`
 ${css`
@@ -45,14 +51,24 @@ ${css`
 export const StyledApp = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 `;
 
-export const StyledMain = styled.main`
+export const StyledLayout = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: calc(100vh - ${headerHeight}px);
+  min-height: calc(100vh - ${headerHeight}px);
+
   ${MediaAbove('md')} {
-    margin-left: ${navWidth}px;
+    padding-left: ${navWidth}px;
+    min-height: 100vh;
+    min-height: 100dvh;
   }
 `;
+
+export const StyledMain = styled.main``;
 
 export const StyledArticle = styled.article`
   max-width: ${space(120)}px;
