@@ -19,6 +19,10 @@ export const StyledNav = styled.nav`
 export const StyledLabel = styled.div`
   padding: ${space(1)}px ${space(3)}px;
   ${typography.label01};
+  text-transform: uppercase;
+  color: ${color.gray60};
+  font-weight: 500;
+  margin-top: ${space(5)}px;
 `;
 
 export const StyledLink = styled(Link)`
@@ -60,3 +64,14 @@ export const StyledUl = styled.ul`
 `;
 
 export const StyledLi = styled.li``;
+
+export const Button = styled.button`
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+
+  display: grid;
+  place-content: center;
+`;

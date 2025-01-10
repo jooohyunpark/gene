@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Drawer from '@mui/material/Drawer';
 import { useLocation } from 'react-router';
+import MenuIcon from '@mui/icons-material/Menu';
 
 import useMediaAbove from '@/hooks/useMediaAbove';
 import Header from '@/components/Header';
@@ -11,6 +12,7 @@ import {
   StyledLi,
   StyledUl,
   StyledLabel,
+  Button,
 } from './styles';
 
 const CustomLink = ({ to, children, ...props }) => {
@@ -45,7 +47,9 @@ const Nav = () => {
     <>
       {!isDesktop && (
         <Header>
-          <button onClick={toggle}>Open drawer</button>
+          <Button aria-label="Open menu" onClick={toggle}>
+            <MenuIcon />
+          </Button>
         </Header>
       )}
 
@@ -91,11 +95,13 @@ const Nav = () => {
           </StyledUl>
 
           <StyledLabel>Components</StyledLabel>
-          <ul>
-            <li>d </li>
-            <li>d</li>
-            <li>1123 </li>
-          </ul>
+          <StyledUl>
+            <StyledLi>
+              <CustomLink to="/components/button" onClick={close}>
+                Button
+              </CustomLink>
+            </StyledLi>
+          </StyledUl>
         </StyledNav>
       </Drawer>
     </>

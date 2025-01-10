@@ -5,11 +5,11 @@ import { SetPadding, borderColor } from '@/styles/js';
 export const StyledFooter = styled.footer`
   display: flex;
   justify-content: flex-end;
+  column-gap: ${space(1.5)}px;
   border-top: 1px solid ${borderColor};
+  ${typography.label02};
 
   ${SetPadding({ x: true, y: false })};
-
-  ${typography.label02};
 
   && {
     padding-top: ${space(3)}px;
