@@ -1,12 +1,14 @@
 import { ReactNode } from 'react';
 
-export interface TileProps {
+export interface CardProps {
   outline?: boolean;
   color?: boolean;
+  size?: 'sm' | 'md' | 'lg';
   children?: ReactNode;
 }
 
-export interface GeneTileProps {
+export interface GeneCardProps {
   $outline?: boolean;
   $color?: boolean;
+  $size?: 'sm' | 'md' | 'lg';
 }
