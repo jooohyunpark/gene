@@ -1,14 +1,14 @@
 import { ReactNode } from 'react';
 
 export interface CardProps {
-  border?: boolean;
+  outline?: boolean;
   color?: 'blue' | 'gray' | 'white';
   size?: 'sm' | 'md' | 'lg';
   children?: ReactNode;
 }
 
 export interface GeneCardProps {
-  $border?: boolean;
+  $outline?: boolean;
   $color?: 'blue' | 'gray' | 'white';
   $size?: 'sm' | 'md' | 'lg';
 }

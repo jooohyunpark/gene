@@ -26,8 +26,8 @@ const GeneCard = styled.div<GeneCardProps>`
   padding: ${({ $size = 'md' }) => paddingSizes[$size]}px;
   background: ${({ $color = 'gray' }) => colors.background[$color]};
 
-  ${({ $border = 'gray', $color = 'gray' }) =>
-    $border &&
+  ${({ $outline, $color = 'gray' }) =>
+    $outline &&
     css`
       border-width: 1px;
       border-style: solid;
@@ -39,7 +39,7 @@ export const Card = forwardRef(
   (
     {
       color = 'gray',
-      border = true,
+      outline = true,
       size = 'md',
       children,
       ...props
@@ -51,7 +51,7 @@ export const Card = forwardRef(
         ref={ref}
         $color={color}
         $size={size}
-        $border={border}
+        $outline={outline}
         {...props}
       >
         {children}

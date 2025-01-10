@@ -6,6 +6,7 @@ import { LinkProps, GeneLinkProps } from './Link.types';
 const GeneLink = styled.a<GeneLinkProps>`
   text-decoration: ${({ $underline }) => ($underline ? 'underline' : 'none')};
   color: ${({ $color }) => ($color ? color.blue30 : color.black)};
+  color: currentColor;
 
   transition: color 0.2s ease-in-out;
 
