@@ -6,5 +6,5 @@ export default create({
   brandTitle: 'Gene UI Storybook',
   brandUrl: '/',
   brandTarget: '_self',
-  fontBase: `"Inter", sans-serif`,
+  fontBase: '"Inter", sans-serif',
 });
