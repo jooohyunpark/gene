@@ -1,3 +1,4 @@
 export * from './Link';
 export * from './Button';
 export * from './Card';
+export * from './Tag';

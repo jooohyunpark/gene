@@ -86,7 +86,7 @@ const Color = () => (
       </p>
 
       <BoxRow>
-        <Box $background={color.white} $border={color.gray100}></Box>
+        <Box $background={color.white} $border={color.gray30}></Box>
         <Box $background={color.black}></Box>
       </BoxRow>
     </Section>
