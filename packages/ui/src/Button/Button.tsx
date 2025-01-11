@@ -4,13 +4,39 @@ import { color, space, typography } from '@gene/token';
 import { ButtonProps, GeneButtonProps } from './Button.types';
 
 const colors = {
-  main: {
-    primary: color.blue30,
-    neutral: color.white,
+  primary: {
+    fill: {
+      background: color.blue30,
+      text: color.white,
+      hover: color.blue40,
+    },
+    outline: {
+      background: color.blue30,
+      text: color.blue30,
+      hover: `${color.blue20}33`,
+    },
+    subtle: {
+      background: 'transparent',
+      text: color.blue30,
+      hover: `${color.blue20}33`,
+    },
   },
-  secondary: {
-    primary: color.white,
-    neutral: color.blue40,
+  base: {
+    fill: {
+      background: color.white,
+      text: color.gray100,
+      hover: color.gray10,
+    },
+    outline: {
+      background: color.white,
+      text: color.white,
+      hover: `${color.gray10}33`,
+    },
+    subtle: {
+      background: 'transparent',
+      text: color.white,
+      hover: `${color.gray10}33`,
+    },
   },
 };
 
@@ -25,41 +51,43 @@ const GeneButton = styled.button<GeneButtonProps>`
   border-radius: ${space(0.5)}px;
   transition: background 0.2s ease-in-out;
 
-  ${({ $variant = 'primary', $type = 'fill' }) => {
-    const mainColor = colors.main[$variant];
-    const secondaryColor = colors.secondary[$variant];
+  ${({ $color = 'primary', $variant = 'fill' }) => {
+    const backgroundColor = colors[$color][$variant].background;
+    const textColor = colors[$color][$variant].text;
+    const hoverColor = colors[$color][$variant].hover;
 
-    switch ($type) {
+    switch ($variant) {
       case 'outline':
         return css`
           background: transparent;
-          color: ${mainColor};
-          border: 2px solid ${mainColor};
-
-          /* @media (hover: hover) {
-            &:hover {
-              background: ${secondaryColor};
-              color: ${color.white};
-            }
-          } */
-        `;
-      case 'empty':
-        return css`
-          background: transparent;
-          color: ${mainColor};
+          color: ${backgroundColor};
+          border: 2px solid ${backgroundColor};
 
           @media (hover: hover) {
             &:hover {
+              background: ${hoverColor};
+            }
+          }
+        `;
+      case 'subtle':
+        return css`
+          background: transparent;
+          color: ${textColor};
+
+          @media (hover: hover) {
+            &:hover {
+              background: ${hoverColor};
             }
           }
         `;
       default:
         return css`
-          background: ${mainColor};
-          color: ${secondaryColor};
+          background: ${backgroundColor};
+          color: ${textColor};
 
           @media (hover: hover) {
             &:hover {
+              background: ${hoverColor};
             }
           }
         `;
@@ -77,8 +105,8 @@ export const Button = forwardRef(
   (
     {
       onClick,
-      variant = 'primary',
-      type = 'fill',
+      color = 'primary',
+      variant = 'fill',
       children,
       ...props
     }: ButtonProps,
@@ -88,8 +116,8 @@ export const Button = forwardRef(
       <GeneButton
         ref={ref}
         onClick={onClick}
+        $color={color}
         $variant={variant}
-        $type={type}
         {...props}
       >
         {children}

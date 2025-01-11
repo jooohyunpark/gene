@@ -13,33 +13,33 @@ const colors = {
   background: {
     primary: color.blue10,
     neutral: color.gray10,
-    plain: color.white,
+    base: color.white,
   },
-  // border: {
-  //   primary: color.blue20,
-  //   neutral: color.gray30,
-  //   plain: color.gray70,
-  // },
+  border: {
+    primary: color.blue20,
+    neutral: color.gray30,
+    base: color.gray100,
+  },
 };
 
 const GeneCard = styled.div<GeneCardProps>`
   padding: ${({ $padding = 'md' }) => paddingSizes[$padding]}px;
   background: ${({ $color = 'neutral' }) => colors.background[$color]};
 
-  /* ${({ $outline, $color = 'neutral' }) =>
+  ${({ $outline, $color = 'neutral' }) =>
     $outline &&
     css`
       border-width: 2px;
       border-style: solid;
       border-color: ${colors.border[$color]};
-    `}; */
+    `};
 `;
 
 export const Card = forwardRef(
   (
     {
       color = 'neutral',
-      // outline = false,
+      outline = false,
       padding = 'md',
       children,
       style,
@@ -52,7 +52,7 @@ export const Card = forwardRef(
         ref={ref}
         $color={color}
         $padding={padding}
-        // $outline={outline}
+        $outline={outline}
         style={style}
         {...props}
       >

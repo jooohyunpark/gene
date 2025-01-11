@@ -20,6 +20,5 @@ export const Playground: Story = {
     children: 'Link to my works',
     color: 'inherit',
     underline: true,
-    // expressive: true,
   },
 };

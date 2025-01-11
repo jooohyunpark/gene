@@ -16,7 +16,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Playground: Story = {
   args: {
-    // outline: false,
+    outline: false,
     color: 'neutral',
     padding: 'md',
   },
