@@ -11,7 +11,6 @@ const GeneButton = styled.button`
   user-select: none;
   background: ${color.blue30};
   color: ${color.white};
-
   ${typography.button01};
 
   transition: background 0.2s ease-in-out;
@@ -23,13 +22,21 @@ const GeneButton = styled.button`
   }
 
   &:focus-visible {
-    outline-color: ${color.gray100};
+    outline: 2px ${color.white} solid;
+    outline-offset: 0;
+    box-shadow: 0 0 0 4px ${color.blue30};
   }
 `;
 
 export const Button = forwardRef(
   (
-    { onClick, children, ...props }: ButtonProps,
+    {
+      onClick,
+      variant = 'primary',
+      type = 'fill',
+      children,
+      ...props
+    }: ButtonProps,
     ref: ForwardedRef<HTMLButtonElement>,
   ) => {
     return (

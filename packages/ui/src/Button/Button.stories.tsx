@@ -18,6 +18,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Playground: Story = {
   args: {
+    variant: 'primary',
+    type: 'fill',
     children: 'Click me!',
     onClick: action('onClick'),
   },

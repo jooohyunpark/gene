@@ -1,6 +1,6 @@
 import { forwardRef, ForwardedRef } from 'react';
 import styled, { css } from 'styled-components';
-import { color } from '@gene/token';
+import { color, space } from '@gene/token';
 import { LinkProps, GeneLinkProps } from './Link.types';
 
 const colors = {
@@ -17,8 +17,8 @@ const GeneLink = styled.a<GeneLinkProps>`
     content: '';
     position: absolute;
     width: 100%;
-    height: 2px;
-    bottom: -2px;
+    height: ${space(0.25)}px;
+    bottom: ${-1 * space(0.25)}px;
     left: 0;
     background-color: currentColor;
 
