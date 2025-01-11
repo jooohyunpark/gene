@@ -18,8 +18,8 @@ export const Playground: Story = {
   args: {
     href: 'https://dev.parkjoohyun.com',
     children: 'Link to my works',
-    variant: 'neutral',
+    color: 'inherit',
     underline: true,
-    expressive: true,
+    // expressive: true,
   },
 };

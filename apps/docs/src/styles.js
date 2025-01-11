@@ -52,6 +52,9 @@ ${css`
 export const StyledApp = styled.div``;
 
 export const StyledLayout = styled.div`
+  max-width: 100vw;
+  overflow-x: hidden;
+
   ${MediaAbove('md')} {
     padding-left: ${navWidth}px;
   }
