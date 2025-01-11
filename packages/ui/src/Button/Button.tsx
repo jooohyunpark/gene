@@ -22,9 +22,10 @@ const GeneButton = styled.button<GeneButtonProps>`
   user-select: none;
   ${typography.button01};
 
+  border-radius: ${space(0.5)}px;
   transition: background 0.2s ease-in-out;
 
-  ${({ $variant = 'primary', $type = 'fill', $expressive = true }) => {
+  ${({ $variant = 'primary', $type = 'fill' }) => {
     const mainColor = colors.main[$variant];
     const secondaryColor = colors.secondary[$variant];
 
@@ -78,7 +79,6 @@ export const Button = forwardRef(
       onClick,
       variant = 'primary',
       type = 'fill',
-      expressive = true,
       children,
       ...props
     }: ButtonProps,
