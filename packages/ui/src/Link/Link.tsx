@@ -13,6 +13,7 @@ const GeneLink = styled.a<GeneLinkProps>`
   display: inline-block;
   text-decoration: ${({ $underline }) => ($underline ? 'underline' : 'none')};
   color: ${({ $color = 'inherit' }) => colors[$color]};
+  z-index: 0;
 
   ${({ $expressive }) =>
     $expressive &&
@@ -32,12 +33,11 @@ const GeneLink = styled.a<GeneLinkProps>`
         transform-origin: bottom right;
         transition: transform 0.25s ease-out;
         z-index: -1;
-        pointer-events: none;
       }
 
       @media (hover: hover) {
         &:hover {
-          color: white;
+          color: ${color.white};
 
           &::before {
             transform: scaleX(1);
