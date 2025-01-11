@@ -42,6 +42,7 @@ const Color = () => (
         Neutral gray color families give each design the opportunity for nuance
         and meaningful moments.
       </p>
+
       <BoxRow>
         <Box $background={color.gray10} $color={color.gray100}>
           10
@@ -74,6 +75,19 @@ const Color = () => (
         <Box $background={color.gray100} $color={color.white}>
           100
         </Box>
+      </BoxRow>
+    </Section>
+
+    <Section>
+      <h2>Base</h2>
+      <p>
+        Solid white and black colors for foundational purposes, like background
+        elements.
+      </p>
+
+      <BoxRow>
+        <Box $background={color.white} $border={color.gray100}></Box>
+        <Box $background={color.black}></Box>
       </BoxRow>
     </Section>
   </>

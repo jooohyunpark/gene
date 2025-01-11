@@ -1,5 +1,5 @@
 import { space, typography } from '@gene/token';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Box = styled.div`
   width: 20%;
@@ -13,6 +13,12 @@ export const Box = styled.div`
   padding: ${space(1)}px;
   font-weight: ${typography.fontWeight700};
   font-size: ${typography.fontSize20};
+
+  ${({ $border }) =>
+    $border &&
+    css`
+      border: 1px solid ${$border};
+    `}
 `;
 
 export const BoxRow = styled.div`
