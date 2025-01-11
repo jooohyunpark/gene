@@ -1,23 +1,77 @@
 import { forwardRef, ForwardedRef } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { color } from '@gene/token';
 import { LinkProps, GeneLinkProps } from './Link.types';
 
+const colors = {
+  primary: color.blue30,
+  neutral: color.gray100,
+};
+
 const GeneLink = styled.a<GeneLinkProps>`
-  text-decoration: ${({ $underline }) => ($underline ? 'underline' : 'none')};
-  color: ${({ $color }) => ($color ? color.blue30 : color.black)};
-  color: currentColor;
+  position: relative;
+  text-decoration: none;
+  color: ${({ $variant = 'neutral' }) => colors[$variant]};
 
-  transition: color 0.2s ease-in-out;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: currentColor;
 
-  @media (hover: hover) {
-    &:hover {
-      color: ${color.blue30};
-    }
+    ${({ $underline }) =>
+      $underline
+        ? css``
+        : css`
+            transform: scaleX(0);
+            transition: transform 0.25s ease-out;
+            transform-origin: bottom right;
+          `}
   }
 
-  &:focus {
-    outline-color: ${color.blue30};
+  ${({ $expressive, $underline }) =>
+    $expressive &&
+    css`
+      @media (hover: hover) {
+        &:hover {
+          &::after {
+            /* animatel underline linearly */
+            ${$underline &&
+            css`
+              animation: 0.25s ease-out slide-in;
+              transform-origin: bottom left;
+
+              @keyframes slide-in {
+                0% {
+                  transform: scaleX(0);
+                }
+                100% {
+                  transform: scaleX(1);
+                }
+              }
+            `}
+
+            /* transition underline */
+            ${!$underline &&
+            css`
+              transform: scaleX(1);
+              transform-origin: bottom left;
+            `}
+          }
+        }
+      }
+    `}
+
+  &:focus-visible {
+    /* inner indicator */
+    outline: 2px ${color.white} solid;
+    outline-offset: 0;
+
+    /* outer indicator */
+    box-shadow: 0 0 0 4px ${color.blue30};
   }
 `;
 
@@ -25,7 +79,8 @@ export const Link = forwardRef(
   (
     {
       href = '',
-      color = false,
+      variant = 'neutral',
+      expressive = true,
       underline = true,
       children,
       ...props
@@ -36,8 +91,9 @@ export const Link = forwardRef(
       <GeneLink
         ref={ref}
         href={href}
-        $color={color}
+        $variant={variant}
         $underline={underline}
+        $expressive={expressive}
         {...props}
       >
         {children}

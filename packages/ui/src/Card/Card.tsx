@@ -11,34 +11,34 @@ const paddingSizes = {
 
 const colors = {
   background: {
-    white: color.white,
-    blue: color.blue10,
-    gray: color.gray10,
+    primary: color.blue10,
+    neutral: color.gray10,
+    plain: color.white,
   },
   border: {
-    white: color.gray60,
-    blue: color.blue20,
-    gray: color.gray30,
+    primary: color.blue20,
+    neutral: color.gray30,
+    plain: color.gray60,
   },
 };
 
 const GeneCard = styled.div<GeneCardProps>`
   padding: ${({ $size = 'md' }) => paddingSizes[$size]}px;
-  background: ${({ $color = 'gray' }) => colors.background[$color]};
+  background: ${({ $variant = 'neutral' }) => colors.background[$variant]};
 
-  ${({ $outline, $color = 'gray' }) =>
+  ${({ $outline, $variant = 'neutral' }) =>
     $outline &&
     css`
-      border-width: 1px;
+      border-width: 2px;
       border-style: solid;
-      border-color: ${colors.border[$color]};
+      border-color: ${colors.border[$variant]};
     `};
 `;
 
 export const Card = forwardRef(
   (
     {
-      color = 'gray',
+      variant = 'neutral',
       outline = true,
       size = 'md',
       children,
@@ -49,7 +49,7 @@ export const Card = forwardRef(
     return (
       <GeneCard
         ref={ref}
-        $color={color}
+        $variant={variant}
         $size={size}
         $outline={outline}
         {...props}

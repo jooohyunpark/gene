@@ -3,11 +3,13 @@ import { ReactNode } from 'react';
 export interface LinkProps {
   href: string;
   underline?: boolean;
-  color?: boolean;
+  variant?: 'primary' | 'neutral';
+  expressive?: boolean;
   children?: ReactNode;
 }
 
 export interface GeneLinkProps {
   $underline?: boolean;
-  $color?: boolean;
+  $variant?: 'primary' | 'neutral';
+  $expressive?: boolean;
 }
