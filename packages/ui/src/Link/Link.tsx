@@ -1,5 +1,5 @@
 import { forwardRef, ForwardedRef } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { color } from '@gene/token';
 import { LinkProps, GeneLinkProps } from './Link.types';
 
@@ -10,14 +10,42 @@ const colors = {
 
 const GeneLink = styled.a<GeneLinkProps>`
   position: relative;
+  display: inline-block;
   text-decoration: ${({ $underline }) => ($underline ? 'underline' : 'none')};
   color: ${({ $color = 'inherit' }) => colors[$color]};
 
-  @media (hover: hover) {
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+  ${({ $expressive }) =>
+    $expressive &&
+    css`
+      transition: color 0.2s ease-out;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: -0.15em;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0 0.15em;
+        background: ${color.blue30};
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+        z-index: -1;
+        pointer-events: none;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          color: white;
+
+          &::before {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+          }
+        }
+      }
+    `}
 
   &:focus-visible {
     /* inner indicator */
@@ -34,7 +62,7 @@ export const Link = forwardRef(
     {
       href = '',
       color = 'inherit',
-      // expressive = true,
+      expressive = true,
       underline = true,
       children,
       ...props
@@ -47,7 +75,7 @@ export const Link = forwardRef(
         href={href}
         $color={color}
         $underline={underline}
-        // $expressive={expressive}
+        $expressive={expressive}
         {...props}
       >
         {children}
