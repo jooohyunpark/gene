@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-
+import { color } from '@gene/token';
+import { Card } from '../Card';
 import { Button } from './Button';
 
 const meta = {
@@ -20,7 +21,7 @@ export const Playground: Story = {
   args: {
     variant: 'primary',
     type: 'fill',
-    children: 'Click me!',
     onClick: action('onClick'),
   },
+  render: (args) => <Button {...args}>Click me!</Button>,
 };

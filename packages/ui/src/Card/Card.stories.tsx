@@ -18,14 +18,12 @@ export const Playground: Story = {
   args: {
     outline: false,
     variant: 'neutral',
-    size: 'md',
+    padding: 'md',
   },
   render: (args) => (
-    <div style={{ maxWidth: 500 }}>
-      <Card {...args}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-      </Card>
-    </div>
+    <Card {...args}>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </Card>
   ),
 };
