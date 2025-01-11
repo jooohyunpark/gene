@@ -10,28 +10,30 @@ const paddingSizes = {
 };
 
 const colors = {
-  background: {
-    primary: color.blue10,
-    neutral: color.gray10,
-    base: color.white,
+  primary: {
+    background: color.blue10,
+    border: color.blue20,
   },
-  border: {
-    primary: color.blue20,
-    neutral: color.gray30,
-    base: color.gray100,
+  neutral: {
+    background: color.gray10,
+    border: color.gray30,
+  },
+  base: {
+    background: color.white,
+    border: color.gray100,
   },
 };
 
 const GeneCard = styled.div<GeneCardProps>`
   padding: ${({ $padding = 'md' }) => paddingSizes[$padding]}px;
-  background: ${({ $color = 'neutral' }) => colors.background[$color]};
+  background: ${({ $color = 'neutral' }) => colors[$color].background};
 
   ${({ $outline, $color = 'neutral' }) =>
     $outline &&
     css`
-      border-width: 2px;
+      border-width: 1px;
       border-style: solid;
-      border-color: ${colors.border[$color]};
+      border-color: ${colors[$color].border};
     `};
 `;
 

@@ -47,7 +47,6 @@ const GeneButton = styled.button<GeneButtonProps>`
   -webkit-user-select: none;
   user-select: none;
   ${typography.button01};
-
   border-radius: ${space(0.5)}px;
   transition: background 0.2s ease-in-out;
 
