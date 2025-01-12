@@ -1,4 +1,4 @@
-import { Link } from '@gene/ui';
+import { Button, Link } from '@gene/ui';
 import Section from '@/components/Section';
 import { Table, Th, Td } from '@/components/Table';
 import { ExampleText } from './styles';
@@ -157,6 +157,8 @@ const Typography = () => {
             })}
           </tbody>
         </Table>
+
+        <Button>Click me</Button>
       </Section>
     </>
   );

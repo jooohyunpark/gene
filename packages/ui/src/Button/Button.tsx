@@ -9,16 +9,19 @@ const colors = {
       background: color.blue30,
       text: color.white,
       hover: color.blue40,
+      shahdow: color.blue40,
     },
     outline: {
       background: color.blue30,
       text: color.blue30,
       hover: `${color.blue20}33`,
+      shahdow: color.blue40,
     },
     subtle: {
       background: 'transparent',
       text: color.blue30,
       hover: `${color.blue20}33`,
+      shahdow: color.blue40,
     },
   },
   base: {
@@ -26,19 +29,24 @@ const colors = {
       background: color.white,
       text: color.gray100,
       hover: color.gray10,
+      shahdow: color.gray30,
     },
     outline: {
       background: color.white,
       text: color.white,
       hover: `${color.gray10}33`,
+      shahdow: color.gray30,
     },
     subtle: {
       background: 'transparent',
       text: color.white,
       hover: `${color.gray10}33`,
+      shahdow: color.gray30,
     },
   },
 };
+
+const shadowSize = space(0.5);
 
 const GeneButton = styled.button<GeneButtonProps>`
   padding: ${space(1)}px ${space(3)}px;
@@ -48,12 +56,15 @@ const GeneButton = styled.button<GeneButtonProps>`
   user-select: none;
   ${typography.button01};
   border-radius: ${space(0.5)}px;
-  transition: background 0.2s ease-in-out;
+  transition:
+    background 0.25s ease-in-out,
+    box-shadow 0.25s ease-in-out;
 
-  ${({ $color = 'primary', $variant = 'fill' }) => {
+  ${({ $color = 'primary', $variant = 'fill', $expressive = true }) => {
     const backgroundColor = colors[$color][$variant].background;
     const textColor = colors[$color][$variant].text;
     const hoverColor = colors[$color][$variant].hover;
+    const shadowColor = colors[$color][$variant].shahdow;
 
     switch ($variant) {
       case 'outline':
@@ -65,6 +76,11 @@ const GeneButton = styled.button<GeneButtonProps>`
           @media (hover: hover) {
             &:hover {
               background: ${hoverColor};
+
+              ${$expressive &&
+              css`
+                box-shadow: ${shadowSize}px ${shadowSize}px ${shadowColor};
+              `}
             }
           }
         `;
@@ -76,6 +92,11 @@ const GeneButton = styled.button<GeneButtonProps>`
           @media (hover: hover) {
             &:hover {
               background: ${hoverColor};
+
+              ${$expressive &&
+              css`
+                box-shadow: ${shadowSize}px ${shadowSize}px ${shadowColor};
+              `}
             }
           }
         `;
@@ -86,7 +107,13 @@ const GeneButton = styled.button<GeneButtonProps>`
 
           @media (hover: hover) {
             &:hover {
-              background: ${hoverColor};
+              ${$expressive
+                ? css`
+                    box-shadow: ${shadowSize}px ${shadowSize}px ${shadowColor};
+                  `
+                : css`
+                    background: ${hoverColor};
+                  `}
             }
           }
         `;
@@ -106,6 +133,7 @@ export const Button = forwardRef(
       onClick,
       color = 'primary',
       variant = 'fill',
+      expressive = true,
       children,
       ...props
     }: ButtonProps,
@@ -117,6 +145,7 @@ export const Button = forwardRef(
         onClick={onClick}
         $color={color}
         $variant={variant}
+        $expressive={expressive}
         {...props}
       >
         {children}

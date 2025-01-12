@@ -40,6 +40,7 @@ export const Playground: Story = {
   args: {
     color: 'primary',
     variant: 'fill',
+    expressive: true,
     onClick: action('onClick'),
     children: 'Click me!',
   },
