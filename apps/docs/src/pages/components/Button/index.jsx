@@ -3,6 +3,7 @@ import { Card, Button } from '@gene/ui';
 import Section from '@/components/Section';
 import PreviewBlock from '@/components/PreviewBlock';
 import { Table, Th, Td } from '@/components/Table';
+import Code from '@/components/Code';
 
 const ButtonComponent = () => (
   <>
@@ -79,26 +80,48 @@ const ButtonComponent = () => (
         </thead>
         <tbody>
           <tr>
-            <Td>variant</Td>
-            <Td>'fill' | 'outline' | 'subtle'</Td>
-            <Td>'fill'</Td>
+            <Td>
+              <Code>variant</Code>
+            </Td>
+            <Td>
+              <Code>'fill' | 'outline' | 'subtle'</Code>
+            </Td>
+            <Td>
+              <Code>'fill'</Code>
+            </Td>
             <Td>The component style variation.</Td>
           </tr>
           <tr>
-            <Td>color</Td>
-            <Td>'primary' | 'base'</Td>
-            <Td>'primary'</Td>
+            <Td>
+              <Code>color</Code>
+            </Td>
+            <Td>
+              <Code>'primary' | 'base'</Code>
+            </Td>
+            <Td>
+              <Code>'primary'</Code>
+            </Td>
             <Td>The color of the component.</Td>
           </tr>
           <tr>
-            <Td>expressive</Td>
-            <Td>boolean</Td>
-            <Td>true</Td>
+            <Td>
+              <Code>expressive</Code>
+            </Td>
+            <Td>
+              <Code>boolean</Code>
+            </Td>
+            <Td>
+              <Code>true</Code>
+            </Td>
             <Td>Set the expressive hover animation.</Td>
           </tr>
           <tr>
-            <Td>children</Td>
-            <Td>node</Td>
+            <Td>
+              <Code>children</Code>
+            </Td>
+            <Td>
+              <Code>node</Code>
+            </Td>
             <Td>-</Td>
             <Td>The content of the component.</Td>
           </tr>

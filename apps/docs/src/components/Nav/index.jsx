@@ -76,8 +76,8 @@ const Nav = () => {
               </CustomLink>
             </StyledLi>
             <StyledLi>
-              <CustomLink to="/foundation/typography" onClick={close}>
-                Typography
+              <CustomLink to="/foundation/design-tokens" onClick={close}>
+                Design Tokens
               </CustomLink>
             </StyledLi>
             <StyledLi>
@@ -86,8 +86,8 @@ const Nav = () => {
               </CustomLink>
             </StyledLi>
             <StyledLi>
-              <CustomLink to="/foundation/design-tokens" onClick={close}>
-                Design Tokens
+              <CustomLink to="/foundation/typography" onClick={close}>
+                Typography
               </CustomLink>
             </StyledLi>
           </StyledUl>

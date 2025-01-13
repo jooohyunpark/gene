@@ -5,10 +5,7 @@ const DesignTokens = () => (
   <>
     <Section>
       <h1>Design Tokens</h1>
-      <p>
-        ddd
-        <code>hello()</code>
-      </p>
+      <p>WIP</p>
     </Section>
   </>
 );
