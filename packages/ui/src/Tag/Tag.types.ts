@@ -1,8 +1,9 @@
-import { ReactNode } from 'react';
+import { ReactNode, MouseEventHandler } from 'react';
 
 export interface TagProps {
   color?: 'primary' | 'neutral';
   type?: 'div' | 'button' | 'a';
+  onClick?: MouseEventHandler;
   href?: string;
   children?: ReactNode;
 }

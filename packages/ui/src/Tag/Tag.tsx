@@ -27,11 +27,21 @@ const GeneTag = styled.div<GeneTagProps>`
 
 export const Tag = forwardRef(
   (
-    { href, color = 'neutral', type = 'div', children, ...props }: TagProps,
-    ref: ForwardedRef<HTMLDivElement>,
+    { href, color = 'neutral', onClick, children, ...props }: TagProps,
+    ref: ForwardedRef<HTMLDivElement | HTMLAnchorElement | HTMLButtonElement>,
   ) => {
     return (
-      <GeneTag ref={ref} as={type} href={href} $color={color} {...props}>
+      <GeneTag
+        ref={
+          ref as ForwardedRef<
+            HTMLDivElement & HTMLAnchorElement & HTMLButtonElement
+          >
+        }
+        as={onClick ? (href ? 'a' : 'button') : 'div'}
+        href={href}
+        $color={color}
+        {...props}
+      >
         {children}
       </GeneTag>
     );

@@ -123,7 +123,6 @@ const Typography = () => {
           needed. It is recommended to use different scales for responsive
           screens.
         </p>
-
         <Table>
           <thead>
             <tr>
@@ -157,8 +156,6 @@ const Typography = () => {
             })}
           </tbody>
         </Table>
-
-        <Button>Click me</Button>
       </Section>
     </>
   );
