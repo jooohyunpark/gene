@@ -12,14 +12,14 @@ import Button from '@/pages/components/Button';
 const Pages = () => {
   return (
     <Routes>
-      <Route path="/components/button" element={<Button />} />
+      <Route path="/" element={<GDS />} />
 
       <Route path="/foundation/design-tokens" element={<DesignTokens />} />
       <Route path="/foundation/typography" element={<Typography />} />
       <Route path="/foundation/spacing" element={<Spacing />} />
       <Route path="/foundation/color" element={<Color />} />
 
-      <Route path="/" element={<GDS />} />
+      <Route path="/components/button" element={<Button />} />
     </Routes>
   );
 };
