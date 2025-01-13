@@ -1,17 +1,25 @@
 import { Link } from '@gene/ui';
 import Section from '@/components/Section';
-import {} from './styles';
+import { HeroImage } from './styles';
 
 const GDS = () => (
   <>
     <Section>
       <h1>Gene Design System</h1>
       <p>
+        A gene is the basic unit of heredity. It is passed down from parents to
+        offspring and contain the information needed to determine physical and
+        biological traits. In a similar way, what you create defines who you
+        are.
+      </p>
+      <p>
         Gene Design System (GDS) is a concise, intelligent framework for
         showcasing creative works. Created by{' '}
         <Link href="https://dev.parkjoohyun.com/">Joohyun Park</Link> for his
         portfolio, it is intended for his personal use only.
       </p>
+
+      <HeroImage src="/gene_hero.jpg" alt="" />
     </Section>
 
     <Section>

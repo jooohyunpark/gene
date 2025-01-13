@@ -68,9 +68,7 @@ const Nav = () => {
           <CustomLink to="/" onClick={close}>
             Gene Design System
           </CustomLink>
-
           <StyledLabel>Foundation</StyledLabel>
-
           <StyledUl>
             <StyledLi>
               <CustomLink to="/foundation/color" onClick={close}>
@@ -93,7 +91,6 @@ const Nav = () => {
               </CustomLink>
             </StyledLi>
           </StyledUl>
-
           <StyledLabel>Components</StyledLabel>
           <StyledUl>
             <StyledLi>
