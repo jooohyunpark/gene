@@ -9,40 +9,23 @@ const colors = {
 };
 
 const GeneLink = styled.a<GeneLinkProps>`
-  position: relative;
-  display: inline-block;
   text-decoration: ${({ $underline }) => ($underline ? 'underline' : 'none')};
   color: ${({ $color = 'inherit' }) => colors[$color]};
-  z-index: 0;
 
   ${({ $expressive }) =>
     $expressive &&
     css`
-      transition: color 0.2s ease-out;
+      padding: 0 0.15em;
+      margin: 0 -0.15em;
 
-      &::before {
-        content: '';
-        position: absolute;
-        left: -0.15em;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        padding: 0 0.15em;
-        background: ${color.blue30};
-        transform: scaleX(0);
-        transform-origin: bottom right;
-        transition: transform 0.25s ease-out;
-        z-index: -1;
-      }
+      transition:
+        background 0.25s ease-out,
+        color 0.25s ease-out;
 
       @media (hover: hover) {
         &:hover {
+          background: ${color.blue30};
           color: ${color.white};
-
-          &::before {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-          }
         }
       }
     `}
