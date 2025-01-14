@@ -1,5 +1,4 @@
-import { space } from '@gene/token';
-import { Card, Button } from '@gene/ui';
+import { Button } from '@gene/ui';
 import Section from '@/components/Section';
 import PreviewBlock from '@/components/PreviewBlock';
 import { Table, Th, Td } from '@/components/Table';
@@ -18,7 +17,6 @@ const ButtonComponent = () => (
 
     <Section>
       <h2>Variant</h2>
-      <p>ddd</p>
 
       <PreviewBlock
         code={`<Button variant="fill" expressive={false}>Click me</Button>\n<Button variant="outline" expressive={false}>Click me</Button>\n<Button variant="subtle" expressive={false}>Click me</Button>`}
@@ -37,13 +35,13 @@ const ButtonComponent = () => (
 
     <Section>
       <h2>Color</h2>
-      <p>ddd</p>
 
-      <PreviewBlock>
+      <PreviewBlock
+        code={`<Button color="primary" expressive={false}>Click me</Button>\n<Button color="base" expressive={false}>Click me</Button>`}
+      >
         <Button color="primary" expressive={false}>
           Click me
         </Button>
-        {'\n'}
         <Button color="base" expressive={false}>
           Click me
         </Button>
@@ -52,9 +50,10 @@ const ButtonComponent = () => (
 
     <Section>
       <h2>Expressive</h2>
-      <p>ddd</p>
 
-      <PreviewBlock>
+      <PreviewBlock
+        code={`<Button variant="fill" expressive={true}>Click me</Button>\n<Button variant="outline" expressive={true}>Click me</Button>\n<Button variant="subtle" expressive={true}>Click me</Button>`}
+      >
         <Button variant="fill">Click me</Button>
         <Button variant="outline">Click me</Button>
         <Button variant="subtle">Click me</Button>

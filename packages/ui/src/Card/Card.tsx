@@ -20,7 +20,7 @@ const colors = {
   },
   base: {
     background: color.white,
-    border: color.gray100,
+    border: color.gray30,
   },
 };
 
