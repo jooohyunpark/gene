@@ -1,50 +1,46 @@
-import { Button } from '@gene/ui';
+import { Link } from '@gene/ui';
 import Section from '@/components/Section';
 import PreviewBlock from '@/components/PreviewBlock';
 import { Table, Th, Td } from '@/components/Table';
 import Code from '@/components/Code';
 
-const ButtonComponent = () => (
+const LinkComponent = () => (
   <>
     <Section>
-      <h1>Button</h1>
+      <h1>Link</h1>
       <p>
-        Buttons allow users to perform an action or to navigate to another page.
-        GDS offers different kinds of button variations which each suit for
-        different needs.
+        Links are a key component of GDS and are used as navigational elements
+        to access further information.
       </p>
-    </Section>
-
-    <Section>
-      <h2>Variant</h2>
-
-      <PreviewBlock
-        code={`<Button variant="fill" expressive={false}>Click me</Button>\n<Button variant="outline" expressive={false}>Click me</Button>\n<Button variant="subtle" expressive={false}>Click me</Button>`}
-      >
-        <Button variant="fill" expressive={false}>
-          Click me
-        </Button>
-        <Button variant="outline" expressive={false}>
-          Click me
-        </Button>
-        <Button variant="subtle" expressive={false}>
-          Click me
-        </Button>
-      </PreviewBlock>
     </Section>
 
     <Section>
       <h2>Color</h2>
 
       <PreviewBlock
-        code={`<Button color="primary" expressive={false}>Click me</Button>\n<Button color="base" expressive={false}>Click me</Button>`}
+        code={`<Link color="primary" expressive={false} underline={false}>Link to works</Link>\n<Link color="inherit" expressive={false} underline={false}>Link to works</Link>`}
       >
-        <Button color="primary" expressive={false}>
-          Click me
-        </Button>
-        <Button color="base" expressive={false}>
-          Click me
-        </Button>
+        <Link color="primary" expressive={false} underline={false}>
+          Link to works
+        </Link>
+        <Link color="inherit" expressive={false} underline={false}>
+          Link to works
+        </Link>
+      </PreviewBlock>
+    </Section>
+
+    <Section>
+      <h2>Underline</h2>
+
+      <PreviewBlock
+        code={`<Link color="primary" expressive={false}>Link to works</Link>\n<Link color="inherit" expressive={false}>Link to works</Link>`}
+      >
+        <Link color="primary" expressive={false}>
+          Link to works
+        </Link>
+        <Link color="inherit" expressive={false}>
+          Link to works
+        </Link>
       </PreviewBlock>
     </Section>
 
@@ -52,11 +48,10 @@ const ButtonComponent = () => (
       <h2>Expressive</h2>
 
       <PreviewBlock
-        code={`<Button variant="fill">Click me</Button>\n<Button variant="outline">Click me</Button>\n<Button variant="subtle">Click me</Button>`}
+        code={`<Link color="primary">Link to works</Link>\n<Link color="inherit">Link to works</Link>`}
       >
-        <Button variant="fill">Click me</Button>
-        <Button variant="outline">Click me</Button>
-        <Button variant="subtle">Click me</Button>
+        <Link color="primary">Link to works</Link>
+        <Link color="inherit">Link to works</Link>
       </PreviewBlock>
     </Section>
 
@@ -83,27 +78,27 @@ const ButtonComponent = () => (
         <tbody>
           <tr>
             <Td>
-              <Code>variant</Code>
-            </Td>
-            <Td>
-              <Code>'fill' | 'outline' | 'subtle'</Code>
-            </Td>
-            <Td>
-              <Code>'fill'</Code>
-            </Td>
-            <Td>The component style variation.</Td>
-          </tr>
-          <tr>
-            <Td>
               <Code>color</Code>
             </Td>
             <Td>
-              <Code>'primary' | 'base'</Code>
+              <Code>'primary' | 'inherit'</Code>
             </Td>
             <Td>
               <Code>'primary'</Code>
             </Td>
             <Td>The color of the component.</Td>
+          </tr>
+          <tr>
+            <Td>
+              <Code>underline</Code>
+            </Td>
+            <Td>
+              <Code>boolean</Code>
+            </Td>
+            <Td>
+              <Code>true</Code>
+            </Td>
+            <Td>Controls when the link should have an underline.</Td>
           </tr>
           <tr>
             <Td>
@@ -133,4 +128,4 @@ const ButtonComponent = () => (
   </>
 );
 
-export default ButtonComponent;
+export default LinkComponent;

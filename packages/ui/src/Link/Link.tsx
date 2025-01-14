@@ -30,6 +30,19 @@ const GeneLink = styled.a<GeneLinkProps>`
       }
     `}
 
+  ${({ $expressive, $underline }) =>
+    !$expressive &&
+    !$underline &&
+    css`
+      @media (hover: hover) {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    `}
+
+    
+
   &:focus-visible {
     /* inner indicator */
     outline: 2px ${color.white} solid;

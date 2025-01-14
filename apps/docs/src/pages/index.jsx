@@ -8,6 +8,7 @@ import Spacing from '@/pages/foundation/Spacing';
 import DesignTokens from '@/pages/foundation/DesignTokens';
 
 import Button from '@/pages/components/Button';
+import Link from '@/pages/components/Link';
 
 const Pages = () => {
   return (
@@ -20,6 +21,7 @@ const Pages = () => {
       <Route path="/foundation/color" element={<Color />} />
 
       <Route path="/components/button" element={<Button />} />
+      <Route path="/components/link" element={<Link />} />
     </Routes>
   );
 };
