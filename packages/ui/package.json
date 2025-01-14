@@ -15,7 +15,7 @@
     "build": "rollup --config rollup.config.mjs",
     "lint": "eslint .",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build --output-dir storybook-dist"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.26.3",
