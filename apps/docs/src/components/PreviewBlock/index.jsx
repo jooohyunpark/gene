@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import Prism from 'prismjs';
 
 import { Card } from '@gene/ui';
-import { space, typography, color } from '@gene/token';
+import { space, typography } from '@gene/token';
 import styled from 'styled-components';
 import { borderColor } from '@/styles/js';
 

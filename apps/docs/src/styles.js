@@ -20,7 +20,7 @@ ${css`
   }
 
   ::selection {
-    background-color: ${color.blue20}cc;
+    background-color: ${color.blue20};
   }
 
   h1 {
