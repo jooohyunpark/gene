@@ -1,8 +1,8 @@
 export const black = "#000000";
 export const white = "#ffffff";
 
-export const blue10 = "#f0f3ff";
-export const blue20 = "#ccd5ff";
+export const blue10 = "#f0f5ff";
+export const blue20 = "#ccdbff";
 export const blue30 = "#0000bf";
 export const blue40 = "#00005e";
 
