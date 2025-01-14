@@ -18,7 +18,7 @@ export const StyledNav = styled.nav`
 
 export const StyledLabel = styled.div`
   padding: ${space(1)}px ${space(3)}px;
-  ${typography.label01};
+  ${typography.label02};
   text-transform: uppercase;
   color: ${color.gray60};
   font-weight: 500;

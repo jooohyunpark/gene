@@ -9,9 +9,8 @@ const ButtonComponent = () => (
     <Section>
       <h1>Button</h1>
       <p>
-        Buttons allow users to perform an action or to navigate to another page.
-        GDS offers different kinds of button variations which each suit for
-        different needs.
+        Buttons allow users to perform an action. GDS offers different kinds of
+        button variations which each suit for different needs.
       </p>
     </Section>
 
