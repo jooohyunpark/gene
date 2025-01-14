@@ -14,6 +14,14 @@ export default defineConfig({
               fileName: false,
             },
           ],
+          [
+            'prismjs',
+            {
+              languages: ['javascript', 'jsx', 'css', 'html'],
+              theme: 'default',
+              css: true,
+            },
+          ],
         ],
       },
     }),

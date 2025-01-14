@@ -14,13 +14,13 @@ const colors = {
     outline: {
       background: color.blue30,
       text: color.blue30,
-      hover: `${color.blue20}4D`, // 30% opacity
+      hover: `${color.blue20}40`, // 25% opacity
       shahdow: color.blue40,
     },
     subtle: {
       background: 'transparent',
       text: color.blue30,
-      hover: `${color.blue20}4D`,
+      hover: `${color.blue20}40`,
       shahdow: color.blue40,
     },
   },
@@ -34,13 +34,13 @@ const colors = {
     outline: {
       background: color.white,
       text: color.white,
-      hover: `${color.gray20}4D`,
+      hover: `${color.gray20}40`,
       shahdow: color.gray30,
     },
     subtle: {
       background: 'transparent',
       text: color.white,
-      hover: `${color.gray20}4D`,
+      hover: `${color.gray20}40`,
       shahdow: color.gray30,
     },
   },

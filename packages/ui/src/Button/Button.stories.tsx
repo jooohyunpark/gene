@@ -42,6 +42,6 @@ export const Playground: Story = {
     variant: 'fill',
     expressive: true,
     onClick: action('onClick'),
-    children: 'Click me!',
+    children: 'Click me',
   },
 };

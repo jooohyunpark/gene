@@ -20,7 +20,9 @@ const ButtonComponent = () => (
       <h2>Variant</h2>
       <p>ddd</p>
 
-      <PreviewBlock>
+      <PreviewBlock
+        code={`<Button variant="fill" expressive={false}>Click me</Button>\n<Button variant="outline" expressive={false}>Click me</Button>\n<Button variant="subtle" expressive={false}>Click me</Button>`}
+      >
         <Button variant="fill" expressive={false}>
           Click me
         </Button>
@@ -41,6 +43,7 @@ const ButtonComponent = () => (
         <Button color="primary" expressive={false}>
           Click me
         </Button>
+        {'\n'}
         <Button color="base" expressive={false}>
           Click me
         </Button>

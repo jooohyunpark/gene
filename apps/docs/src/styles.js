@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle, css } from 'styled-components';
-import { typography, color, space } from '@gene/token';
+import { typography, color } from '@gene/token';
 import {
   navWidth,
   MediaAbove,
@@ -20,7 +20,7 @@ ${css`
   }
 
   ::selection {
-    background-color: ${color.blue20};
+    background-color: ${color.blue20}cc;
   }
 
   h1 {
