@@ -44,7 +44,6 @@ export const Card = forwardRef(
       outline = false,
       padding = 'md',
       children,
-      style,
       ...props
     }: CardProps,
     ref: ForwardedRef<HTMLDivElement>,
@@ -55,7 +54,6 @@ export const Card = forwardRef(
         $color={color}
         $padding={padding}
         $outline={outline}
-        style={style}
         {...props}
       >
         {children}

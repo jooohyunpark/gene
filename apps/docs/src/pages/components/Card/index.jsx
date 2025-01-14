@@ -7,11 +7,8 @@ import Code from '@/components/Code';
 const CardComponent = () => (
   <>
     <Section>
-      <h1>Link</h1>
-      <p>
-        Links are a key component of GDS and are used as navigational elements
-        to access further information.
-      </p>
+      <h1>Card</h1>
+      <p>Cards contain content and actions related to a single subject.</p>
     </Section>
 
     <Section>
@@ -130,7 +127,7 @@ const CardComponent = () => (
               <Code>boolean</Code>
             </Td>
             <Td>
-              <Code>true</Code>
+              <Code>false</Code>
             </Td>
             <Td>Controls when the link should have an outline.</Td>
           </tr>
