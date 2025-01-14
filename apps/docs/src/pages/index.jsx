@@ -9,6 +9,7 @@ import DesignTokens from '@/pages/foundation/DesignTokens';
 
 import Button from '@/pages/components/Button';
 import Link from '@/pages/components/Link';
+import Card from '@/pages/components/Card';
 
 const Pages = () => {
   return (
@@ -21,6 +22,7 @@ const Pages = () => {
       <Route path="/foundation/color" element={<Color />} />
 
       <Route path="/components/button" element={<Button />} />
+      <Route path="/components/card" element={<Card />} />
       <Route path="/components/link" element={<Link />} />
     </Routes>
   );

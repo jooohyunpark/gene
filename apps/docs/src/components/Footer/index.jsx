@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       <Link href="">Gene UI Storybook</Link> <span>/</span>{' '}
-      <Link href="">Joohyun Park</Link>
+      <Link href="https://dev.parkjoohyun.com">Joohyun Park</Link>
     </StyledFooter>
   );
 };

@@ -101,6 +101,11 @@ const Nav = () => {
               </CustomLink>
             </StyledLi>
             <StyledLi>
+              <CustomLink to="/components/card" onClick={close}>
+                Card
+              </CustomLink>
+            </StyledLi>
+            <StyledLi>
               <CustomLink to="/components/link" onClick={close}>
                 Link
               </CustomLink>

@@ -29,7 +29,7 @@ const StyledCodeCard = styled(Card)`
 
   & {
     pre {
-      padding: 0;
+      padding: ${space(2)}px;
       background: transparent;
     }
   }
@@ -46,7 +46,7 @@ const PreviewBlock = ({ code = '', children }) => {
         {children}
       </StyledCard>
 
-      <StyledCodeCard padding="lg">
+      <StyledCodeCard padding="sm">
         <pre>
           <code className="language-jsx">{code}</code>
         </pre>
