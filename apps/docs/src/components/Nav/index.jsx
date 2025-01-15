@@ -17,7 +17,6 @@ import {
 
 const CustomLink = ({ to, children, ...props }) => {
   const location = useLocation();
-
   const isActive = location.pathname === to;
 
   return (
@@ -28,8 +27,31 @@ const CustomLink = ({ to, children, ...props }) => {
 };
 
 const Nav = () => {
+  const navData = {
+    foundation: [
+      { text: 'Color', to: '/foundation/color' },
+      { text: 'Design Tokens', to: '/foundation/design-tokens' },
+      { text: 'Spacing', to: '/foundation/spacing' },
+      { text: 'Typography', to: '/foundation/typography' },
+    ],
+    components: [
+      { text: 'Button', to: '/components/button' },
+      { text: 'Link', to: '/components/link' },
+      { text: 'Card', to: '/components/card' },
+      { text: 'Tag', to: '/components/tag' },
+    ],
+  };
+
   const isDesktop = useMediaAbove('md');
   const [open, setOpen] = useState(false);
+
+  const sortAlphabetically = (array) => {
+    return array.sort((a, b) => {
+      if (a.text < b.text) return -1;
+      if (a.text > b.text) return 1;
+      return 0;
+    });
+  };
 
   useEffect(() => {
     close();
@@ -71,45 +93,26 @@ const Nav = () => {
 
           <StyledLabel>Foundation</StyledLabel>
           <StyledUl>
-            <StyledLi>
-              <CustomLink to="/foundation/color" onClick={close}>
-                Color
-              </CustomLink>
-            </StyledLi>
-            <StyledLi>
-              <CustomLink to="/foundation/design-tokens" onClick={close}>
-                Design Tokens
-              </CustomLink>
-            </StyledLi>
-            <StyledLi>
-              <CustomLink to="/foundation/spacing" onClick={close}>
-                Spacing
-              </CustomLink>
-            </StyledLi>
-            <StyledLi>
-              <CustomLink to="/foundation/typography" onClick={close}>
-                Typography
-              </CustomLink>
-            </StyledLi>
+            {sortAlphabetically(navData.foundation).map((d, i) => (
+              <StyledLi key={`foundation-${i}`}>
+                <CustomLink to={d.to} onClick={close}>
+                  {d.text}
+                </CustomLink>
+              </StyledLi>
+            ))}
           </StyledUl>
 
           <StyledLabel>Components</StyledLabel>
           <StyledUl>
-            <StyledLi>
-              <CustomLink to="/components/button" onClick={close}>
-                Button
-              </CustomLink>
-            </StyledLi>
-            <StyledLi>
-              <CustomLink to="/components/card" onClick={close}>
-                Card
-              </CustomLink>
-            </StyledLi>
-            <StyledLi>
-              <CustomLink to="/components/link" onClick={close}>
-                Link
-              </CustomLink>
-            </StyledLi>
+            <StyledUl>
+              {sortAlphabetically(navData.components).map((d, i) => (
+                <StyledLi key={`components-${i}`}>
+                  <CustomLink to={d.to} onClick={close}>
+                    {d.text}
+                  </CustomLink>
+                </StyledLi>
+              ))}
+            </StyledUl>
           </StyledUl>
         </StyledNav>
       </Drawer>

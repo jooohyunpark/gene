@@ -16,7 +16,9 @@ type Story = StoryObj<typeof meta>;
 
 export const Playground: Story = {
   args: {
-    children: 'Gene design system',
     color: 'neutral',
+    href: undefined,
+    onClick: undefined,
+    children: 'Gene Design System',
   },
 };
