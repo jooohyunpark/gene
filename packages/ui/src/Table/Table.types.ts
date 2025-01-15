@@ -10,6 +10,8 @@ export interface TableHeadProps {
 }
 
 export interface TableRowProps {
+  borderBottom?: boolean;
+  hover?: boolean;
   children?: ReactNode;
 }
 
@@ -25,4 +27,8 @@ export interface TableCellProps {
 
 export interface GeneTableHeadProps {
   $color?: 'primary' | 'neutral';
+}
+export interface GeneTableRowProps {
+  $borderBottom?: boolean;
+  $hover?: boolean;
 }

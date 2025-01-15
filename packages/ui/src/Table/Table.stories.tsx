@@ -1,5 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { TableContainer, Table, TableHead } from './Table';
+import {
+  TableContainer,
+  Table,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableBody,
+} from './Table';
 
 const meta = {
   title: 'Components/Table',
@@ -19,7 +26,22 @@ export const Playground: Story = {
   render: (args) => (
     <TableContainer>
       <Table {...args}>
-        <TableHead></TableHead>
+        <TableHead>
+          <TableRow>
+            <TableCell>Name</TableCell>
+            <TableCell>Name</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          <TableRow>
+            <TableCell>Name</TableCell>
+            <TableCell>Name</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Name</TableCell>
+            <TableCell>Name</TableCell>
+          </TableRow>
+        </TableBody>
       </Table>
     </TableContainer>
   ),

@@ -16,7 +16,7 @@ const GDS = () => (
         Gene Design System (GDS) is a concise, intelligent framework for
         showcasing creative works. Created by{' '}
         <Link href="https://dev.parkjoohyun.com/">Joohyun Park</Link> for his
-        portfolio, it is intended for his personal use only.
+        portfolio website, it is intended for his personal use only.
       </p>
 
       <HeroImage src="/gene_hero.jpg" alt="" />

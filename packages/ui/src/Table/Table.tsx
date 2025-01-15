@@ -1,12 +1,15 @@
 import { forwardRef, ForwardedRef } from 'react';
 import styled, { css } from 'styled-components';
 import { color, space, typography } from '@gene/token';
+import { TableRowContext, useTableRowContext } from './TableRowContext';
+
 import {
   TableProps,
   TableHeadProps,
   TableRowProps,
   TableCellProps,
   GeneTableHeadProps,
+  GeneTableRowProps,
 } from './Table.types';
 
 const colors = {
@@ -34,7 +37,23 @@ const GeneTableHead = styled.thead<GeneTableHeadProps>`
 
 const GeneTableBody = styled.tbody``;
 
-const GeneTableRow = styled.tr``;
+const GeneTableRow = styled.tr<GeneTableRowProps>`
+  ${({ $borderBottom = true }) =>
+    $borderBottom &&
+    css`
+      border-bottom: 1px solid ${color.gray30};
+    `}
+
+  ${({ $hover = true }) =>
+    $hover &&
+    css`
+      @media (hover: hover) {
+        &:hover {
+          background: ${color.gray10};
+        }
+      }
+    `}
+`;
 
 const GeneTableCell = styled.td`
   padding: ${space(1.5)}px ${space(3)}px;
@@ -83,23 +102,32 @@ export const TableBody = forwardRef(
     ref: ForwardedRef<HTMLTableSectionElement>,
   ) => {
     return (
-      <GeneTableBody
-        ref={ref as ForwardedRef<HTMLTableSectionElement>}
-        {...props}
-      >
-        {children}
-      </GeneTableBody>
+      <TableRowContext.Provider value={{ isBody: true }}>
+        <GeneTableBody
+          ref={ref as ForwardedRef<HTMLTableSectionElement>}
+          {...props}
+        >
+          {children}
+        </GeneTableBody>
+      </TableRowContext.Provider>
     );
   },
 );
 
 export const TableRow = forwardRef(
   (
-    { children, ...props }: TableRowProps,
+    { children, borderBottom = true, hover = true, ...props }: TableRowProps,
     ref: ForwardedRef<HTMLTableRowElement>,
   ) => {
+    const { isBody } = useTableRowContext(); // Consume the context
+
     return (
-      <GeneTableRow ref={ref as ForwardedRef<HTMLTableRowElement>} {...props}>
+      <GeneTableRow
+        ref={ref as ForwardedRef<HTMLTableRowElement>}
+        $borderBottom={isBody ? borderBottom : false}
+        $hover={isBody ? hover : false}
+        {...props}
+      >
         {children}
       </GeneTableRow>
     );
