@@ -1,7 +1,7 @@
 import { StyledSection } from './styles';
 
-const Section = ({ children }) => {
-  return <StyledSection>{children}</StyledSection>;
+const Section = ({ children, ...props }) => {
+  return <StyledSection {...props}>{children}</StyledSection>;
 };
 
 export default Section;

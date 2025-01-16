@@ -1,4 +1,5 @@
-import { Routes, Route } from 'react-router';
+import { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router';
 
 import GDS from '@/pages/GDS';
 
@@ -13,6 +14,12 @@ import Card from '@/pages/components/Card';
 import Tag from '@/pages/components/Tag';
 
 const Pages = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <Routes>
       <Route path="/" element={<GDS />} />

@@ -126,7 +126,8 @@ const Typography = () => {
         <h2>Type scale</h2>
         <p>
           The type scale ensures consistent type usage across the design and can
-          be easily customized with <Link href="">typography tokens</Link> as
+          be easily customized with{' '}
+          <Link href="#/foundation/design-tokens">typography tokens</Link> as
           needed. It is recommended to use different scales for responsive
           screens.
         </p>
