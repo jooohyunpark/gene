@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import Drawer from '@mui/material/Drawer';
 import { useLocation } from 'react-router';
+import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 
 import useMediaAbove from '@/hooks/useMediaAbove';

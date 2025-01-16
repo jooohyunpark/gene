@@ -29,7 +29,7 @@ const DesignTokens = () => {
         />
       </Section>
 
-      {/* <Section id="design-token-color">
+      <Section id="design-token-color">
         <h2>Color</h2>
         <TableContainer>
           <Table>
@@ -138,7 +138,7 @@ const DesignTokens = () => {
             </TableBody>
           </Table>
         </TableContainer>
-      </Section> */}
+      </Section>
     </>
   );
 };

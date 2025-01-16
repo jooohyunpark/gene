@@ -125,7 +125,7 @@ export const TableRow = forwardRef(
     { children, borderBottom = true, hover = true, ...props }: TableRowProps,
     ref: ForwardedRef<HTMLTableRowElement>,
   ) => {
-    const { isBody } = useTableRowContext(); // Consume the context
+    const { isBody } = useTableRowContext();
 
     return (
       <GeneTableRow

@@ -39,6 +39,7 @@ export default {
           {
             displayName: true,
             fileName: false,
+            ssr: false,
           },
         ],
       ],
