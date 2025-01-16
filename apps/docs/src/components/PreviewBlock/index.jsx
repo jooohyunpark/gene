@@ -42,9 +42,11 @@ const PreviewBlock = ({ code = '', children }) => {
 
   return (
     <StylePreviewBlock>
-      <StyledCard color="base" padding="lg">
-        {children}
-      </StyledCard>
+      {children && (
+        <StyledCard color="base" padding="lg">
+          {children}
+        </StyledCard>
+      )}
 
       <StyledCodeCard padding="sm">
         <pre>

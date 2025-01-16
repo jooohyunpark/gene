@@ -7,6 +7,7 @@ import {
   TableRow,
 } from '@gene/ui';
 import Section from '@/components/Section';
+import PreviewBlock from '@/components/PreviewBlock';
 import Code from '@/components/Code';
 import { StyledTableCell } from './styles';
 
@@ -19,6 +20,13 @@ const DesignTokens = () => {
           Design tokens are design decisions, translated into data. GDS provides
           primitive design tokens to ensure a cohesive experience.
         </p>
+      </Section>
+
+      <Section>
+        <h2>Usage</h2>
+        <PreviewBlock
+          code={`/* js */\nimport { color, typography, spacing } from '@gene/token';\n\n/* sass */\n@use '@gene/token/scss' as token;`}
+        />
       </Section>
 
       <Section id="design-token-color">
