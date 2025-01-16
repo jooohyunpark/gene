@@ -1,7 +1,14 @@
-import { Card } from '@gene/ui';
+import {
+  Card,
+  TableContainer,
+  Table,
+  TableRow,
+  TableHead,
+  TableBody,
+  TableCell,
+} from '@gene/ui';
 import Section from '@/components/Section';
 import PreviewBlock from '@/components/PreviewBlock';
-import { Table, Th, Td } from '@/components/Table';
 import Code from '@/components/Code';
 
 const CardComponent = () => (
@@ -77,73 +84,77 @@ const CardComponent = () => (
     <Section>
       <h2>Props</h2>
 
-      <Table>
-        <thead>
-          <tr>
-            <Th scope="col" align="left">
-              Name
-            </Th>
-            <Th scope="col" align="left">
-              Type
-            </Th>
-            <Th scope="col" align="left">
-              Default
-            </Th>
-            <Th scope="col" align="left">
-              Description
-            </Th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <Td>
-              <Code>color</Code>
-            </Td>
-            <Td>
-              <Code>'primary' | 'neutral' | 'base'</Code>
-            </Td>
-            <Td>
-              <Code>'neutral'</Code>
-            </Td>
-            <Td>The color of the component.</Td>
-          </tr>
-          <tr>
-            <Td>
-              <Code>padding</Code>
-            </Td>
-            <Td>
-              <Code>'sm' | 'md' | 'lg'</Code>
-            </Td>
-            <Td>
-              <Code>'md'</Code>
-            </Td>
-            <Td>The padding of the component.</Td>
-          </tr>
-          <tr>
-            <Td>
-              <Code>outline</Code>
-            </Td>
-            <Td>
-              <Code>boolean</Code>
-            </Td>
-            <Td>
-              <Code>false</Code>
-            </Td>
-            <Td>Controls when the link should have an outline.</Td>
-          </tr>
+      <TableContainer>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell component="th" scope="col" align="left">
+                Name
+              </TableCell>
+              <TableCell component="th" scope="col" align="left">
+                Type
+              </TableCell>
+              <TableCell component="th" scope="col" align="left">
+                Default
+              </TableCell>
+              <TableCell component="th" scope="col" align="left">
+                Description
+              </TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            <TableRow>
+              <TableCell>
+                <Code>color</Code>
+              </TableCell>
+              <TableCell>
+                <Code>'primary' | 'neutral' | 'base'</Code>
+              </TableCell>
+              <TableCell>
+                <Code>'neutral'</Code>
+              </TableCell>
+              <TableCell>The color of the component.</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>
+                <Code>padding</Code>
+              </TableCell>
+              <TableCell>
+                <Code>'sm' | 'md' | 'lg'</Code>
+              </TableCell>
+              <TableCell>
+                <Code>'md'</Code>
+              </TableCell>
+              <TableCell>The padding of the component.</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>
+                <Code>outline</Code>
+              </TableCell>
+              <TableCell>
+                <Code>boolean</Code>
+              </TableCell>
+              <TableCell>
+                <Code>false</Code>
+              </TableCell>
+              <TableCell>
+                Controls when the link should have an outline.
+              </TableCell>
+            </TableRow>
 
-          <tr>
-            <Td>
-              <Code>children</Code>
-            </Td>
-            <Td>
-              <Code>node</Code>
-            </Td>
-            <Td>-</Td>
-            <Td>The content of the component.</Td>
-          </tr>
-        </tbody>
-      </Table>
+            <TableRow>
+              <TableCell>
+                <Code>children</Code>
+              </TableCell>
+              <TableCell>
+                <Code>node</Code>
+              </TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>The content of the component.</TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </TableContainer>
     </Section>
   </>
 );

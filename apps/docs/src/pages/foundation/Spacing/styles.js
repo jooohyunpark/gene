@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-
+import { TableCell } from '@gene/ui';
 import { color, space } from '@gene/token';
 import { MediaAbove } from '@/styles/js';
-import { Table } from '@/components/Table';
 
 export const Box = styled.div`
   width: ${({ $size }) => $size}px;
@@ -10,9 +9,7 @@ export const Box = styled.div`
   background: ${color.blue20};
 `;
 
-export const CustomTable = styled(Table)``;
-
-export const StyledTd = styled.td`
+export const StyledTableCell = styled(TableCell)`
   ${MediaAbove('md')} {
     min-width: ${space(20)}px;
   }

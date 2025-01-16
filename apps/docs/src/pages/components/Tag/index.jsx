@@ -1,7 +1,14 @@
-import { Tag } from '@gene/ui';
+import {
+  Tag,
+  TableContainer,
+  Table,
+  TableRow,
+  TableHead,
+  TableBody,
+  TableCell,
+} from '@gene/ui';
 import Section from '@/components/Section';
 import PreviewBlock from '@/components/PreviewBlock';
-import { Table, Th, Td } from '@/components/Table';
 import Code from '@/components/Code';
 
 const TagComponent = () => (
@@ -40,72 +47,76 @@ const TagComponent = () => (
     <Section>
       <h2>Props</h2>
 
-      <Table>
-        <thead>
-          <tr>
-            <Th scope="col" align="left">
-              Name
-            </Th>
-            <Th scope="col" align="left">
-              Type
-            </Th>
-            <Th scope="col" align="left">
-              Default
-            </Th>
-            <Th scope="col" align="left">
-              Description
-            </Th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <Td>
-              <Code>color</Code>
-            </Td>
-            <Td>
-              <Code>'primary' | 'neutral'</Code>
-            </Td>
-            <Td>
-              <Code>'neutral'</Code>
-            </Td>
-            <Td>The color of the component.</Td>
-          </tr>
-          <tr>
-            <Td>
-              <Code>href</Code>
-            </Td>
-            <Td>
-              <Code>string</Code>
-            </Td>
-            <Td>-</Td>
-            <Td>URI or path. If provided, the tag will be a link.</Td>
-          </tr>
-          <tr>
-            <Td>
-              <Code>onClick</Code>
-            </Td>
-            <Td>
-              <Code>function</Code>
-            </Td>
-            <Td>-</Td>
-            <Td>
-              Handler to be called when the tag is clicked.
-              <br />
-              If provided, the tag will be a button.
-            </Td>
-          </tr>
-          <tr>
-            <Td>
-              <Code>children</Code>
-            </Td>
-            <Td>
-              <Code>node</Code>
-            </Td>
-            <Td>-</Td>
-            <Td>The content of the component.</Td>
-          </tr>
-        </tbody>
-      </Table>
+      <TableContainer>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell component="th" scope="col" align="left">
+                Name
+              </TableCell>
+              <TableCell component="th" scope="col" align="left">
+                Type
+              </TableCell>
+              <TableCell component="th" scope="col" align="left">
+                Default
+              </TableCell>
+              <TableCell component="th" scope="col" align="left">
+                Description
+              </TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            <TableRow>
+              <TableCell>
+                <Code>color</Code>
+              </TableCell>
+              <TableCell>
+                <Code>'primary' | 'neutral'</Code>
+              </TableCell>
+              <TableCell>
+                <Code>'neutral'</Code>
+              </TableCell>
+              <TableCell>The color of the component.</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>
+                <Code>href</Code>
+              </TableCell>
+              <TableCell>
+                <Code>string</Code>
+              </TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>
+                URI or path. If provided, the tag will be a link.
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>
+                <Code>onClick</Code>
+              </TableCell>
+              <TableCell>
+                <Code>function</Code>
+              </TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>
+                Handler to be called when the tag is clicked.
+                <br />
+                If provided, the tag will be a button.
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>
+                <Code>children</Code>
+              </TableCell>
+              <TableCell>
+                <Code>node</Code>
+              </TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>The content of the component.</TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </TableContainer>
     </Section>
   </>
 );

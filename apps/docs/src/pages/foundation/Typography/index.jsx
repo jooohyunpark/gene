@@ -1,6 +1,13 @@
-import { Link } from '@gene/ui';
+import {
+  Link,
+  TableContainer,
+  Table,
+  TableRow,
+  TableHead,
+  TableBody,
+  TableCell,
+} from '@gene/ui';
 import Section from '@/components/Section';
-import { Table, Th, Td } from '@/components/Table';
 import { ExampleText } from './styles';
 
 const Typography = () => {
@@ -123,39 +130,48 @@ const Typography = () => {
           needed. It is recommended to use different scales for responsive
           screens.
         </p>
-        <Table>
-          <thead>
-            <tr>
-              <Th scope="col" align="left">
-                Name
-              </Th>
-              <Th scope="col" align="left">
-                Size (px/rem)
-              </Th>
-              <Th scope="col">Line height (unitless)</Th>
-              <Th scope="col">Weight</Th>
-              <Th scope="col">Letter spacing (em)</Th>
-            </tr>
-          </thead>
-          <tbody>
-            {typographyData.map((data, i) => {
-              const { name, token, size, lineHeight, weight, letterSpacing } =
-                data;
 
-              return (
-                <tr key={i}>
-                  <Th scope="row" align="left">
-                    <ExampleText $token={token}>{name}</ExampleText>
-                  </Th>
-                  <Td>{size}</Td>
-                  <Td align="center">{lineHeight}</Td>
-                  <Td align="center">{weight}</Td>
-                  <Td align="center">{letterSpacing}</Td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </Table>
+        <TableContainer>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell component="th" scope="col" align="left">
+                  Name
+                </TableCell>
+                <TableCell component="th" scope="col" align="left">
+                  Size (px/rem)
+                </TableCell>
+                <TableCell component="th" scope="col">
+                  Line height (unitless)
+                </TableCell>
+                <TableCell component="th" scope="col">
+                  Weight
+                </TableCell>
+                <TableCell component="th" scope="col">
+                  Letter spacing (em)
+                </TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {typographyData.map((data, i) => {
+                const { name, token, size, lineHeight, weight, letterSpacing } =
+                  data;
+
+                return (
+                  <TableRow key={i}>
+                    <TableCell scope="row" align="left">
+                      <ExampleText $token={token}>{name}</ExampleText>
+                    </TableCell>
+                    <TableCell>{size}</TableCell>
+                    <TableCell align="center">{lineHeight}</TableCell>
+                    <TableCell align="center">{weight}</TableCell>
+                    <TableCell align="center">{letterSpacing}</TableCell>
+                  </TableRow>
+                );
+              })}
+            </TableBody>
+          </Table>
+        </TableContainer>
       </Section>
     </>
   );

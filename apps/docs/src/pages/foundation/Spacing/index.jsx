@@ -1,6 +1,13 @@
+import {
+  TableContainer,
+  Table,
+  TableRow,
+  TableHead,
+  TableBody,
+  TableCell,
+} from '@gene/ui';
 import Section from '@/components/Section';
-import { Th } from '@/components/Table';
-import { Box, CustomTable, StyledTd } from './styles';
+import { Box, StyledTableCell } from './styles';
 
 const Spacing = () => {
   const spacingData = [
@@ -37,28 +44,41 @@ const Spacing = () => {
           is consistently applied across all GDS components.
         </p>
 
-        <CustomTable>
-          <thead>
-            <tr>
-              <Th scope="col">Base unit multiplier</Th>
-              <Th scope="col">Size (px)</Th>
-              <Th scope="col" align="right" style={{ minWidth: 200 }}>
-                Example
-              </Th>
-            </tr>
-          </thead>
-          <tbody>
-            {spacingData.map((data, i) => (
-              <tr key={i}>
-                <StyledTd align="center">{data.multiplier}</StyledTd>
-                <StyledTd align="center">{data.size}</StyledTd>
-                <StyledTd align="right">
-                  <Box $size={data.size} />
-                </StyledTd>
-              </tr>
-            ))}
-          </tbody>
-        </CustomTable>
+        <TableContainer>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell component="th" scope="col">
+                  Base unit multiplier
+                </TableCell>
+                <TableCell component="th" scope="col">
+                  Size (px)
+                </TableCell>
+                <TableCell
+                  component="th"
+                  scope="col"
+                  align="right"
+                  style={{ minWidth: 200 }}
+                >
+                  Example
+                </TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {spacingData.map((data, i) => (
+                <TableRow key={i}>
+                  <StyledTableCell align="center">
+                    {data.multiplier}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">{data.size}</StyledTableCell>
+                  <StyledTableCell align="right">
+                    <Box $size={data.size} />
+                  </StyledTableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
       </Section>
     </>
   );
