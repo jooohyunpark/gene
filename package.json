@@ -6,7 +6,8 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "build": "yarn --cwd packages/ui build",
+    "build:ui": "yarn --cwd packages/ui build",
+    "build:docs": "yarn --cwd apps/docs build",
     "dev:docs": "yarn --cwd apps/docs dev",
     "storybook": "yarn --cwd packages/ui storybook"
   },

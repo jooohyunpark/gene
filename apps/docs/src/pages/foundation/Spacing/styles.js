@@ -4,6 +4,7 @@ import { color, space } from '@gene/token';
 import { MediaAbove } from '@/styles/js';
 
 export const Box = styled.div`
+  display: inline-block;
   width: ${({ $size }) => $size}px;
   aspect-ratio: 1 / 1;
   background: ${color.blue20};

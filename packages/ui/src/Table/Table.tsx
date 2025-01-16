@@ -2,14 +2,13 @@ import { forwardRef, ForwardedRef, HTMLAttributes } from 'react';
 import styled, { css } from 'styled-components';
 import { color, space, typography } from '@gene/token';
 import { TableRowContext, useTableRowContext } from './TableRowContext';
-
 import type {
-  TableProps,
   TableHeadProps,
   TableRowProps,
   TableCellProps,
   GeneTableHeadProps,
   GeneTableRowProps,
+  GeneTableCellProps,
 } from './Table.types';
 
 const colors = {
@@ -55,12 +54,16 @@ const GeneTableRow = styled.tr<GeneTableRowProps>`
     `}
 `;
 
-const GeneTableCell = styled.td`
+const GeneTableCell = styled.td<GeneTableCellProps>`
   padding: ${space(1.5)}px ${space(3)}px;
+  text-align: ${({ $align }) => $align};
 `;
 
 export const TableContainer = forwardRef(
-  ({ children, ...props }: TableProps, ref: ForwardedRef<HTMLDivElement>) => {
+  (
+    { children, ...props }: HTMLAttributes<HTMLDivElement>,
+    ref: ForwardedRef<HTMLDivElement>,
+  ) => {
     return (
       <GeneTableContainer ref={ref as ForwardedRef<HTMLDivElement>} {...props}>
         {children}
@@ -70,7 +73,10 @@ export const TableContainer = forwardRef(
 );
 
 export const Table = forwardRef(
-  ({ children, ...props }: TableProps, ref: ForwardedRef<HTMLTableElement>) => {
+  (
+    { children, ...props }: HTMLAttributes<HTMLTableElement>,
+    ref: ForwardedRef<HTMLTableElement>,
+  ) => {
     return (
       <GeneTable ref={ref as ForwardedRef<HTMLTableElement>} {...props}>
         {children}
@@ -136,14 +142,26 @@ export const TableRow = forwardRef(
 
 export const TableCell = forwardRef(
   (
-    { component = 'td', scope = 'col', children, ...props }: TableCellProps,
+    {
+      component = 'td',
+      scope = 'col',
+      align = 'left',
+      children,
+      ...props
+    }: TableCellProps,
     ref: ForwardedRef<HTMLTableCellElement>,
   ) => {
+    const defaultAlign = component === 'th' ? 'center' : 'left';
+    const finalAlign = align || defaultAlign;
+
+    const scopeProp = component === 'th' ? { scope } : {};
+
     return (
       <GeneTableCell
         ref={ref as ForwardedRef<HTMLTableCellElement>}
         as={component}
-        scope={scope}
+        $align={finalAlign}
+        {...scopeProp}
         {...props}
       >
         {children}

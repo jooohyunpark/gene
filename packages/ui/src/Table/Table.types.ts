@@ -1,8 +1,4 @@
-import { ReactNode, HTMLAttributes } from 'react';
-
-export interface TableProps extends HTMLAttributes<HTMLTableElement> {
-  children?: ReactNode;
-}
+import { HTMLAttributes } from 'react';
 
 export interface TableHeadProps
   extends HTMLAttributes<HTMLTableSectionElement> {
@@ -17,6 +13,7 @@ export interface TableRowProps extends HTMLAttributes<HTMLTableRowElement> {
 export interface TableCellProps extends HTMLAttributes<HTMLTableCellElement> {
   component?: 'th' | 'td';
   scope?: 'row' | 'col' | 'rowgroup' | 'colgroup';
+  align?: 'left' | 'center' | 'right';
 }
 
 export interface GeneTableHeadProps {
@@ -25,4 +22,8 @@ export interface GeneTableHeadProps {
 export interface GeneTableRowProps {
   $borderBottom?: boolean;
   $hover?: boolean;
+}
+
+export interface GeneTableCellProps {
+  $align?: 'left' | 'center' | 'right';
 }

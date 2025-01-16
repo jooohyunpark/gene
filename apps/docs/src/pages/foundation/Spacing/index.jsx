@@ -53,12 +53,7 @@ const Spacing = () => {
                 <StyledTableCell component="th" scope="col">
                   Size (px)
                 </StyledTableCell>
-                <StyledTableCell
-                  component="th"
-                  scope="col"
-                  align="right"
-                  style={{ minWidth: 200 }}
-                >
+                <StyledTableCell component="th" scope="col" align="right">
                   Example
                 </StyledTableCell>
               </TableRow>
