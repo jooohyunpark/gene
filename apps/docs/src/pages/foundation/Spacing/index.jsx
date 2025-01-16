@@ -65,7 +65,7 @@ const Spacing = () => {
                     {data.multiplier}
                   </StyledTableCell>
                   <StyledTableCell align="center">{data.size}</StyledTableCell>
-                  <StyledTableCell align="right">
+                  <StyledTableCell align="right" style={{ lineHeight: 0 }}>
                     <Box $size={data.size} />
                   </StyledTableCell>
                 </TableRow>
