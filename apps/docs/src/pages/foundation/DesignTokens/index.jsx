@@ -1,7 +1,15 @@
 import { color, typography, space } from '@gene/token';
+import {
+  TableContainer,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
+  Link,
+  Button,
+} from '@gene/ui';
 import Section from '@/components/Section';
-
-console.log(color);
 
 const DesignTokens = () => (
   <>
@@ -22,6 +30,20 @@ const DesignTokens = () => (
           </div>
         ))}
       </div>
+
+      <TableContainer>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>Token</TableCell>
+            </TableRow>
+          </TableHead>
+        </Table>
+      </TableContainer>
+
+      <Link></Link>
+
+      <Button onClick={() => console.log('ddd')}>ddddd</Button>
     </Section>
   </>
 );

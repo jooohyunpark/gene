@@ -1,10 +1,11 @@
-import { ReactNode, MouseEventHandler } from 'react';
+import { HTMLAttributes } from 'react';
 
-export interface TagProps {
+export interface TagProps
+  extends HTMLAttributes<
+    HTMLDivElement | HTMLAnchorElement | HTMLButtonElement
+  > {
   color?: 'primary' | 'neutral';
-  onClick?: MouseEventHandler;
   href?: string;
-  children?: ReactNode;
 }
 
 export interface GeneTagProps {

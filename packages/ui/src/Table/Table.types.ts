@@ -1,28 +1,22 @@
-import { ReactNode } from 'react';
+import { ReactNode, HTMLAttributes } from 'react';
 
-export interface TableProps {
+export interface TableProps extends HTMLAttributes<HTMLTableElement> {
   children?: ReactNode;
 }
 
-export interface TableHeadProps {
+export interface TableHeadProps
+  extends HTMLAttributes<HTMLTableSectionElement> {
   color?: 'primary' | 'neutral';
-  children?: ReactNode;
 }
 
-export interface TableRowProps {
+export interface TableRowProps extends HTMLAttributes<HTMLTableRowElement> {
   borderBottom?: boolean;
   hover?: boolean;
-  children?: ReactNode;
 }
 
-export interface TableBodyProps {
-  children?: ReactNode;
-}
-
-export interface TableCellProps {
+export interface TableCellProps extends HTMLAttributes<HTMLTableCellElement> {
   component?: 'th' | 'td';
   scope?: 'row' | 'col' | 'rowgroup' | 'colgroup';
-  children?: ReactNode;
 }
 
 export interface GeneTableHeadProps {

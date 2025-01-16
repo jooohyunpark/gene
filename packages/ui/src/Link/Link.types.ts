@@ -1,11 +1,10 @@
-import { ReactNode } from 'react';
+import { HTMLAttributes } from 'react';
 
-export interface LinkProps {
+export interface LinkProps extends HTMLAttributes<HTMLAnchorElement> {
   href: string;
   underline?: boolean;
   color?: 'primary' | 'inherit';
   expressive?: boolean;
-  children?: ReactNode;
 }
 
 export interface GeneLinkProps {

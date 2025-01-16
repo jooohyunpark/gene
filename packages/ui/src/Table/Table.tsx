@@ -1,9 +1,9 @@
-import { forwardRef, ForwardedRef } from 'react';
+import { forwardRef, ForwardedRef, HTMLAttributes } from 'react';
 import styled, { css } from 'styled-components';
 import { color, space, typography } from '@gene/token';
 import { TableRowContext, useTableRowContext } from './TableRowContext';
 
-import {
+import type {
   TableProps,
   TableHeadProps,
   TableRowProps,
@@ -98,7 +98,7 @@ export const TableHead = forwardRef(
 
 export const TableBody = forwardRef(
   (
-    { children, ...props }: TableRowProps,
+    { children, ...props }: HTMLAttributes<HTMLTableSectionElement>,
     ref: ForwardedRef<HTMLTableSectionElement>,
   ) => {
     return (

@@ -1,7 +1,7 @@
 import { forwardRef, ForwardedRef } from 'react';
 import styled, { css } from 'styled-components';
 import { color, space, typography } from '@gene/token';
-import { ButtonProps, GeneButtonProps } from './Button.types';
+import type { ButtonProps, GeneButtonProps } from './Button.types';
 
 const colors = {
   primary: {
@@ -130,7 +130,6 @@ const GeneButton = styled.button<GeneButtonProps>`
 export const Button = forwardRef(
   (
     {
-      onClick,
       color = 'primary',
       variant = 'fill',
       expressive = true,
@@ -142,7 +141,6 @@ export const Button = forwardRef(
     return (
       <GeneButton
         ref={ref}
-        onClick={onClick}
         $color={color}
         $variant={variant}
         $expressive={expressive}
