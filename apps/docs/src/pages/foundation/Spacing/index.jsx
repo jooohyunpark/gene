@@ -4,7 +4,6 @@ import {
   TableRow,
   TableHead,
   TableBody,
-  TableCell,
 } from '@gene/ui';
 import Section from '@/components/Section';
 import { Box, StyledTableCell } from './styles';
@@ -48,20 +47,20 @@ const Spacing = () => {
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell component="th" scope="col">
+                <StyledTableCell component="th" scope="col">
                   Base unit multiplier
-                </TableCell>
-                <TableCell component="th" scope="col">
+                </StyledTableCell>
+                <StyledTableCell component="th" scope="col">
                   Size (px)
-                </TableCell>
-                <TableCell
+                </StyledTableCell>
+                <StyledTableCell
                   component="th"
                   scope="col"
                   align="right"
                   style={{ minWidth: 200 }}
                 >
                   Example
-                </TableCell>
+                </StyledTableCell>
               </TableRow>
             </TableHead>
             <TableBody>

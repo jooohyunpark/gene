@@ -57,5 +57,9 @@ export const StyledSection = styled.section`
       margin-block-start: ${space(2)}px;
       margin-block-end: ${space(1)}px;
     }
+
+    div:has(> table) {
+      margin-block-start: ${space(3)}px;
+    }
   }
 `;

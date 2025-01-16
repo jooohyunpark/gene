@@ -1,41 +1,41 @@
 @use "sass:map";
 
-$white: #ffffff !default;
-$black: #000000 !default;
+$colorWhite: #ffffff !default;
+$colorBlack: #000000 !default;
 
-$blue10: #f0f3ff !default;
-$blue20: #ccd5ff !default;
-$blue30: #0000bf !default;
-$blue40: #00005e !default;
+$colorBlue10: #f0f3ff !default;
+$colorBlue20: #ccd5ff !default;
+$colorBlue30: #0000bf !default;
+$colorBlue40: #00005e !default;
 
-$gray10: #f4f4f4 !default;
-$gray20: #e0e0e0 !default;
-$gray30: #c6c6c6 !default;
-$gray40: #a8a8a8 !default;
-$gray50: #8d8d8d !default;
-$gray60: #6f6f6f !default;
-$gray70: #525252 !default;
-$gray80: #393939 !default;
-$gray90: #262626 !default;
-$gray100: #161616 !default;
+$colorGray10: #f4f4f4 !default;
+$colorGray20: #e0e0e0 !default;
+$colorGray30: #c6c6c6 !default;
+$colorGray40: #a8a8a8 !default;
+$colorGray50: #8d8d8d !default;
+$colorGray60: #6f6f6f !default;
+$colorGray70: #525252 !default;
+$colorGray80: #393939 !default;
+$colorGray90: #262626 !default;
+$colorGray100: #161616 !default;
 
 $color: (
-  blue10: $blue10,
-  blue20: $blue20,
-  blue30: $blue30,
-  blue40: $blue40,
+  blue10: $colorBlue10,
+  blue20: $colorBlue20,
+  blue30: $colorBlue30,
+  blue40: $colorBlue40,
 
-  gray10: $gray10,
-  gray20: $gray20,
-  gray30: $gray30,
-  gray40: $gray40,
-  gray50: $gray50,
-  gray60: $gray60,
-  gray70: $gray70,
-  gray80: $gray80,
-  gray90: $gray90,
-  gray100: $gray100,
+  gray10: $colorGray10,
+  gray20: $colorGray20,
+  gray30: $colorGray30,
+  gray40: $colorGray40,
+  gray50: $colorGray50,
+  gray60: $colorGray60,
+  gray70: $colorGray70,
+  gray80: $colorGray80,
+  gray90: $colorGray90,
+  gray100: $colorGray100,
 
-  white: $white,
-  black: $black,
+  white: $colorWhite,
+  black: $colorBlack,
 ) !default;

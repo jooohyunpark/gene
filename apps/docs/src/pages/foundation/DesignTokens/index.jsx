@@ -3,49 +3,67 @@ import {
   TableContainer,
   Table,
   TableBody,
-  TableCell,
   TableHead,
   TableRow,
-  Link,
-  Button,
 } from '@gene/ui';
 import Section from '@/components/Section';
+import Code from '@/components/Code';
+import { StyledTableCell } from './styles';
 
-const DesignTokens = () => (
-  <>
-    <Section>
-      <h1>Design Tokens</h1>
-      <p>
-        Design tokens are design decisions, translated into data. GDS provides
-        primitive design tokens to ensure a cohesive experience.
-      </p>
-    </Section>
+const DesignTokens = () => {
+  const capitalizeFirstLetter = (str) => {
+    if (!str) return str;
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+  };
 
-    <Section>
-      <h2>Color</h2>
-      <div>
-        {Object.entries(color).map(([key, value], i) => (
-          <div key={i}>
-            color.{key} {value}
-          </div>
-        ))}
-      </div>
+  return (
+    <>
+      <Section>
+        <h1>Design Tokens</h1>
+        <p>
+          Design tokens are design decisions, translated into data. GDS provides
+          primitive design tokens to ensure a cohesive experience.
+        </p>
+      </Section>
 
-      <TableContainer>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>Token</TableCell>
-            </TableRow>
-          </TableHead>
-        </Table>
-      </TableContainer>
+      <Section>
+        <h2>Color</h2>
 
-      <Link></Link>
-
-      <Button onClick={() => console.log('ddd')}>ddddd</Button>
-    </Section>
-  </>
-);
+        <TableContainer>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <StyledTableCell component="th" scope="col" align="left">
+                  Token (standard)
+                </StyledTableCell>
+                <StyledTableCell component="th" scope="col" align="left">
+                  Token (sass)
+                </StyledTableCell>
+                <StyledTableCell component="th" scope="col" align="left">
+                  Value
+                </StyledTableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {Object.entries(color).map(([key, value], i) => (
+                <TableRow key={i}>
+                  <StyledTableCell>
+                    <Code>color.{key}</Code>
+                  </StyledTableCell>
+                  <StyledTableCell>
+                    <Code>$color{capitalizeFirstLetter(key)}</Code>
+                  </StyledTableCell>
+                  <StyledTableCell>
+                    <Code>{value}</Code>
+                  </StyledTableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Section>
+    </>
+  );
+};
 
 export default DesignTokens;
