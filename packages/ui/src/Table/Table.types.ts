@@ -7,7 +7,7 @@ export interface TableHeadProps
 
 export interface TableRowProps extends HTMLAttributes<HTMLTableRowElement> {
   borderBottom?: boolean;
-  hover?: boolean;
+  expressive?: boolean;
 }
 
 export interface TableCellProps extends HTMLAttributes<HTMLTableCellElement> {
@@ -21,7 +21,7 @@ export interface GeneTableHeadProps {
 }
 export interface GeneTableRowProps {
   $borderBottom?: boolean;
-  $hover?: boolean;
+  $expressive?: boolean;
 }
 
 export interface GeneTableCellProps {

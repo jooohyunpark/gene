@@ -39,6 +39,7 @@ const Nav = () => {
       { text: 'Link', to: '/components/link' },
       { text: 'Card', to: '/components/card' },
       { text: 'Tag', to: '/components/tag' },
+      { text: 'Table', to: '/components/table' },
     ],
   };
 

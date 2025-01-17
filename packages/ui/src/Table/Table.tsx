@@ -43,8 +43,8 @@ const GeneTableRow = styled.tr<GeneTableRowProps>`
       border-bottom: 1px solid ${color.gray30};
     `}
 
-  ${({ $hover = true }) =>
-    $hover &&
+  ${({ $expressive = true }) =>
+    $expressive &&
     css`
       @media (hover: hover) {
         &:hover {
@@ -122,7 +122,12 @@ export const TableBody = forwardRef(
 
 export const TableRow = forwardRef(
   (
-    { children, borderBottom = true, hover = true, ...props }: TableRowProps,
+    {
+      children,
+      borderBottom = true,
+      expressive = true,
+      ...props
+    }: TableRowProps,
     ref: ForwardedRef<HTMLTableRowElement>,
   ) => {
     const { isBody } = useTableRowContext();
@@ -131,7 +136,7 @@ export const TableRow = forwardRef(
       <GeneTableRow
         ref={ref as ForwardedRef<HTMLTableRowElement>}
         $borderBottom={isBody ? borderBottom : false}
-        $hover={isBody ? hover : false}
+        $expressive={isBody ? expressive : false}
         {...props}
       >
         {children}

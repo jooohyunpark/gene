@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Link } from './Link';
 
-const meta = {
+const meta: Meta<typeof Link> = {
   title: 'Components/Link',
   component: Link,
   parameters: {
@@ -9,9 +9,10 @@ const meta = {
   },
   tags: ['autodocs'],
   argTypes: {},
-} satisfies Meta<typeof Link>;
+};
 
 export default meta;
+
 type Story = StoryObj<typeof meta>;
 
 export const Playground: Story = {

@@ -25,7 +25,7 @@ const DesignTokens = () => {
       <Section>
         <h2>Usage</h2>
         <PreviewBlock
-          code={`/* js */\nimport { color, typography, spacing } from '@gene/token';\n\n/* sass */\n@use '@gene/token/scss' as token;`}
+          code={`// js\nimport { color, typography, spacing } from '@gene/token';\n\n// sass\n@use '@gene/token/scss' as token;`}
         />
       </Section>
 
