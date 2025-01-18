@@ -1,10 +1,15 @@
 import { forwardRef, ForwardedRef, HTMLAttributes } from 'react';
 import styled, { css } from 'styled-components';
 import { color, space, typography } from '@gene/token';
-import { TableRowContext, useTableRowContext } from './TableRowContext';
+import {
+  TableContext,
+  TableSectionContext,
+  useTableContext,
+  useTableSectionContext,
+} from './TableContext';
+
 import type {
-  TableHeadProps,
-  TableRowProps,
+  TableProps,
   TableCellProps,
   GeneTableHeadProps,
   GeneTableRowProps,
@@ -74,30 +79,42 @@ export const TableContainer = forwardRef(
 
 const TableBase = forwardRef(
   (
-    { children, ...props }: HTMLAttributes<HTMLTableElement>,
+    {
+      color = 'primary',
+      expressive = true,
+      borderBottom = true,
+      children,
+      ...props
+    }: TableProps,
     ref: ForwardedRef<HTMLTableElement>,
   ) => {
     return (
-      <GeneTable ref={ref as ForwardedRef<HTMLTableElement>} {...props}>
-        {children}
-      </GeneTable>
+      <TableContext.Provider value={{ color, expressive, borderBottom }}>
+        <GeneTable ref={ref as ForwardedRef<HTMLTableElement>} {...props}>
+          {children}
+        </GeneTable>
+      </TableContext.Provider>
     );
   },
 );
 
 export const TableHead = forwardRef(
   (
-    { color = 'primary', children, ...props }: TableHeadProps,
+    { children, ...props }: HTMLAttributes<HTMLTableSectionElement>,
     ref: ForwardedRef<HTMLTableSectionElement>,
   ) => {
+    const { color } = useTableContext();
+
     return (
-      <GeneTableHead
-        ref={ref as ForwardedRef<HTMLTableSectionElement>}
-        $color={color}
-        {...props}
-      >
-        {children}
-      </GeneTableHead>
+      <TableSectionContext.Provider value={{ section: 'head' }}>
+        <GeneTableHead
+          ref={ref as ForwardedRef<HTMLTableSectionElement>}
+          $color={color}
+          {...props}
+        >
+          {children}
+        </GeneTableHead>
+      </TableSectionContext.Provider>
     );
   },
 );
@@ -108,35 +125,31 @@ export const TableBody = forwardRef(
     ref: ForwardedRef<HTMLTableSectionElement>,
   ) => {
     return (
-      <TableRowContext.Provider value={{ isBody: true }}>
+      <TableSectionContext.Provider value={{ section: 'body' }}>
         <GeneTableBody
           ref={ref as ForwardedRef<HTMLTableSectionElement>}
           {...props}
         >
           {children}
         </GeneTableBody>
-      </TableRowContext.Provider>
+      </TableSectionContext.Provider>
     );
   },
 );
 
 export const TableRow = forwardRef(
   (
-    {
-      children,
-      borderBottom = true,
-      expressive = true,
-      ...props
-    }: TableRowProps,
+    { children, ...props }: HTMLAttributes<HTMLTableRowElement>,
     ref: ForwardedRef<HTMLTableRowElement>,
   ) => {
-    const { isBody } = useTableRowContext();
+    const { borderBottom, expressive } = useTableContext();
+    const { section } = useTableSectionContext();
 
     return (
       <GeneTableRow
         ref={ref as ForwardedRef<HTMLTableRowElement>}
-        $borderBottom={isBody ? borderBottom : false}
-        $expressive={isBody ? expressive : false}
+        $borderBottom={section === 'body' ? borderBottom : false}
+        $expressive={section === 'body' ? expressive : false}
         {...props}
       >
         {children}
@@ -156,16 +169,16 @@ export const TableCell = forwardRef(
     }: TableCellProps,
     ref: ForwardedRef<HTMLTableCellElement>,
   ) => {
-    const defaultAlign = component === 'th' ? 'center' : 'left';
-    const finalAlign = align || defaultAlign;
+    const { section } = useTableSectionContext();
 
-    const scopeProp = component === 'th' ? { scope } : {};
+    const componentProp = section === 'head' ? 'th' : component;
+    const scopeProp = componentProp === 'th' ? { scope } : {};
 
     return (
       <GeneTableCell
         ref={ref as ForwardedRef<HTMLTableCellElement>}
-        as={component}
-        $align={finalAlign}
+        as={componentProp}
+        $align={align}
         {...scopeProp}
         {...props}
       >

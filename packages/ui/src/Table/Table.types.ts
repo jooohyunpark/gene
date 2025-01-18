@@ -1,13 +1,9 @@
 import { HTMLAttributes } from 'react';
 
-export interface TableHeadProps
-  extends HTMLAttributes<HTMLTableSectionElement> {
+export interface TableProps extends HTMLAttributes<HTMLTableElement> {
   color?: 'primary' | 'neutral';
-}
-
-export interface TableRowProps extends HTMLAttributes<HTMLTableRowElement> {
-  borderBottom?: boolean;
   expressive?: boolean;
+  borderBottom?: boolean;
 }
 
 export interface TableCellProps extends HTMLAttributes<HTMLTableCellElement> {
