@@ -18,7 +18,6 @@ export const Playground: Story = {
   args: {
     color: 'primary',
     expressive: true,
-    borderBottom: true,
     zebra: false,
   },
   render: (args) => (

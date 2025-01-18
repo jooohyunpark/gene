@@ -5,44 +5,51 @@ import PreviewBlock from '@/components/PreviewBlock';
 import Code from '@/components/Code';
 import { StyledPreviewLayout } from './styles';
 
-const NobelPrizeTable = ({ color = 'primary', expressive = true }) => (
+const NobelPrizeTable = ({
+  color = 'primary',
+  expressive = true,
+  zebra = false,
+  align = 'left',
+}) => (
   <Table.Container>
-    <Table color={color} expressive={expressive}>
+    <Table color={color} expressive={expressive} zebra={zebra}>
       <caption style={{ marginBottom: space(1) }}>
         All Nobel Prizes 2024
       </caption>
       <Table.Head>
         <Table.Row>
-          <Table.Cell>Category</Table.Cell>
-          <Table.Cell>Winners</Table.Cell>
+          <Table.Cell align={align}>Category</Table.Cell>
+          <Table.Cell align={align}>Winners</Table.Cell>
         </Table.Row>
       </Table.Head>
       <Table.Body>
         <Table.Row>
-          <Table.Cell>Physics</Table.Cell>
-          <Table.Cell>John J. Hopfield, Geoffrey Hinton</Table.Cell>
+          <Table.Cell align={align}>Physics</Table.Cell>
+          <Table.Cell align={align}>
+            John J. Hopfield, Geoffrey Hinton
+          </Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Chemistry</Table.Cell>
-          <Table.Cell>
+          <Table.Cell align={align}>Chemistry</Table.Cell>
+          <Table.Cell align={align}>
             David Baker, Demis Hassabis, and John M. Jumper
           </Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Physiology or Medicine</Table.Cell>
-          <Table.Cell>Victor Ambros, Gary Ruvkun</Table.Cell>
+          <Table.Cell align={align}>Physiology or Medicine</Table.Cell>
+          <Table.Cell align={align}>Victor Ambros, Gary Ruvkun</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Literature</Table.Cell>
-          <Table.Cell>Han Kang</Table.Cell>
+          <Table.Cell align={align}>Literature</Table.Cell>
+          <Table.Cell align={align}>Han Kang</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Peace</Table.Cell>
-          <Table.Cell>Nihon Hidankyo</Table.Cell>
+          <Table.Cell align={align}>Peace</Table.Cell>
+          <Table.Cell align={align}>Nihon Hidankyo</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Economic Sciences</Table.Cell>
-          <Table.Cell>
+          <Table.Cell align={align}>Economic Sciences</Table.Cell>
+          <Table.Cell align={align}>
             Daron Acemoglu, Simon Johnson, and James A. Robinson
           </Table.Cell>
         </Table.Row>
@@ -63,19 +70,35 @@ const TableComponent = () => (
 
       <PreviewBlock
         code={`<Table.Container>
-  <Table>
+  <Table expressive={false}>
     ...
   </Table>
 </Table.Container>\n
 <Table.Container>
-  <Table color="neutral">
+  <Table color="neutral" expressive={false}>
     ...
   </Table>
 </Table.Container>`}
       >
         <StyledPreviewLayout>
-          <NobelPrizeTable color="primary" />
-          <NobelPrizeTable color="neutral" />
+          <NobelPrizeTable color="primary" expressive={false} />
+          <NobelPrizeTable color="neutral" expressive={false} />
+        </StyledPreviewLayout>
+      </PreviewBlock>
+    </Section>
+
+    <Section>
+      <h2>Zebra</h2>
+
+      <PreviewBlock
+        code={`<Table.Container>
+  <Table zebra={true} expressive={false}>
+    ...
+  </Table>
+</Table.Container>`}
+      >
+        <StyledPreviewLayout>
+          <NobelPrizeTable zebra />
         </StyledPreviewLayout>
       </PreviewBlock>
     </Section>
@@ -90,24 +113,24 @@ const TableComponent = () => (
   </Table>
 </Table.Container>\n
 <Table.Container>
-  <Table expressive={false}>
+  <Table zebra>
     ...
   </Table>
 </Table.Container>`}
       >
         <StyledPreviewLayout>
           <NobelPrizeTable />
-          <NobelPrizeTable expressive={false} />
+          <NobelPrizeTable zebra />
         </StyledPreviewLayout>
       </PreviewBlock>
     </Section>
 
     <Section>
-      <h2>Zebra</h2>
+      <h2>Align</h2>
 
       <PreviewBlock
         code={`<Table.Container>
-  <Table expressive={false}>
+  <Table>
     <Table.Head>
       <Table.Row>
         <Table.Cell>...</Table.Cell>
@@ -124,12 +147,12 @@ const TableComponent = () => (
   <Table>
     <Table.Head>
       <Table.Row>
-        <Table.Cell>...</Table.Cell>
+        <Table.Cell align="center">...</Table.Cell>
       </Table.Row>
     </Table.Head>
     <Table.Body>
       <Table.Row>
-        <Table.Cell>...</Table.Cell>
+        <Table.Cell align="center">...</Table.Cell>
       </Table.Row>
     </Table.Body>
   </Table>
@@ -137,7 +160,7 @@ const TableComponent = () => (
       >
         <StyledPreviewLayout>
           <NobelPrizeTable />
-          <NobelPrizeTable expressive={false} />
+          <NobelPrizeTable align="center" />
         </StyledPreviewLayout>
       </PreviewBlock>
     </Section>
@@ -172,7 +195,7 @@ const TableComponent = () => (
             </Table.Row>
             <Table.Row>
               <Table.Cell>
-                <Code>borderBottom</Code>
+                <Code>zebra</Code>
               </Table.Cell>
               <Table.Cell>
                 <Code>boolean</Code>
@@ -180,7 +203,7 @@ const TableComponent = () => (
               <Table.Cell>
                 <Code>true</Code>
               </Table.Cell>
-              <Table.Cell>Adds the border at the table row.</Table.Cell>
+              <Table.Cell>Sets the zebra pattern.</Table.Cell>
             </Table.Row>
             <Table.Row>
               <Table.Cell>

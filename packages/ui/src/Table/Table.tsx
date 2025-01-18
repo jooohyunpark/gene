@@ -42,7 +42,7 @@ const GeneTableHead = styled.thead<GeneTableHeadProps>`
 const GeneTableBody = styled.tbody``;
 
 const GeneTableRow = styled.tr<GeneTableRowProps>`
-  ${({ $borderBottom = true }) =>
+  ${({ $borderBottom = false }) =>
     $borderBottom &&
     css`
       border-bottom: 1px solid ${color.gray30};
@@ -90,7 +90,6 @@ const TableBase = forwardRef(
     {
       color = 'primary',
       expressive = true,
-      borderBottom = true,
       zebra = false,
       children,
       ...props
@@ -98,7 +97,7 @@ const TableBase = forwardRef(
     ref: ForwardedRef<HTMLTableElement>,
   ) => {
     return (
-      <TableContext.Provider value={{ color, expressive, borderBottom, zebra }}>
+      <TableContext.Provider value={{ color, expressive, zebra }}>
         <GeneTable ref={ref as ForwardedRef<HTMLTableElement>} {...props}>
           {children}
         </GeneTable>
@@ -151,13 +150,14 @@ export const TableRow = forwardRef(
     { children, ...props }: HTMLAttributes<HTMLTableRowElement>,
     ref: ForwardedRef<HTMLTableRowElement>,
   ) => {
-    const { borderBottom, expressive, zebra } = useTableContext();
+    const { expressive, zebra } = useTableContext();
     const { section } = useTableSectionContext();
 
     return (
       <GeneTableRow
         ref={ref as ForwardedRef<HTMLTableRowElement>}
-        $borderBottom={section === 'body' ? borderBottom : false}
+        $section={section}
+        $borderBottom={section === 'body' ? !zebra : false}
         $expressive={section === 'body' ? expressive : false}
         $zebra={section === 'body' ? zebra : false}
         {...props}

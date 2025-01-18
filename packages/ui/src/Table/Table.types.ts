@@ -3,7 +3,6 @@ import { HTMLAttributes } from 'react';
 export interface TableProps extends HTMLAttributes<HTMLTableElement> {
   color?: 'primary' | 'neutral';
   expressive?: boolean;
-  borderBottom?: boolean;
   zebra?: boolean;
 }
 
@@ -17,9 +16,10 @@ export interface GeneTableHeadProps {
   $color?: 'primary' | 'neutral';
 }
 export interface GeneTableRowProps {
-  $borderBottom?: boolean;
   $expressive?: boolean;
   $zebra?: boolean;
+  $section?: 'head' | 'body';
+  $borderBottom?: boolean;
 }
 
 export interface GeneTableCellProps {
