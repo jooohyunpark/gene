@@ -14,30 +14,32 @@ const GeneInputLabel = styled.label`
 `;
 
 const GeneInput = styled.input<GeneInputProps>`
-  &:focus-visible {
-    /* inner indicator */
-    outline: 2px ${color.white} solid;
-    outline-offset: 0;
+  ${typography.body03};
+  padding: ${space(0.5)}px ${space(1)}px;
+  background: ${color.white};
+  border: 1px solid ${color.gray30};
 
-    /* outer indicator */
-    box-shadow: 0 0 0 4px ${color.blue30};
+  &:focus-visible {
+    outline-color: ${color.blue30};
   }
 `;
 
 export const Input = forwardRef(
   (
-    { label, children, ...props }: InputProps,
+    { label, required = false, ...props }: InputProps,
     ref: ForwardedRef<HTMLInputElement>,
   ) => {
     const id = useId();
 
     return (
       <GeneInputLayout>
-        {label && <GeneInputLabel htmlFor={id}>{label}</GeneInputLabel>}
+        {label && (
+          <GeneInputLabel htmlFor={id}>
+            {label} {required && <span aria-label="required">*</span>}
+          </GeneInputLabel>
+        )}
 
-        <GeneInput ref={ref} id={id} {...props}>
-          {children}
-        </GeneInput>
+        <GeneInput ref={ref} id={id} required={required} {...props} />
       </GeneInputLayout>
     );
   },

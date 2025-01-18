@@ -17,7 +17,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Playground: Story = {
   args: {
-    label: 'Enter password',
+    label: 'Password',
+    required: false,
   },
-  render: () => <Input type="password" label="test"></Input>,
 };

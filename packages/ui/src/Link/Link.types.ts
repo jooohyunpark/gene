@@ -1,6 +1,6 @@
-import { HTMLAttributes } from 'react';
+import { HTMLProps } from 'react';
 
-export interface LinkProps extends HTMLAttributes<HTMLAnchorElement> {
+export interface LinkProps extends HTMLProps<HTMLAnchorElement> {
   href: string;
   underline?: boolean;
   color?: 'primary' | 'inherit';

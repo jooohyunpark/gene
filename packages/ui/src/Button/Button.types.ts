@@ -1,6 +1,6 @@
-import { HTMLAttributes } from 'react';
+import { HTMLProps } from 'react';
 
-export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends HTMLProps<HTMLButtonElement> {
   color?: 'primary' | 'base';
   variant?: 'fill' | 'outline' | 'subtle';
   expressive?: boolean;

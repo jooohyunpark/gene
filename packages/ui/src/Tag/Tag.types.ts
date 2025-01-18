@@ -1,9 +1,7 @@
-import { HTMLAttributes } from 'react';
+import { HTMLProps } from 'react';
 
 export interface TagProps
-  extends HTMLAttributes<
-    HTMLDivElement | HTMLAnchorElement | HTMLButtonElement
-  > {
+  extends HTMLProps<HTMLDivElement | HTMLAnchorElement | HTMLButtonElement> {
   color?: 'primary' | 'neutral';
   href?: string;
 }
