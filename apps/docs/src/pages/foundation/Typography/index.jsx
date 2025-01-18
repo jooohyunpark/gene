@@ -128,19 +128,15 @@ const Typography = () => {
           <Table>
             <Table.Head>
               <Table.Row>
-                <Table.Cell component="th" scope="col" align="left">
-                  Name
-                </Table.Cell>
-                <Table.Cell component="th" scope="col" align="left">
-                  Size (px/rem)
-                </Table.Cell>
-                <Table.Cell component="th" scope="col">
+                <Table.Cell scope="col">Name</Table.Cell>
+                <Table.Cell scope="col">Size (px/rem)</Table.Cell>
+                <Table.Cell scope="col" align="center">
                   Line height (unitless)
                 </Table.Cell>
-                <Table.Cell component="th" scope="col">
+                <Table.Cell scope="col" align="center">
                   Weight
                 </Table.Cell>
-                <Table.Cell component="th" scope="col">
+                <Table.Cell scope="col" align="center">
                   Letter spacing (em)
                 </Table.Cell>
               </Table.Row>
@@ -152,7 +148,7 @@ const Typography = () => {
 
                 return (
                   <Table.Row key={i}>
-                    <Table.Cell scope="row" align="left">
+                    <Table.Cell align="left">
                       <ExampleText $token={token}>{name}</ExampleText>
                     </Table.Cell>
                     <Table.Cell>{size}</Table.Cell>

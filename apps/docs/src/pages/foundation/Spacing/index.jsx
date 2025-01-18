@@ -41,13 +41,13 @@ const Spacing = () => {
           <Table>
             <Table.Head>
               <Table.Row>
-                <StyledTableCell component="th" scope="col">
+                <StyledTableCell scope="col" align="center">
                   Base unit multiplier
                 </StyledTableCell>
-                <StyledTableCell component="th" scope="col">
+                <StyledTableCell scope="col" align="center">
                   Size (px)
                 </StyledTableCell>
-                <StyledTableCell component="th" scope="col" align="right">
+                <StyledTableCell scope="col" align="right">
                   Example
                 </StyledTableCell>
               </Table.Row>

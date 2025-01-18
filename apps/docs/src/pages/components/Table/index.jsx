@@ -7,40 +7,40 @@ import { StyledPreviewLayout } from './styles';
 
 const NobelPrizeTable = ({ color = 'primary', expressive = true }) => (
   <Table.Container>
-    <Table>
+    <Table color={color} expressive={expressive}>
       <caption style={{ marginBottom: space(1) }}>
         All Nobel Prizes 2024
       </caption>
-      <Table.Head color={color}>
+      <Table.Head>
         <Table.Row>
           <Table.Cell component="th">Category</Table.Cell>
           <Table.Cell component="th">Winners</Table.Cell>
         </Table.Row>
       </Table.Head>
       <Table.Body>
-        <Table.Row expressive={expressive}>
+        <Table.Row>
           <Table.Cell>Physics</Table.Cell>
           <Table.Cell>John J. Hopfield, Geoffrey Hinton</Table.Cell>
         </Table.Row>
-        <Table.Row expressive={expressive}>
+        <Table.Row>
           <Table.Cell>Chemistry</Table.Cell>
           <Table.Cell>
             David Baker, Demis Hassabis, and John M. Jumper
           </Table.Cell>
         </Table.Row>
-        <Table.Row expressive={expressive}>
+        <Table.Row>
           <Table.Cell>Physiology or Medicine</Table.Cell>
           <Table.Cell>Victor Ambros, Gary Ruvkun</Table.Cell>
         </Table.Row>
-        <Table.Row expressive={expressive}>
+        <Table.Row>
           <Table.Cell>Literature</Table.Cell>
           <Table.Cell>Han Kang</Table.Cell>
         </Table.Row>
-        <Table.Row expressive={expressive}>
+        <Table.Row>
           <Table.Cell>Peace</Table.Cell>
           <Table.Cell>Nihon Hidankyo</Table.Cell>
         </Table.Row>
-        <Table.Row expressive={expressive}>
+        <Table.Row>
           <Table.Cell>Economic Sciences</Table.Cell>
           <Table.Cell>
             Daron Acemoglu, Simon Johnson, and James A. Robinson
@@ -103,10 +103,10 @@ const TableComponent = () => (
 
       <PreviewBlock
         code={`<Table.Container>
-  <Table>
+  <Table expressive={false}>
     <Table.Head>
       <Table.Row>
-        <Table.Cell component="th">...</Table.Cell>
+        <Table.Cell>...</Table.Cell>
       </Table.Row>
     </Table.Head>
     <Table.Body>
@@ -120,11 +120,11 @@ const TableComponent = () => (
   <Table>
     <Table.Head>
       <Table.Row>
-        <Table.Cell component="th">...</Table.Cell>
+        <Table.Cell>...</Table.Cell>
       </Table.Row>
     </Table.Head>
     <Table.Body>
-      <Table.Row expressive={false}>
+      <Table.Row>
         <Table.Cell>...</Table.Cell>
       </Table.Row>
     </Table.Body>
@@ -141,24 +141,16 @@ const TableComponent = () => (
     <Section>
       <h2>Props</h2>
 
-      <h3>Table.Head</h3>
+      <h3>Table</h3>
 
       <Table.Container style={{ width: '100%' }}>
         <Table>
           <Table.Head>
             <Table.Row>
-              <Table.Cell component="th" scope="col" align="left">
-                Name
-              </Table.Cell>
-              <Table.Cell component="th" scope="col" align="left">
-                Type
-              </Table.Cell>
-              <Table.Cell component="th" scope="col" align="left">
-                Default
-              </Table.Cell>
-              <Table.Cell component="th" scope="col" align="left">
-                Description
-              </Table.Cell>
+              <Table.Cell scope="col">Name</Table.Cell>
+              <Table.Cell scope="col">Type</Table.Cell>
+              <Table.Cell scope="col">Default</Table.Cell>
+              <Table.Cell scope="col">Description</Table.Cell>
             </Table.Row>
           </Table.Head>
           <Table.Body>
@@ -174,31 +166,6 @@ const TableComponent = () => (
               </Table.Cell>
               <Table.Cell>The color of the table head.</Table.Cell>
             </Table.Row>
-          </Table.Body>
-        </Table>
-      </Table.Container>
-
-      <h3>Table.Row</h3>
-
-      <Table.Container style={{ width: '100%' }}>
-        <Table>
-          <Table.Head>
-            <Table.Row>
-              <Table.Cell component="th" scope="col" align="left">
-                Name
-              </Table.Cell>
-              <Table.Cell component="th" scope="col" align="left">
-                Type
-              </Table.Cell>
-              <Table.Cell component="th" scope="col" align="left">
-                Default
-              </Table.Cell>
-              <Table.Cell component="th" scope="col" align="left">
-                Description
-              </Table.Cell>
-            </Table.Row>
-          </Table.Head>
-          <Table.Body>
             <Table.Row>
               <Table.Cell>
                 <Code>borderBottom</Code>
@@ -209,7 +176,7 @@ const TableComponent = () => (
               <Table.Cell>
                 <Code>true</Code>
               </Table.Cell>
-              <Table.Cell>Adds the border at the bottom.</Table.Cell>
+              <Table.Cell>Adds the border at the table row.</Table.Cell>
             </Table.Row>
             <Table.Row>
               <Table.Cell>
@@ -221,7 +188,7 @@ const TableComponent = () => (
               <Table.Cell>
                 <Code>true</Code>
               </Table.Cell>
-              <Table.Cell>Sets the expressive expressive shade.</Table.Cell>
+              <Table.Cell>Sets the hover shade.</Table.Cell>
             </Table.Row>
           </Table.Body>
         </Table>
@@ -233,18 +200,10 @@ const TableComponent = () => (
         <Table>
           <Table.Head>
             <Table.Row>
-              <Table.Cell component="th" scope="col" align="left">
-                Name
-              </Table.Cell>
-              <Table.Cell component="th" scope="col" align="left">
-                Type
-              </Table.Cell>
-              <Table.Cell component="th" scope="col" align="left">
-                Default
-              </Table.Cell>
-              <Table.Cell component="th" scope="col" align="left">
-                Description
-              </Table.Cell>
+              <Table.Cell scope="col">Name</Table.Cell>
+              <Table.Cell scope="col">Type</Table.Cell>
+              <Table.Cell scope="col">Default</Table.Cell>
+              <Table.Cell scope="col">Description</Table.Cell>
             </Table.Row>
           </Table.Head>
           <Table.Body>
@@ -258,7 +217,11 @@ const TableComponent = () => (
               <Table.Cell>
                 <Code>'td'</Code>
               </Table.Cell>
-              <Table.Cell>The component used for the node.</Table.Cell>
+              <Table.Cell>
+                The component used for the node.
+                <br />
+                Forced to <Code>'th'</Code> when inside table head.
+              </Table.Cell>
             </Table.Row>
             <Table.Row>
               <Table.Cell>
@@ -270,7 +233,11 @@ const TableComponent = () => (
               <Table.Cell>
                 <Code>'col'</Code>
               </Table.Cell>
-              <Table.Cell>Sets scope attribute.</Table.Cell>
+              <Table.Cell>
+                Sets scope attribute.
+                <br />
+                Ignored when the component is <Code>'td'</Code>
+              </Table.Cell>
             </Table.Row>
             <Table.Row>
               <Table.Cell>

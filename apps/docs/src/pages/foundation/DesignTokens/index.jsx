@@ -29,15 +29,9 @@ const DesignTokens = () => {
           <Table>
             <Table.Head>
               <Table.Row>
-                <StyledTableCell component="th" scope="col" align="left">
-                  Token (standard)
-                </StyledTableCell>
-                <StyledTableCell component="th" scope="col" align="left">
-                  Token (sass)
-                </StyledTableCell>
-                <StyledTableCell component="th" scope="col" align="left">
-                  Value
-                </StyledTableCell>
+                <StyledTableCell scope="col">Token (standard)</StyledTableCell>
+                <StyledTableCell scope="col">Token (sass)</StyledTableCell>
+                <StyledTableCell scope="col">Value</StyledTableCell>
               </Table.Row>
             </Table.Head>
             <Table.Body>
@@ -65,15 +59,9 @@ const DesignTokens = () => {
           <Table>
             <Table.Head>
               <Table.Row>
-                <StyledTableCell component="th" scope="col" align="left">
-                  Token (standard)
-                </StyledTableCell>
-                <StyledTableCell component="th" scope="col" align="left">
-                  Token (sass)
-                </StyledTableCell>
-                <StyledTableCell component="th" scope="col" align="left">
-                  Value
-                </StyledTableCell>
+                <StyledTableCell scope="col">Token (standard)</StyledTableCell>
+                <StyledTableCell scope="col">Token (sass)</StyledTableCell>
+                <StyledTableCell scope="col">Value</StyledTableCell>
               </Table.Row>
             </Table.Head>
             <Table.Body>
@@ -101,15 +89,9 @@ const DesignTokens = () => {
           <Table>
             <Table.Head>
               <Table.Row>
-                <StyledTableCell component="th" scope="col" align="left">
-                  Token (standard)
-                </StyledTableCell>
-                <StyledTableCell component="th" scope="col" align="left">
-                  Token (sass)
-                </StyledTableCell>
-                <StyledTableCell component="th" scope="col" align="left">
-                  Value
-                </StyledTableCell>
+                <StyledTableCell scope="col">Token (standard)</StyledTableCell>
+                <StyledTableCell scope="col">Token (sass)</StyledTableCell>
+                <StyledTableCell scope="col">Value</StyledTableCell>
               </Table.Row>
             </Table.Head>
             <Table.Body>

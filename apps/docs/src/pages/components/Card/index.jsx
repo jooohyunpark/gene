@@ -80,18 +80,10 @@ const CardComponent = () => (
         <Table>
           <Table.Head>
             <Table.Row>
-              <Table.Cell component="th" scope="col" align="left">
-                Name
-              </Table.Cell>
-              <Table.Cell component="th" scope="col" align="left">
-                Type
-              </Table.Cell>
-              <Table.Cell component="th" scope="col" align="left">
-                Default
-              </Table.Cell>
-              <Table.Cell component="th" scope="col" align="left">
-                Description
-              </Table.Cell>
+              <Table.Cell scope="col">Name</Table.Cell>
+              <Table.Cell scope="col">Type</Table.Cell>
+              <Table.Cell scope="col">Default</Table.Cell>
+              <Table.Cell scope="col">Description</Table.Cell>
             </Table.Row>
           </Table.Head>
           <Table.Body>
