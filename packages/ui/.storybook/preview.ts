@@ -17,8 +17,6 @@ const preview: Preview = {
   },
 };
 
-export const argTypes = {
-  children: { control: false },
-};
+export const argTypes = {};
 
 export default preview;
