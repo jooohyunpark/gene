@@ -1,12 +1,4 @@
-import {
-  Link,
-  TableContainer,
-  Table,
-  TableRow,
-  TableHead,
-  TableBody,
-  TableCell,
-} from '@gene/ui';
+import { Link, Table } from '@gene/ui';
 import Section from '@/components/Section';
 import { ExampleText } from './styles';
 
@@ -132,47 +124,47 @@ const Typography = () => {
           screens.
         </p>
 
-        <TableContainer>
+        <Table.Container>
           <Table>
-            <TableHead>
-              <TableRow>
-                <TableCell component="th" scope="col" align="left">
+            <Table.Head>
+              <Table.Row>
+                <Table.Cell component="th" scope="col" align="left">
                   Name
-                </TableCell>
-                <TableCell component="th" scope="col" align="left">
+                </Table.Cell>
+                <Table.Cell component="th" scope="col" align="left">
                   Size (px/rem)
-                </TableCell>
-                <TableCell component="th" scope="col">
+                </Table.Cell>
+                <Table.Cell component="th" scope="col">
                   Line height (unitless)
-                </TableCell>
-                <TableCell component="th" scope="col">
+                </Table.Cell>
+                <Table.Cell component="th" scope="col">
                   Weight
-                </TableCell>
-                <TableCell component="th" scope="col">
+                </Table.Cell>
+                <Table.Cell component="th" scope="col">
                   Letter spacing (em)
-                </TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
+                </Table.Cell>
+              </Table.Row>
+            </Table.Head>
+            <Table.Body>
               {typographyData.map((data, i) => {
                 const { name, token, size, lineHeight, weight, letterSpacing } =
                   data;
 
                 return (
-                  <TableRow key={i}>
-                    <TableCell scope="row" align="left">
+                  <Table.Row key={i}>
+                    <Table.Cell scope="row" align="left">
                       <ExampleText $token={token}>{name}</ExampleText>
-                    </TableCell>
-                    <TableCell>{size}</TableCell>
-                    <TableCell align="center">{lineHeight}</TableCell>
-                    <TableCell align="center">{weight}</TableCell>
-                    <TableCell align="center">{letterSpacing}</TableCell>
-                  </TableRow>
+                    </Table.Cell>
+                    <Table.Cell>{size}</Table.Cell>
+                    <Table.Cell align="center">{lineHeight}</Table.Cell>
+                    <Table.Cell align="center">{weight}</Table.Cell>
+                    <Table.Cell align="center">{letterSpacing}</Table.Cell>
+                  </Table.Row>
                 );
               })}
-            </TableBody>
+            </Table.Body>
           </Table>
-        </TableContainer>
+        </Table.Container>
       </Section>
     </>
   );

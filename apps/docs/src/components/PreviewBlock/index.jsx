@@ -35,13 +35,13 @@ const StyledCodeCard = styled(Card)`
   }
 `;
 
-const PreviewBlock = ({ code = '', children }) => {
+const PreviewBlock = ({ code = '', children, ...props }) => {
   useEffect(() => {
     setTimeout(() => Prism.highlightAll(), 0);
   }, []);
 
   return (
-    <StylePreviewBlock>
+    <StylePreviewBlock {...props}>
       {children && (
         <StyledCard color="base" padding="lg">
           {children}

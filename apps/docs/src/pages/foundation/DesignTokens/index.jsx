@@ -1,11 +1,5 @@
 import { color, typography, spacing } from '@gene/token';
-import {
-  TableContainer,
-  Table,
-  TableBody,
-  TableHead,
-  TableRow,
-} from '@gene/ui';
+import { Table } from '@gene/ui';
 import Section from '@/components/Section';
 import PreviewBlock from '@/components/PreviewBlock';
 import Code from '@/components/Code';
@@ -31,10 +25,10 @@ const DesignTokens = () => {
 
       <Section id="design-token-color">
         <h2>Color</h2>
-        <TableContainer>
+        <Table.Container>
           <Table>
-            <TableHead>
-              <TableRow>
+            <Table.Head>
+              <Table.Row>
                 <StyledTableCell component="th" scope="col" align="left">
                   Token (standard)
                 </StyledTableCell>
@@ -44,11 +38,11 @@ const DesignTokens = () => {
                 <StyledTableCell component="th" scope="col" align="left">
                   Value
                 </StyledTableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
+              </Table.Row>
+            </Table.Head>
+            <Table.Body>
               {Object.entries(color).map(([key, value], i) => (
-                <TableRow key={i}>
+                <Table.Row key={i}>
                   <StyledTableCell>
                     <Code>color.{key}</Code>
                   </StyledTableCell>
@@ -58,19 +52,19 @@ const DesignTokens = () => {
                   <StyledTableCell>
                     <Code>{value}</Code>
                   </StyledTableCell>
-                </TableRow>
+                </Table.Row>
               ))}
-            </TableBody>
+            </Table.Body>
           </Table>
-        </TableContainer>
+        </Table.Container>
       </Section>
 
       <Section id="design-token-spacing">
         <h2>Spacing</h2>
-        <TableContainer>
+        <Table.Container>
           <Table>
-            <TableHead>
-              <TableRow>
+            <Table.Head>
+              <Table.Row>
                 <StyledTableCell component="th" scope="col" align="left">
                   Token (standard)
                 </StyledTableCell>
@@ -80,11 +74,11 @@ const DesignTokens = () => {
                 <StyledTableCell component="th" scope="col" align="left">
                   Value
                 </StyledTableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
+              </Table.Row>
+            </Table.Head>
+            <Table.Body>
               {Object.entries(spacing).map(([key, value], i) => (
-                <TableRow key={i}>
+                <Table.Row key={i}>
                   <StyledTableCell>
                     <Code>spacing.{key}</Code>
                   </StyledTableCell>
@@ -94,19 +88,19 @@ const DesignTokens = () => {
                   <StyledTableCell>
                     <Code>{value}</Code>
                   </StyledTableCell>
-                </TableRow>
+                </Table.Row>
               ))}
-            </TableBody>
+            </Table.Body>
           </Table>
-        </TableContainer>
+        </Table.Container>
       </Section>
 
       <Section id="design-token-typography">
         <h2>Typography</h2>
-        <TableContainer>
+        <Table.Container>
           <Table>
-            <TableHead>
-              <TableRow>
+            <Table.Head>
+              <Table.Row>
                 <StyledTableCell component="th" scope="col" align="left">
                   Token (standard)
                 </StyledTableCell>
@@ -116,13 +110,13 @@ const DesignTokens = () => {
                 <StyledTableCell component="th" scope="col" align="left">
                   Value
                 </StyledTableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
+              </Table.Row>
+            </Table.Head>
+            <Table.Body>
               {Object.entries(typography).map(
                 ([key, value], i) =>
                   typeof value !== 'object' && (
-                    <TableRow key={i}>
+                    <Table.Row key={i}>
                       <StyledTableCell>
                         <Code>typography.{key}</Code>
                       </StyledTableCell>
@@ -132,12 +126,12 @@ const DesignTokens = () => {
                       <StyledTableCell>
                         <Code>{value}</Code>
                       </StyledTableCell>
-                    </TableRow>
+                    </Table.Row>
                   ),
               )}
-            </TableBody>
+            </Table.Body>
           </Table>
-        </TableContainer>
+        </Table.Container>
       </Section>
     </>
   );

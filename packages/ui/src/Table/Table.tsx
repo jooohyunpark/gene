@@ -72,7 +72,7 @@ export const TableContainer = forwardRef(
   },
 );
 
-export const Table = forwardRef(
+const TableBase = forwardRef(
   (
     { children, ...props }: HTMLAttributes<HTMLTableElement>,
     ref: ForwardedRef<HTMLTableElement>,
@@ -174,3 +174,19 @@ export const TableCell = forwardRef(
     );
   },
 );
+
+type TableComponent = typeof TableBase & {
+  Container: typeof TableContainer;
+  Head: typeof TableHead;
+  Body: typeof TableBody;
+  Row: typeof TableRow;
+  Cell: typeof TableCell;
+};
+
+export const Table: TableComponent = TableBase as TableComponent;
+
+Table.Container = TableContainer;
+Table.Head = TableHead;
+Table.Body = TableBody;
+Table.Row = TableRow;
+Table.Cell = TableCell;

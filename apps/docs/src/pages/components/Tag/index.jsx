@@ -1,12 +1,4 @@
-import {
-  Tag,
-  TableContainer,
-  Table,
-  TableRow,
-  TableHead,
-  TableBody,
-  TableCell,
-} from '@gene/ui';
+import { Tag, Table } from '@gene/ui';
 import Section from '@/components/Section';
 import PreviewBlock from '@/components/PreviewBlock';
 import Code from '@/components/Code';
@@ -47,76 +39,76 @@ const TagComponent = () => (
     <Section>
       <h2>Props</h2>
 
-      <TableContainer>
+      <Table.Container>
         <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell component="th" scope="col" align="left">
+          <Table.Head>
+            <Table.Row>
+              <Table.Cell component="th" scope="col" align="left">
                 Name
-              </TableCell>
-              <TableCell component="th" scope="col" align="left">
+              </Table.Cell>
+              <Table.Cell component="th" scope="col" align="left">
                 Type
-              </TableCell>
-              <TableCell component="th" scope="col" align="left">
+              </Table.Cell>
+              <Table.Cell component="th" scope="col" align="left">
                 Default
-              </TableCell>
-              <TableCell component="th" scope="col" align="left">
+              </Table.Cell>
+              <Table.Cell component="th" scope="col" align="left">
                 Description
-              </TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            <TableRow>
-              <TableCell>
+              </Table.Cell>
+            </Table.Row>
+          </Table.Head>
+          <Table.Body>
+            <Table.Row>
+              <Table.Cell>
                 <Code>color</Code>
-              </TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>
                 <Code>'primary' | 'neutral'</Code>
-              </TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>
                 <Code>'neutral'</Code>
-              </TableCell>
-              <TableCell>The color of the component.</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>The color of the component.</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>
                 <Code>href</Code>
-              </TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>
                 <Code>string</Code>
-              </TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>-</Table.Cell>
+              <Table.Cell>
                 URI or path. If provided, the tag will be a link.
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>
+              </Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>
                 <Code>onClick</Code>
-              </TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>
                 <Code>function</Code>
-              </TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>-</Table.Cell>
+              <Table.Cell>
                 Handler to be called when the tag is clicked.
                 <br />
                 If provided, the tag will be a button.
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>
+              </Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>
                 <Code>children</Code>
-              </TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>
                 <Code>node</Code>
-              </TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>The content of the component.</TableCell>
-            </TableRow>
-          </TableBody>
+              </Table.Cell>
+              <Table.Cell>-</Table.Cell>
+              <Table.Cell>The content of the component.</Table.Cell>
+            </Table.Row>
+          </Table.Body>
         </Table>
-      </TableContainer>
+      </Table.Container>
     </Section>
   </>
 );

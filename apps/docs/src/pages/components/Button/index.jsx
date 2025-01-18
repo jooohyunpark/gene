@@ -1,12 +1,4 @@
-import {
-  Button,
-  TableContainer,
-  Table,
-  TableRow,
-  TableHead,
-  TableBody,
-  TableCell,
-} from '@gene/ui';
+import { Button, Table } from '@gene/ui';
 import Section from '@/components/Section';
 import PreviewBlock from '@/components/PreviewBlock';
 import Code from '@/components/Code';
@@ -69,74 +61,74 @@ const ButtonComponent = () => (
     <Section>
       <h2>Props</h2>
 
-      <TableContainer>
+      <Table.Container>
         <Table>
-          <TableHead>
-            <TableRow hover={false} borderBottom={false}>
-              <TableCell component="th" scope="col" align="left">
+          <Table.Head>
+            <Table.Row hover={false} borderBottom={false}>
+              <Table.Cell component="th" scope="col" align="left">
                 Name
-              </TableCell>
-              <TableCell component="th" scope="col" align="left">
+              </Table.Cell>
+              <Table.Cell component="th" scope="col" align="left">
                 Type
-              </TableCell>
-              <TableCell component="th" scope="col" align="left">
+              </Table.Cell>
+              <Table.Cell component="th" scope="col" align="left">
                 Default
-              </TableCell>
-              <TableCell component="th" scope="col" align="left">
+              </Table.Cell>
+              <Table.Cell component="th" scope="col" align="left">
                 Description
-              </TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            <TableRow>
-              <TableCell>
+              </Table.Cell>
+            </Table.Row>
+          </Table.Head>
+          <Table.Body>
+            <Table.Row>
+              <Table.Cell>
                 <Code>variant</Code>
-              </TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>
                 <Code>'fill' | 'outline' | 'subtle'</Code>
-              </TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>
                 <Code>'fill'</Code>
-              </TableCell>
-              <TableCell>The component style variation.</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>The component style variation.</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>
                 <Code>color</Code>
-              </TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>
                 <Code>'primary' | 'base'</Code>
-              </TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>
                 <Code>'primary'</Code>
-              </TableCell>
-              <TableCell>The color of the component.</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>The color of the component.</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>
                 <Code>expressive</Code>
-              </TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>
                 <Code>boolean</Code>
-              </TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>
                 <Code>true</Code>
-              </TableCell>
-              <TableCell>Sets the expressive hover animation.</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>Sets the expressive hover animation.</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>
                 <Code>children</Code>
-              </TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>
                 <Code>node</Code>
-              </TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>The content of the component.</TableCell>
-            </TableRow>
-          </TableBody>
+              </Table.Cell>
+              <Table.Cell>-</Table.Cell>
+              <Table.Cell>The content of the component.</Table.Cell>
+            </Table.Row>
+          </Table.Body>
         </Table>
-      </TableContainer>
+      </Table.Container>
     </Section>
   </>
 );

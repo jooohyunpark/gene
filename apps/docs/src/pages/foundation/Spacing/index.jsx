@@ -1,10 +1,4 @@
-import {
-  TableContainer,
-  Table,
-  TableRow,
-  TableHead,
-  TableBody,
-} from '@gene/ui';
+import { Table } from '@gene/ui';
 import Section from '@/components/Section';
 import { Box, StyledTableCell } from './styles';
 
@@ -43,10 +37,10 @@ const Spacing = () => {
           is consistently applied across all GDS components.
         </p>
 
-        <TableContainer>
+        <Table.Container>
           <Table>
-            <TableHead>
-              <TableRow>
+            <Table.Head>
+              <Table.Row>
                 <StyledTableCell component="th" scope="col">
                   Base unit multiplier
                 </StyledTableCell>
@@ -56,11 +50,11 @@ const Spacing = () => {
                 <StyledTableCell component="th" scope="col" align="right">
                   Example
                 </StyledTableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
+              </Table.Row>
+            </Table.Head>
+            <Table.Body>
               {spacingData.map((data, i) => (
-                <TableRow key={i}>
+                <Table.Row key={i}>
                   <StyledTableCell align="center">
                     {data.multiplier}
                   </StyledTableCell>
@@ -68,11 +62,11 @@ const Spacing = () => {
                   <StyledTableCell align="right" style={{ lineHeight: 0 }}>
                     <Box $size={data.size} />
                   </StyledTableCell>
-                </TableRow>
+                </Table.Row>
               ))}
-            </TableBody>
+            </Table.Body>
           </Table>
-        </TableContainer>
+        </Table.Container>
       </Section>
     </>
   );

@@ -1,99 +1,100 @@
-import {
-  Tag,
-  TableContainer,
-  Table,
-  TableRow,
-  TableHead,
-  TableBody,
-  TableCell,
-} from '@gene/ui';
+import { Table } from '@gene/ui';
+import { space } from '@gene/token';
 import Section from '@/components/Section';
 import PreviewBlock from '@/components/PreviewBlock';
 import Code from '@/components/Code';
+import { StyledPreviewLayout } from './styles';
 
-const NobelPrizeTable = ({ color = 'primary', hover = true }) => (
-  <TableContainer>
+const NobelPrizeTable = ({ color = 'primary', expressive = true }) => (
+  <Table.Container>
     <Table>
-      <TableHead color={color}>
-        <TableRow>
-          <TableCell component="th">Category</TableCell>
-          <TableCell component="th">Winners</TableCell>
-        </TableRow>
-      </TableHead>
-      <TableBody>
-        <TableRow hover={hover}>
-          <TableCell>Physics</TableCell>
-          <TableCell>John J. Hopfield, Geoffrey Hinton</TableCell>
-        </TableRow>
-        <TableRow hover={hover}>
-          <TableCell>Chemistry</TableCell>
-          <TableCell>David Baker, Demis Hassabis, and John M. Jumper</TableCell>
-        </TableRow>
-        <TableRow hover={hover}>
-          <TableCell>Physiology or Medicine</TableCell>
-          <TableCell>Victor Ambros, Gary Ruvkun</TableCell>
-        </TableRow>
-        <TableRow hover={hover}>
-          <TableCell>Literature</TableCell>
-          <TableCell>Han Kang</TableCell>
-        </TableRow>
-        <TableRow hover={hover}>
-          <TableCell>Peace</TableCell>
-          <TableCell>Nihon Hidankyo</TableCell>
-        </TableRow>
-        <TableRow hover={hover}>
-          <TableCell>Economic Sciences</TableCell>
-          <TableCell>
+      <caption style={{ marginBottom: space(1) }}>
+        All Nobel Prizes 2024
+      </caption>
+      <Table.Head color={color}>
+        <Table.Row>
+          <Table.Cell component="th">Category</Table.Cell>
+          <Table.Cell component="th">Winners</Table.Cell>
+        </Table.Row>
+      </Table.Head>
+      <Table.Body>
+        <Table.Row expressive={expressive}>
+          <Table.Cell>Physics</Table.Cell>
+          <Table.Cell>John J. Hopfield, Geoffrey Hinton</Table.Cell>
+        </Table.Row>
+        <Table.Row expressive={expressive}>
+          <Table.Cell>Chemistry</Table.Cell>
+          <Table.Cell>
+            David Baker, Demis Hassabis, and John M. Jumper
+          </Table.Cell>
+        </Table.Row>
+        <Table.Row expressive={expressive}>
+          <Table.Cell>Physiology or Medicine</Table.Cell>
+          <Table.Cell>Victor Ambros, Gary Ruvkun</Table.Cell>
+        </Table.Row>
+        <Table.Row expressive={expressive}>
+          <Table.Cell>Literature</Table.Cell>
+          <Table.Cell>Han Kang</Table.Cell>
+        </Table.Row>
+        <Table.Row expressive={expressive}>
+          <Table.Cell>Peace</Table.Cell>
+          <Table.Cell>Nihon Hidankyo</Table.Cell>
+        </Table.Row>
+        <Table.Row expressive={expressive}>
+          <Table.Cell>Economic Sciences</Table.Cell>
+          <Table.Cell>
             Daron Acemoglu, Simon Johnson, and James A. Robinson
-          </TableCell>
-        </TableRow>
-      </TableBody>
+          </Table.Cell>
+        </Table.Row>
+      </Table.Body>
     </Table>
-  </TableContainer>
+  </Table.Container>
 );
 
 const TableComponent = () => (
   <>
     <Section>
       <h1>Table</h1>
-      <p>xxxxx</p>
+      <p>Tables display sets of data. They can be fully customized.</p>
     </Section>
 
     <Section>
       <h2>Color</h2>
 
       <PreviewBlock
-        code={`<TableContainer>
+        code={`<Table.Container>
   <Table>
-    <TableHead>
-      <TableRow>
-        <TableCell component="th">...</TableCell>
-      </TableRow>
-    </TableHead>
-    <TableBody>
-      <TableRow>
-        <TableCell>...</TableCell>
-      </TableRow>
-    </TableBody>
+    <Table.Head>
+      <Table.Row>
+        <Table.Cell component="th">...</Table.Cell>
+      </Table.Row>
+    </Table.Head>
+    <Table.Body>
+      <Table.Row>
+        <Table.Cell>...</Table.Cell>
+      </Table.Row>
+    </Table.Body>
   </Table>
-</TableContainer>\n
-<TableContainer>
+</Table.Container>\n
+<Table.Container>
   <Table>
-    <TableHead color="neutral">
-      <TableRow>
-        <TableCell component="th">...</TableCell>
-      </TableRow>
-    </TableHead>
-    <TableBody>
-      <TableRow>
-        <TableCell>...</TableCell>
-      </TableRow>
-    </TableBody>
+    <Table.Head color="neutral">
+      <Table.Row>
+        <Table.Cell component="th">...</Table.Cell>
+      </Table.Row>
+    </Table.Head>
+    <Table.Body>
+      <Table.Row>
+        <Table.Cell>...</Table.Cell>
+      </Table.Row>
+    </Table.Body>
   </Table>
-</TableContainer>`}
+</Table.Container>`}
       >
-        <NobelPrizeTable color="primary" />
-        <NobelPrizeTable color="neutral" />
+        <StyledPreviewLayout>
+          <NobelPrizeTable color="primary" />
+          <NobelPrizeTable color="neutral" />
+        </StyledPreviewLayout>
       </PreviewBlock>
     </Section>
 
@@ -101,189 +102,191 @@ const TableComponent = () => (
       <h2>Expressive</h2>
 
       <PreviewBlock
-        code={`<TableContainer>
+        code={`<Table.Container>
   <Table>
-    <TableHead>
-      <TableRow>
-        <TableCell component="th">...</TableCell>
-      </TableRow>
-    </TableHead>
-    <TableBody>
-      <TableRow>
-        <TableCell>...</TableCell>
-      </TableRow>
-    </TableBody>
+    <Table.Head>
+      <Table.Row>
+        <Table.Cell component="th">...</Table.Cell>
+      </Table.Row>
+    </Table.Head>
+    <Table.Body>
+      <Table.Row>
+        <Table.Cell>...</Table.Cell>
+      </Table.Row>
+    </Table.Body>
   </Table>
-</TableContainer>\n
-<TableContainer>
+</Table.Container>\n
+<Table.Container>
   <Table>
-    <TableHead>
-      <TableRow>
-        <TableCell component="th">...</TableCell>
-      </TableRow>
-    </TableHead>
-    <TableBody>
-      <TableRow hover={false}>
-        <TableCell>...</TableCell>
-      </TableRow>
-    </TableBody>
+    <Table.Head>
+      <Table.Row>
+        <Table.Cell component="th">...</Table.Cell>
+      </Table.Row>
+    </Table.Head>
+    <Table.Body>
+      <Table.Row expressive={false}>
+        <Table.Cell>...</Table.Cell>
+      </Table.Row>
+    </Table.Body>
   </Table>
-</TableContainer>`}
+</Table.Container>`}
       >
-        <NobelPrizeTable />
-        <NobelPrizeTable hover={false} />
+        <StyledPreviewLayout>
+          <NobelPrizeTable />
+          <NobelPrizeTable expressive={false} />
+        </StyledPreviewLayout>
       </PreviewBlock>
     </Section>
 
     <Section>
       <h2>Props</h2>
 
-      <h3>TableHead</h3>
+      <h3>Table.Head</h3>
 
-      <TableContainer style={{ width: '100%' }}>
+      <Table.Container style={{ width: '100%' }}>
         <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell component="th" scope="col" align="left">
+          <Table.Head>
+            <Table.Row>
+              <Table.Cell component="th" scope="col" align="left">
                 Name
-              </TableCell>
-              <TableCell component="th" scope="col" align="left">
+              </Table.Cell>
+              <Table.Cell component="th" scope="col" align="left">
                 Type
-              </TableCell>
-              <TableCell component="th" scope="col" align="left">
+              </Table.Cell>
+              <Table.Cell component="th" scope="col" align="left">
                 Default
-              </TableCell>
-              <TableCell component="th" scope="col" align="left">
+              </Table.Cell>
+              <Table.Cell component="th" scope="col" align="left">
                 Description
-              </TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            <TableRow>
-              <TableCell>
+              </Table.Cell>
+            </Table.Row>
+          </Table.Head>
+          <Table.Body>
+            <Table.Row>
+              <Table.Cell>
                 <Code>color</Code>
-              </TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>
                 <Code>'primary' | 'neutral'</Code>
-              </TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>
                 <Code>'primary'</Code>
-              </TableCell>
-              <TableCell>The color of the table head.</TableCell>
-            </TableRow>
-          </TableBody>
+              </Table.Cell>
+              <Table.Cell>The color of the table head.</Table.Cell>
+            </Table.Row>
+          </Table.Body>
         </Table>
-      </TableContainer>
+      </Table.Container>
 
-      <h3>TableRow</h3>
+      <h3>Table.Row</h3>
 
-      <TableContainer style={{ width: '100%' }}>
+      <Table.Container style={{ width: '100%' }}>
         <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell component="th" scope="col" align="left">
+          <Table.Head>
+            <Table.Row>
+              <Table.Cell component="th" scope="col" align="left">
                 Name
-              </TableCell>
-              <TableCell component="th" scope="col" align="left">
+              </Table.Cell>
+              <Table.Cell component="th" scope="col" align="left">
                 Type
-              </TableCell>
-              <TableCell component="th" scope="col" align="left">
+              </Table.Cell>
+              <Table.Cell component="th" scope="col" align="left">
                 Default
-              </TableCell>
-              <TableCell component="th" scope="col" align="left">
+              </Table.Cell>
+              <Table.Cell component="th" scope="col" align="left">
                 Description
-              </TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            <TableRow>
-              <TableCell>
+              </Table.Cell>
+            </Table.Row>
+          </Table.Head>
+          <Table.Body>
+            <Table.Row>
+              <Table.Cell>
                 <Code>borderBottom</Code>
-              </TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>
                 <Code>boolean</Code>
-              </TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>
                 <Code>true</Code>
-              </TableCell>
-              <TableCell>Adds the border at the bottom.</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>Adds the border at the bottom.</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>
                 <Code>expressive</Code>
-              </TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>
                 <Code>boolean</Code>
-              </TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>
                 <Code>true</Code>
-              </TableCell>
-              <TableCell>Sets the expressive hover shade.</TableCell>
-            </TableRow>
-          </TableBody>
+              </Table.Cell>
+              <Table.Cell>Sets the expressive expressive shade.</Table.Cell>
+            </Table.Row>
+          </Table.Body>
         </Table>
-      </TableContainer>
+      </Table.Container>
 
-      <h3>TableCell</h3>
+      <h3>Table.Cell</h3>
 
-      <TableContainer style={{ width: '100%' }}>
+      <Table.Container style={{ width: '100%' }}>
         <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell component="th" scope="col" align="left">
+          <Table.Head>
+            <Table.Row>
+              <Table.Cell component="th" scope="col" align="left">
                 Name
-              </TableCell>
-              <TableCell component="th" scope="col" align="left">
+              </Table.Cell>
+              <Table.Cell component="th" scope="col" align="left">
                 Type
-              </TableCell>
-              <TableCell component="th" scope="col" align="left">
+              </Table.Cell>
+              <Table.Cell component="th" scope="col" align="left">
                 Default
-              </TableCell>
-              <TableCell component="th" scope="col" align="left">
+              </Table.Cell>
+              <Table.Cell component="th" scope="col" align="left">
                 Description
-              </TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            <TableRow>
-              <TableCell>
+              </Table.Cell>
+            </Table.Row>
+          </Table.Head>
+          <Table.Body>
+            <Table.Row>
+              <Table.Cell>
                 <Code>component</Code>
-              </TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>
                 <Code>'th' | 'td'</Code>
-              </TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>
                 <Code>'td'</Code>
-              </TableCell>
-              <TableCell>The component used for the node.</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>The component used for the node.</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>
                 <Code>scope</Code>
-              </TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>
                 <Code>'row' | 'rowgroup' | 'col' | 'colgroup'</Code>
-              </TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>
                 <Code>'col'</Code>
-              </TableCell>
-              <TableCell>Sets scope attribute.</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>Sets scope attribute.</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>
                 <Code>align</Code>
-              </TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>
                 <Code>'left' | 'center' | 'right'</Code>
-              </TableCell>
-              <TableCell>
+              </Table.Cell>
+              <Table.Cell>
                 <Code>'left'</Code>
-              </TableCell>
-              <TableCell>Sets align attribute.</TableCell>
-            </TableRow>
-          </TableBody>
+              </Table.Cell>
+              <Table.Cell>Sets align attribute.</Table.Cell>
+            </Table.Row>
+          </Table.Body>
         </Table>
-      </TableContainer>
+      </Table.Container>
     </Section>
   </>
 );
