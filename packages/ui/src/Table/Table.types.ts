@@ -4,6 +4,7 @@ export interface TableProps extends HTMLAttributes<HTMLTableElement> {
   color?: 'primary' | 'neutral';
   expressive?: boolean;
   borderBottom?: boolean;
+  zebra?: boolean;
 }
 
 export interface TableCellProps extends HTMLAttributes<HTMLTableCellElement> {
@@ -18,6 +19,7 @@ export interface GeneTableHeadProps {
 export interface GeneTableRowProps {
   $borderBottom?: boolean;
   $expressive?: boolean;
+  $zebra?: boolean;
 }
 
 export interface GeneTableCellProps {

@@ -13,8 +13,8 @@ const NobelPrizeTable = ({ color = 'primary', expressive = true }) => (
       </caption>
       <Table.Head>
         <Table.Row>
-          <Table.Cell component="th">Category</Table.Cell>
-          <Table.Cell component="th">Winners</Table.Cell>
+          <Table.Cell>Category</Table.Cell>
+          <Table.Cell>Winners</Table.Cell>
         </Table.Row>
       </Table.Head>
       <Table.Body>
@@ -64,30 +64,12 @@ const TableComponent = () => (
       <PreviewBlock
         code={`<Table.Container>
   <Table>
-    <Table.Head>
-      <Table.Row>
-        <Table.Cell component="th">...</Table.Cell>
-      </Table.Row>
-    </Table.Head>
-    <Table.Body>
-      <Table.Row>
-        <Table.Cell>...</Table.Cell>
-      </Table.Row>
-    </Table.Body>
+    ...
   </Table>
 </Table.Container>\n
 <Table.Container>
-  <Table>
-    <Table.Head color="neutral">
-      <Table.Row>
-        <Table.Cell component="th">...</Table.Cell>
-      </Table.Row>
-    </Table.Head>
-    <Table.Body>
-      <Table.Row>
-        <Table.Cell>...</Table.Cell>
-      </Table.Row>
-    </Table.Body>
+  <Table color="neutral">
+    ...
   </Table>
 </Table.Container>`}
       >
@@ -100,6 +82,28 @@ const TableComponent = () => (
 
     <Section>
       <h2>Expressive</h2>
+
+      <PreviewBlock
+        code={`<Table.Container>
+  <Table>
+    ...
+  </Table>
+</Table.Container>\n
+<Table.Container>
+  <Table expressive={false}>
+    ...
+  </Table>
+</Table.Container>`}
+      >
+        <StyledPreviewLayout>
+          <NobelPrizeTable />
+          <NobelPrizeTable expressive={false} />
+        </StyledPreviewLayout>
+      </PreviewBlock>
+    </Section>
+
+    <Section>
+      <h2>Zebra</h2>
 
       <PreviewBlock
         code={`<Table.Container>

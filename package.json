@@ -8,6 +8,7 @@
   "scripts": {
     "build:ui": "yarn --cwd packages/ui build",
     "build:docs": "yarn --cwd apps/docs build",
+    "build:storybook": "yarn --cwd packages/ui build:storybook",
     "dev:docs": "yarn --cwd apps/docs dev",
     "storybook": "yarn --cwd packages/ui storybook"
   },

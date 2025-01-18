@@ -4,12 +4,14 @@ interface TableContextValue {
   color?: 'primary' | 'neutral';
   expressive?: boolean;
   borderBottom?: boolean;
+  zebra?: boolean;
 }
 
 export const TableContext = createContext<TableContextValue>({
   color: 'primary',
   expressive: true,
   borderBottom: true,
+  zebra: false,
 });
 
 export const useTableContext = () => useContext(TableContext);

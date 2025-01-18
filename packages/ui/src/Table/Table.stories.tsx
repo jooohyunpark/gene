@@ -19,6 +19,7 @@ export const Playground: Story = {
     color: 'primary',
     expressive: true,
     borderBottom: true,
+    zebra: false,
   },
   render: (args) => (
     <Table.Container>
