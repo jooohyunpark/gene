@@ -19,5 +19,6 @@ export const Playground: Story = {
   args: {
     label: 'Password',
     required: false,
+    type: 'date',
   },
 };

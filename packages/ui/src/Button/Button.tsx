@@ -73,15 +73,22 @@ const GeneButton = styled.button<GeneButtonProps>`
           color: ${backgroundColor};
           border: 2px solid ${backgroundColor};
 
-          @media (hover: hover) {
-            &:hover {
-              background: ${hoverColor};
+          &:not(:disabled) {
+            @media (hover: hover) {
+              &:hover {
+                background: ${hoverColor};
 
-              ${$expressive &&
-              css`
-                box-shadow: ${shadowSize}px ${shadowSize}px ${shadowColor};
-              `}
+                ${$expressive &&
+                css`
+                  box-shadow: ${shadowSize}px ${shadowSize}px ${shadowColor};
+                `}
+              }
             }
+          }
+
+          &:disabled {
+            color: ${color.gray30};
+            border: 2px solid ${color.gray30};
           }
         `;
       case 'subtle':
@@ -89,15 +96,21 @@ const GeneButton = styled.button<GeneButtonProps>`
           background: transparent;
           color: ${textColor};
 
-          @media (hover: hover) {
-            &:hover {
-              background: ${hoverColor};
+          &:not(:disabled) {
+            @media (hover: hover) {
+              &:hover {
+                background: ${hoverColor};
 
-              ${$expressive &&
-              css`
-                box-shadow: ${shadowSize}px ${shadowSize}px ${shadowColor};
-              `}
+                ${$expressive &&
+                css`
+                  box-shadow: ${shadowSize}px ${shadowSize}px ${shadowColor};
+                `}
+              }
             }
+          }
+
+          &:disabled {
+            color: ${color.gray30};
           }
         `;
       default:
@@ -105,16 +118,23 @@ const GeneButton = styled.button<GeneButtonProps>`
           background: ${backgroundColor};
           color: ${textColor};
 
-          @media (hover: hover) {
-            &:hover {
-              ${$expressive
-                ? css`
-                    box-shadow: ${shadowSize}px ${shadowSize}px ${shadowColor};
-                  `
-                : css`
-                    background: ${hoverColor};
-                  `}
+          &:not(:disabled) {
+            @media (hover: hover) {
+              &:hover {
+                ${$expressive
+                  ? css`
+                      box-shadow: ${shadowSize}px ${shadowSize}px ${shadowColor};
+                    `
+                  : css`
+                      background: ${hoverColor};
+                    `}
+              }
             }
+          }
+
+          &:disabled {
+            background: ${color.gray30};
+            color: ${color.white};
           }
         `;
     }
@@ -124,6 +144,11 @@ const GeneButton = styled.button<GeneButtonProps>`
     outline: 2px ${color.white} solid;
     outline-offset: 0;
     box-shadow: 0 0 0 4px ${color.blue30};
+  }
+
+  &:disabled {
+    cursor: auto;
+    opacity: 0.75;
   }
 `;
 
