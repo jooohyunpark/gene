@@ -40,6 +40,7 @@ const Nav = () => {
       { text: 'Card', to: '/components/card' },
       { text: 'Tag', to: '/components/tag' },
       { text: 'Table', to: '/components/table' },
+      { text: 'Input', to: '/components/input' },
     ],
   };
 

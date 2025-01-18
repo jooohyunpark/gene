@@ -13,6 +13,7 @@ import Link from '@/pages/components/Link';
 import Card from '@/pages/components/Card';
 import Tag from '@/pages/components/Tag';
 import Table from '@/pages/components/Table';
+import Input from '@/pages/components/Input';
 
 const Pages = () => {
   const location = useLocation();
@@ -35,6 +36,7 @@ const Pages = () => {
       <Route path="/components/link" element={<Link />} />
       <Route path="/components/tag" element={<Tag />} />
       <Route path="/components/Table" element={<Table />} />
+      <Route path="/components/Input" element={<Input />} />
     </Routes>
   );
 };
