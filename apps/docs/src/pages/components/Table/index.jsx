@@ -98,7 +98,7 @@ const TableComponent = () => (
 </Table.Container>`}
       >
         <StyledPreviewLayout>
-          <NobelPrizeTable zebra />
+          <NobelPrizeTable zebra expressive={false} />
         </StyledPreviewLayout>
       </PreviewBlock>
     </Section>
