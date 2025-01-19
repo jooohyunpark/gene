@@ -1,0 +1,56 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**/*.ts'
+      - '**/*.tsx'
+      - '**/*.js'
+      - '**/*.json'
+      - '.changeset/**'
+      - 'packages/**'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # or the version of Node.js that you're using
+
+      - name: Install Dependencies
+        run: |
+          npm install  # or yarn install if you're using Yarn
+
+      - name: Set up Changeset CLI
+        run: |
+          npx changeset version
+
+      - name: Create Changelog
+        run: |
+          npx changeset changelog
+
+      - name: Publish Packages
+        run: |
+          # Publish to npm (replace with your publishing logic if needed)
+          npm publish packages/token --access public
+          npm publish packages/ui --access public
+
+      - name: Push Changes and Create Tag
+        uses: ad-m/github-push-action@v0.6
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main  # or the branch you want to push to
+
+      - name: Create GitHub Release
+        run: |
+          TAG_NAME=$(node -p -e "require('./package.json').version")
+          gh release create $TAG_NAME ./dist/* --title "Release $TAG_NAME" --notes "Automated release by GitHub Actions"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
