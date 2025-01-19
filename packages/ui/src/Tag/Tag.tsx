@@ -1,6 +1,6 @@
 import { forwardRef, ForwardedRef } from 'react';
 import styled, { css } from 'styled-components';
-import { color, space, typography } from '@gene/token';
+import { color, space, typography } from '@jooohyunpark/gene-token';
 import type { TagProps, GeneTagProps } from './Tag.types';
 
 const colors = {

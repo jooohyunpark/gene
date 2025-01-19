@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { TableCell } from '@gene/ui';
-import { color, space } from '@gene/token';
+import { TableCell } from '@jooohyunpark/gene-ui';
+import { color, space } from '@jooohyunpark/gene-token';
 import { MediaAbove } from '@/styles/js';
 
 export const Box = styled.div`

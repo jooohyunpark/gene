@@ -1,4 +1,4 @@
-import { space } from '@gene/token';
+import { space } from '@jooohyunpark/gene-token';
 import styled from 'styled-components';
 
 export const HeroImage = styled.img`

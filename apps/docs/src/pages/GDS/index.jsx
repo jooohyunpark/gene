@@ -1,4 +1,4 @@
-import { Link } from '@gene/ui';
+import { Link } from '@jooohyunpark/gene-ui';
 import Section from '@/components/Section';
 import { HeroImage } from './styles';
 

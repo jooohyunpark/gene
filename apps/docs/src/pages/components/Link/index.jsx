@@ -1,4 +1,4 @@
-import { Table, Link } from '@gene/ui';
+import { Table, Link } from '@jooohyunpark/gene-ui';
 import Section from '@/components/Section';
 import PreviewBlock from '@/components/PreviewBlock';
 import Code from '@/components/Code';

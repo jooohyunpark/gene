@@ -1,4 +1,4 @@
-import { Table } from '@gene/ui';
+import { Table } from '@jooohyunpark/gene-ui';
 import Section from '@/components/Section';
 import { Box, StyledTableCell } from './styles';
 

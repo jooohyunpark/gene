@@ -1,4 +1,4 @@
-import { space, color } from '@gene/token';
+import { space, color } from '@jooohyunpark/gene-token';
 
 export const breakpoints = {
   xs: 0,

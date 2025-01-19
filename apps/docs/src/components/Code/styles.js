@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { color, space } from '@gene/token';
+import { color, space } from '@jooohyunpark/gene-token';
 
 export const StyledCode = styled.code`
   background: ${color.gray20};

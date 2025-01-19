@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { space } from '@gene/token';
+import { space } from '@jooohyunpark/gene-token';
 import { MediaAbove } from '@/styles/js';
 
 export const StyledSection = styled.section`

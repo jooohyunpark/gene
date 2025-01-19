@@ -1,6 +1,6 @@
 import { forwardRef, ForwardedRef } from 'react';
 import styled, { css } from 'styled-components';
-import { color, space, typography } from '@gene/token';
+import { color, space, typography } from '@jooohyunpark/gene-token';
 import type { ButtonProps, GeneButtonProps } from './Button.types';
 
 const colors = {

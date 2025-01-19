@@ -1,4 +1,4 @@
-import { typography } from '@gene/token';
+import { typography } from '@jooohyunpark/gene-token';
 import styled from 'styled-components';
 
 export const ExampleText = styled.div`

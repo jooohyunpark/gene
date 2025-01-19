@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import Prism from 'prismjs';
 
-import { Card } from '@gene/ui';
-import { space, typography } from '@gene/token';
+import { Card } from '@jooohyunpark/gene-ui';
+import { space, typography } from '@jooohyunpark/gene-token';
 import styled from 'styled-components';
 import { borderColor } from '@/styles/js';
 

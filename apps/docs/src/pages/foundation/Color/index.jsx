@@ -1,4 +1,4 @@
-import { color } from '@gene/token';
+import { color } from '@jooohyunpark/gene-token';
 import Section from '@/components/Section';
 import { Box, BoxRow, Break } from './styles';
 

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { color } from '@gene/token';
+import { color } from '@jooohyunpark/gene-token';
 import { Button } from './Button';
 
 const meta: Meta<typeof Button> = {

@@ -1,4 +1,4 @@
-import { space, typography } from '@gene/token';
+import { space, typography } from '@jooohyunpark/gene-token';
 import styled, { css } from 'styled-components';
 
 export const Box = styled.div`

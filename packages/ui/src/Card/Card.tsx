@@ -1,6 +1,6 @@
 import { forwardRef, ForwardedRef } from 'react';
 import styled, { css } from 'styled-components';
-import { color, space } from '@gene/token';
+import { color, space } from '@jooohyunpark/gene-token';
 import { CardProps, GeneCardProps } from './Card.types';
 
 const paddingSizes = {

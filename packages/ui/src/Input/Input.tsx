@@ -1,6 +1,6 @@
 import { forwardRef, ForwardedRef, useId } from 'react';
 import styled, { css } from 'styled-components';
-import { color, space, typography } from '@gene/token';
+import { color, space, typography } from '@jooohyunpark/gene-token';
 import type { InputProps, GeneInputProps } from './Input.types';
 
 const GeneInputLayout = styled.div`

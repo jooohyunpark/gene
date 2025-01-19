@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router';
 import { navWidth, textColor, padding, SetPadding } from '@/styles/js';
-import { color, space, typography } from '@gene/token';
+import { color, space, typography } from '@jooohyunpark/gene-token';
 
 export const StyledNav = styled.nav`
   width: ${navWidth}px;

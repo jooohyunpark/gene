@@ -1,3 +1,3 @@
-import config from '@gene/config/eslintConfig.js';
+import config from '@jooohyunpark/gene-config/eslintConfig.js';
 
 export default config;

@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle, css } from 'styled-components';
-import { typography, color } from '@gene/token';
+import { typography, color } from '@jooohyunpark/gene-token';
 import {
   navWidth,
   MediaAbove,

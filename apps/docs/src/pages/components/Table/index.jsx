@@ -1,5 +1,5 @@
-import { Table } from '@gene/ui';
-import { space } from '@gene/token';
+import { Table } from '@jooohyunpark/gene-ui';
+import { space } from '@jooohyunpark/gene-token';
 import Section from '@/components/Section';
 import PreviewBlock from '@/components/PreviewBlock';
 import Code from '@/components/Code';
