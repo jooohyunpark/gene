@@ -17,5 +17,8 @@
     "apps/*",
     "packages/*"
   ],
-  "repository": "https://github.com/jooohyunpark/gene.git"
+  "repository": "https://github.com/jooohyunpark/gene.git",
+  "devDependencies": {
+    "@changesets/cli": "^2.27.11"
+  }
 }
