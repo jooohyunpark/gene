@@ -1,7 +1,7 @@
 {
   "name": "gene",
   "description": "Concise, intelligent design system for showcasing creative works.",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "author": "Joohyun Park",
   "main": "index.js",
   "private": true,
