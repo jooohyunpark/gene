@@ -5,7 +5,7 @@ import { Box, StyledTableCell } from './styles';
 const Spacing = () => {
   const spacingData = [
     { multiplier: 0.25, size: 2 },
-    { multiplier: 0.55, size: 4 },
+    { multiplier: 0.5, size: 4 },
     { multiplier: 1, size: 8 },
     { multiplier: 1.5, size: 12 },
     { multiplier: 2, size: 16 },
