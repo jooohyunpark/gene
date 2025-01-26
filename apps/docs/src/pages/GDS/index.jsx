@@ -8,7 +8,7 @@ const GDS = () => (
       <h1>Gene Design System</h1>
       <p>
         A gene is the basic unit of heredity. It is passed down from parents to
-        offspring and contain the information needed to determine physical and
+        offspring and contains the information needed to determine physical and
         biological traits. In a similar way, what you create defines who you
         are.
       </p>
