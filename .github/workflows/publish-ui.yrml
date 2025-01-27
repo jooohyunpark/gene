@@ -1,0 +1,33 @@
+name: Publish UI Package
+
+on:
+  push:
+    tags:
+      - 'ui-*'  # Trigger for tags like ui-v1.0.0
+
+jobs:
+  publish-ui:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js (v20)
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: |
+          yarn install
+
+      - name: Build the UI package
+        run: |
+          yarn workspace @jooohyunpark/ui build
+
+      - name: Publish UI package to GitHub Packages
+        run: |
+          yarn workspace @jooohyunpark/ui publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
