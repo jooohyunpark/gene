@@ -4,6 +4,7 @@
   "main": "dist/index.js",
   "exports": {
     ".": {
+      "types": "./dist/types/*",
       "import": "./dist/index.esm.js",
       "require": "./dist/index.js"
     },
