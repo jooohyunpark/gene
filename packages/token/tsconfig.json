@@ -1,0 +1,13 @@
+{
+  "extends": "@jooohyunpark/gene-config/tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ES2020",
+    "moduleResolution": "node",
+    "strict": true,
+    "declarationDir": "./dist/types", // Output declaration files to dist/types
+    "outDir": "./dist", // Output JS files to dist
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*", "rollup.config.js"],
+  "exclude": ["node_modules", "dist"]
+}

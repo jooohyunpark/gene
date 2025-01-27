@@ -28,7 +28,7 @@ jobs:
         run: yarn install
 
       - name: Build All Packages
-        run: yarn workspaces foreach --include ui run build
+        run: yarn build
 
       - name: Authenticate to GitHub Packages
         run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc

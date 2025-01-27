@@ -1,5 +1,23 @@
 {
   "name": "@jooohyunpark/gene-token",
   "version": "0.0.0",
-  "main": "index.ts"
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js"
+    },
+    "./scss": "./scss/index.scss"
+  },
+  "scripts": {
+    "build": "rollup --config rollup.config.mjs",
+    "publish": "npm publish"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "rollup": "^4.32.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typescript": "^5.7.3"
+  }
 }
