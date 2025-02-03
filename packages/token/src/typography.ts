@@ -26,13 +26,13 @@ export const fontWeight700 = 700;
 export const fontWeight800 = 800;
 export const fontWeight900 = 900;
 
-export const letterSpacingNegative30 = "-0.03em";
-export const letterSpacingNegative20 = "-0.02em";
-export const letterSpacingNegative10 = "-0.01em";
+export const letterSpacingNegative30 = '-0.03em';
+export const letterSpacingNegative20 = '-0.02em';
+export const letterSpacingNegative10 = '-0.01em';
 export const letterSpacing0 = 0;
-export const letterSpacing10 = "0.01em";
-export const letterSpacing20 = "0.02em";
-export const letterSpacing30 = "0.03em";
+export const letterSpacing10 = '0.01em';
+export const letterSpacing20 = '0.02em';
+export const letterSpacing30 = '0.03em';
 
 export const heading01 = {
   fontSize: fontSize90,
