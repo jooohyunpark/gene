@@ -54,6 +54,7 @@ const GeneButton = styled.button<GeneButtonProps>`
   cursor: pointer;
   -webkit-user-select: none;
   user-select: none;
+  text-decoration: none;
   ${typography.button01};
   border-radius: ${space(0.5)}px;
   transition:
@@ -158,17 +159,19 @@ export const Button = forwardRef(
       color = 'primary',
       variant = 'fill',
       expressive = true,
-      href,
+      href = undefined,
       children,
       ...props
     }: ButtonProps,
-    ref: ForwardedRef<HTMLButtonElement>,
+    ref: ForwardedRef<HTMLButtonElement | HTMLAnchorElement>,
   ) => {
+    const component = href ? 'a' : 'button';
+
     return (
       <GeneButton
-        as={href ? 'a' : 'button'}
+        ref={ref as ForwardedRef<HTMLButtonElement & HTMLAnchorElement>}
+        as={component}
         href={href}
-        ref={ref}
         $color={color}
         $variant={variant}
         $expressive={expressive}

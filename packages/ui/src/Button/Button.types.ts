@@ -1,10 +1,13 @@
-import { ButtonHTMLAttributes } from 'react';
+import { ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react';
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+type ButtonAnchorProps = ButtonHTMLAttributes<HTMLButtonElement> &
+  AnchorHTMLAttributes<HTMLAnchorElement>;
+
+export interface ButtonProps extends ButtonAnchorProps {
   color?: 'primary' | 'base';
   variant?: 'fill' | 'outline' | 'subtle';
   expressive?: boolean;
-  href?: string | undefined;
+  href?: string;
 }
 
 export interface GeneButtonProps {
