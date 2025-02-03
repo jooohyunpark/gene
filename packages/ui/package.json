@@ -14,7 +14,7 @@
     "build": "rollup --config rollup.config.mjs",
     "lint": "eslint .",
     "storybook": "storybook dev -p 6006",
-    "build:storybook": "storybook build --output-dir storybook-dist",
+    "build:storybook": "storybook build --output-dir storybook-dist"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
