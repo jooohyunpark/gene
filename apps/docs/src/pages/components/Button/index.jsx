@@ -110,6 +110,18 @@ const ButtonComponent = () => (
             </Table.Row>
             <Table.Row>
               <Table.Cell>
+                <Code>href</Code>
+              </Table.Cell>
+              <Table.Cell>
+                <Code>string</Code>
+              </Table.Cell>
+              <Table.Cell>-</Table.Cell>
+              <Table.Cell>
+                If present, sets the component as an anchor
+              </Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>
                 <Code>children</Code>
               </Table.Cell>
               <Table.Cell>

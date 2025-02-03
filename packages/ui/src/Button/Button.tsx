@@ -158,6 +158,7 @@ export const Button = forwardRef(
       color = 'primary',
       variant = 'fill',
       expressive = true,
+      href,
       children,
       ...props
     }: ButtonProps,
@@ -165,6 +166,7 @@ export const Button = forwardRef(
   ) => {
     return (
       <GeneButton
+        as={href ? 'a' : 'button'}
         ref={ref}
         $color={color}
         $variant={variant}
