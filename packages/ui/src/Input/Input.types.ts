@@ -1,7 +1,6 @@
 import { InputHTMLAttributes } from 'react';
 
-export interface InputProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'id'> {
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   required?: boolean;
 }
