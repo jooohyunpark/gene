@@ -167,6 +167,7 @@ export const Button = forwardRef(
     return (
       <GeneButton
         as={href ? 'a' : 'button'}
+        href={href}
         ref={ref}
         $color={color}
         $variant={variant}
