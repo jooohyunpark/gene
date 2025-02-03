@@ -24,8 +24,6 @@ export default {
   plugins: [
     resolve(), // Resolves dependencies from node_modules
     commonjs(), // Converts CommonJS modules to ES6
-    typescript({
-      useTsconfigDeclarationDir: true,
-    }),
+    typescript(),
   ],
 };

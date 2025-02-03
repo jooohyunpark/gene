@@ -1,6 +1,6 @@
 {
   "name": "@jooohyunpark/gene-token",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "dist/index.js",
   "exports": {
     ".": {
@@ -11,8 +11,7 @@
     "./scss": "./scss/index.scss"
   },
   "scripts": {
-    "build": "rollup --config rollup.config.mjs",
-    "publish": "npm publish"
+    "build": "rollup --config rollup.config.mjs"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.2",
