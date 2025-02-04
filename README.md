@@ -1,4 +1,4 @@
-# Gene
+# Gene Design System
 
 A gene is the basic unit of heredity. It is passed down from parents to offspring and contains the information needed to determine physical and biological traits. In a similar way, what you create defines who you are.
 
