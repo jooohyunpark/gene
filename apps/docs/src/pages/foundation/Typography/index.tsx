@@ -3,7 +3,28 @@ import Section from '@/components/Section';
 import { ExampleText } from './styles';
 
 const Typography = () => {
-  const typographyData = [
+  interface TypographyData {
+    name: string;
+    token:
+      | 'heading01'
+      | 'heading02'
+      | 'heading03'
+      | 'heading04'
+      | 'heading05'
+      | 'heading06'
+      | 'body01'
+      | 'body02'
+      | 'body03'
+      | 'button01'
+      | 'label01'
+      | 'label02';
+    size: string;
+    lineHeight: number;
+    weight: number;
+    letterSpacing: number;
+  }
+
+  const typographyData: TypographyData[] = [
     {
       name: 'Heading 01',
       token: 'heading01',
@@ -54,7 +75,7 @@ const Typography = () => {
     },
     {
       name: 'Body 01',
-      token: 'body 01',
+      token: 'body01',
       size: '18 / 1.125',
       lineHeight: 1.6,
       weight: 400,

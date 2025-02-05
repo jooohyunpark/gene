@@ -1,7 +1,13 @@
 import { space, typography } from '@jooohyunpark/gene-token';
 import styled, { css } from 'styled-components';
 
-export const Box = styled.div`
+interface BoxProps {
+  $background?: string;
+  $color?: string;
+  $border?: string;
+}
+
+export const Box = styled.div<BoxProps>`
   width: 20%;
   max-width: ${space(15)}px;
   aspect-ratio: 1 / 1;

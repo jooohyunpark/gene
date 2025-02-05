@@ -1,5 +1,5 @@
 import path from 'path';
-import typescript from 'rollup-plugin-typescript2';
+import typescript from '@rollup/plugin-typescript';
 import { babel } from '@rollup/plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
@@ -27,9 +27,7 @@ export default {
   plugins: [
     resolve(), // Resolves dependencies from node_modules
     commonjs(), // Converts CommonJS modules to ES6
-    typescript({
-      useTsconfigDeclarationDir: true,
-    }),
+    typescript(),
     babel({
       exclude: 'node_modules/**',
       presets: ['@babel/preset-react', '@babel/preset-typescript'],

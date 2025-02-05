@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, FC } from 'react';
 import { useLocation } from 'react-router';
+import type { LinkProps } from 'react-router';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
-
 import useMediaAbove from '@/hooks/useMediaAbove';
 import Header from '@/components/Header';
-import { borderColor } from '@/styles/js/vars';
+import { borderColor } from '@/styles/helper';
 import {
   StyledNav,
   StyledLink,
@@ -15,7 +15,11 @@ import {
   Button,
 } from './styles';
 
-const CustomLink = ({ to, children, ...props }) => {
+interface CustomLinkProps extends LinkProps {
+  to: string;
+}
+
+const CustomLink: FC<CustomLinkProps> = ({ to, children, ...props }) => {
   const location = useLocation();
   const isActive = location.pathname === to;
 
@@ -47,7 +51,7 @@ const Nav = () => {
   const isDesktop = useMediaAbove('md');
   const [open, setOpen] = useState(false);
 
-  const sortAlphabetically = (array) => {
+  const sortAlphabetically = (array: Array<{ text: string; to: string }>) => {
     return array.sort((a, b) => {
       if (a.text < b.text) return -1;
       if (a.text > b.text) return 1;

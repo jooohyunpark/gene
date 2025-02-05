@@ -1,10 +1,15 @@
-import { useEffect } from 'react';
+import { useEffect, FC, ReactNode } from 'react';
 import Prism from 'prismjs';
 
 import { Card } from '@jooohyunpark/gene-ui';
 import { space, typography } from '@jooohyunpark/gene-token';
 import styled from 'styled-components';
-import { borderColor } from '@/styles/js';
+import { borderColor } from '@/styles/helper';
+
+interface PreviewBlockProps {
+  code?: string;
+  children?: ReactNode;
+}
 
 const StylePreviewBlock = styled.div`
   width: 100%;
@@ -35,7 +40,11 @@ const StyledCodeCard = styled(Card)`
   }
 `;
 
-const PreviewBlock = ({ code = '', children, ...props }) => {
+const PreviewBlock: FC<PreviewBlockProps> = ({
+  code = '',
+  children,
+  ...props
+}) => {
   useEffect(() => {
     setTimeout(() => Prism.highlightAll(), 0);
   }, []);

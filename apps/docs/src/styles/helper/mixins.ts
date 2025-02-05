@@ -1,12 +1,20 @@
-import { css } from 'styled-components';
+import { css, CSSObject } from 'styled-components';
 import { breakpoints, padding } from './vars';
 
-export const MediaBelow = (key) =>
+type MediaKeyProp = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+
+interface PaddingProp {
+  x: boolean;
+  y: boolean;
+}
+
+export const MediaBelow = (key: MediaKeyProp) =>
   `@media (max-width: ${breakpoints[key] - 1}px)`;
 
-export const MediaAbove = (key) => `@media (min-width: ${breakpoints[key]}px)`;
+export const MediaAbove = (key: MediaKeyProp) =>
+  `@media (min-width: ${breakpoints[key]}px)`;
 
-export const SetPadding = (config = { x: true, y: true }) => css`
+export const SetPadding = (config: PaddingProp = { x: true, y: true }) => css`
   ${config?.x &&
   css`
     padding-left: ${padding.x.sm}px;
@@ -30,7 +38,7 @@ export const SetPadding = (config = { x: true, y: true }) => css`
   `}
 `;
 
-export const OnHover = (styles) => css`
+export const OnHover = (styles: CSSObject | undefined) => css`
   @media (hover: hover) {
     &:hover {
       ${styles};

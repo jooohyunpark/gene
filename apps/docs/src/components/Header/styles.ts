@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { headerHeight, SetPadding, borderColor } from '@/styles/js';
+import { headerHeight, SetPadding, borderColor } from '@/styles/helper';
 
 export const StyledHeader = styled.header`
   position: sticky;

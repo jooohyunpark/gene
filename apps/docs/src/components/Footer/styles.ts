@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { space, typography } from '@jooohyunpark/gene-token';
-import { SetPadding, borderColor } from '@/styles/js';
+import { SetPadding, borderColor } from '@/styles/helper';
 
 export const StyledFooter = styled.footer`
   display: flex;

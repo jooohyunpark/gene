@@ -5,11 +5,12 @@
     "moduleResolution": "bundler",
     "strict": true,
     "jsx": "react-jsx",
-    "declaration": true,
-    "declarationDir": "./dist/types", // Output declaration files to dist/types
-    "outDir": "./dist", // Output JS files to dist
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
-  "include": ["src/**/*", "rollup.config.js"],
+  "include": ["src/**/*", "vite.config.ts"],
   "exclude": ["node_modules", "dist"]
 }

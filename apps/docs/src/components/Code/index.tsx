@@ -1,6 +1,7 @@
+import { FC, PropsWithChildren } from 'react';
 import { StyledCode } from './styles';
 
-const Code = ({ children, ...props }) => {
+const Code: FC<PropsWithChildren> = ({ children, ...props }) => {
   return <StyledCode {...props}>{children}</StyledCode>;
 };
 

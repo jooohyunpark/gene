@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { space } from '@jooohyunpark/gene-token';
-import { MediaAbove } from '@/styles/js';
+import { MediaAbove } from '@/styles/helper';
 
 export const StyledSection = styled.section`
   display: flex;

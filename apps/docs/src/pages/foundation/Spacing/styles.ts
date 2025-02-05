@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 import { TableCell } from '@jooohyunpark/gene-ui';
 import { color, space } from '@jooohyunpark/gene-token';
-import { MediaAbove } from '@/styles/js';
+import { MediaAbove } from '@/styles/helper';
 
-export const Box = styled.div`
+interface BoxProps {
+  $size: number;
+}
+
+export const Box = styled.div<BoxProps>`
   display: inline-block;
   width: ${({ $size }) => $size}px;
   aspect-ratio: 1 / 1;

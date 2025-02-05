@@ -7,7 +7,7 @@ import {
   textColor,
   headerHeight,
   contentMaxWidth,
-} from '@/styles/js';
+} from '@/styles/helper';
 
 export const GlolbalStyle = createGlobalStyle`
 ${css`

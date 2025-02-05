@@ -1,7 +1,11 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router';
-import { navWidth, textColor, padding, SetPadding } from '@/styles/js';
+import { navWidth, textColor, padding, SetPadding } from '@/styles/helper';
 import { color, space, typography } from '@jooohyunpark/gene-token';
+
+interface StyledLinkProps {
+  $isActive?: boolean;
+}
 
 export const StyledNav = styled.nav`
   width: ${navWidth}px;
@@ -25,7 +29,7 @@ export const StyledLabel = styled.div`
   margin-top: ${space(5)}px;
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled(Link)<StyledLinkProps>`
   position: relative;
   display: block;
   text-decoration: none;
