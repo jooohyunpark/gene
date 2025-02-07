@@ -1,4 +1,9 @@
-const GeneIcon = ({ size = 48, color = '#161616' }) => (
+interface GeneIconProps {
+  size?: number;
+  color?: string;
+}
+
+const GeneIcon = ({ size = 48, color = '#161616' }: GeneIconProps) => (
   <svg
     width={size}
     height={size}

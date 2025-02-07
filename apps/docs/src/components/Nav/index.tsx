@@ -49,9 +49,9 @@ const Nav = () => {
   };
 
   const isDesktop = useMediaAbove('md');
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
 
-  const sortAlphabetically = (array: Array<{ text: string; to: string }>) => {
+  const sortAlphabetically = (array: { text: string; to: string }[]) => {
     return array.sort((a, b) => {
       if (a.text < b.text) return -1;
       if (a.text > b.text) return 1;
