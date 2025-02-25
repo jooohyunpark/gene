@@ -44,5 +44,6 @@ export const Playground: Story = {
     expressive: true,
     onClick: action('onClick'),
     children: 'Click me',
+    disabled: false,
   },
 };
