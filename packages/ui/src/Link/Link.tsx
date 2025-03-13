@@ -18,14 +18,18 @@ const GeneLink = styled.a<GeneLinkProps>`
       padding: 0 0.15em;
       margin: 0 -0.15em;
 
+      background: linear-gradient(to right, ${color.blue30}, ${color.blue30})
+        no-repeat right;
+      background-size: 0% auto;
       transition:
-        background 0.25s ease-out,
-        color 0.25s ease-out;
+        background-size 0.3s,
+        color 0.3s ease-out;
 
       @media (hover: hover) {
         &:hover {
-          background: ${color.blue30};
           color: ${color.white};
+          background-size: 100% auto;
+          background-position: left;
         }
       }
     `}
