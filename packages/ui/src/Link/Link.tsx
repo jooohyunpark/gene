@@ -23,7 +23,7 @@ const GeneLink = styled.a<GeneLinkProps>`
       background-size: 0% auto;
       transition:
         background-size 0.3s ease-out,
-        color 0.3s;
+        color 0.3s ease-out;
 
       @media (hover: hover) {
         &:hover {
