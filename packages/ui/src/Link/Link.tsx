@@ -22,8 +22,8 @@ const GeneLink = styled.a<GeneLinkProps>`
         no-repeat right;
       background-size: 0% auto;
       transition:
-        background-size 0.3s,
-        color 0.3s ease-out;
+        background-size 0.3s ease-out,
+        color 0.3s;
 
       @media (hover: hover) {
         &:hover {
