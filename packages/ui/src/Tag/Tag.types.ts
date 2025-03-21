@@ -1,12 +1,32 @@
-import { HTMLAttributes } from 'react';
+import type {
+  HTMLAttributes,
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes,
+} from 'react';
 
-export interface TagProps
-  extends HTMLAttributes<
-    HTMLDivElement | HTMLAnchorElement | HTMLButtonElement
-  > {
+type CommonTagProps = {
   color?: 'primary' | 'neutral';
-  href?: string;
-}
+};
+
+export type DivTagProps = CommonTagProps &
+  HTMLAttributes<HTMLDivElement> & {
+    href?: string;
+    onClick?: () => void;
+  };
+
+export type AnchorTagProps = CommonTagProps &
+  AnchorHTMLAttributes<HTMLAnchorElement> & {
+    onClick?: () => void;
+    href?: string;
+  };
+
+export type ButtonTagProps = CommonTagProps &
+  ButtonHTMLAttributes<HTMLButtonElement> & {
+    onClick?: () => void;
+    href?: string;
+  };
+
+export type TagProps = DivTagProps | AnchorTagProps | ButtonTagProps;
 
 export interface GeneTagProps {
   $color?: 'primary' | 'neutral';
