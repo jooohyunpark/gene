@@ -1,4 +1,4 @@
-import { forwardRef, ForwardedRef, useId } from 'react';
+import { forwardRef, useId } from 'react';
 import styled from 'styled-components';
 import { color, space, typography } from '@jooohyunpark/gene-token';
 import type { InputProps, GeneInputProps } from './Input.types';
@@ -24,11 +24,8 @@ const GeneInput = styled.input<GeneInputProps>`
   }
 `;
 
-export const Input = forwardRef(
-  (
-    { label, required = false, ...props }: InputProps,
-    ref: ForwardedRef<HTMLInputElement>,
-  ) => {
+export const Input = forwardRef<HTMLInputElement, InputProps>(
+  ({ label, required = false, ...props }, ref) => {
     const id = useId();
 
     return (

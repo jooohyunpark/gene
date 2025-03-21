@@ -1,12 +1,13 @@
-import { HTMLAttributes } from 'react';
+import { TableHTMLAttributes } from 'react';
 
-export interface TableProps extends HTMLAttributes<HTMLTableElement> {
+export interface TableProps extends TableHTMLAttributes<HTMLTableElement> {
   color?: 'primary' | 'neutral';
   expressive?: boolean;
   zebra?: boolean;
 }
 
-export interface TableCellProps extends HTMLAttributes<HTMLTableCellElement> {
+export interface TableCellProps
+  extends TableHTMLAttributes<HTMLTableCellElement> {
   component?: 'th' | 'td';
   scope?: 'row' | 'col' | 'rowgroup' | 'colgroup';
   align?: 'left' | 'center' | 'right';

@@ -1,4 +1,4 @@
-import { forwardRef, ForwardedRef } from 'react';
+import { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import { color, space } from '@jooohyunpark/gene-token';
 import { CardProps, GeneCardProps } from './Card.types';
@@ -37,7 +37,7 @@ const GeneCard = styled.div<GeneCardProps>`
     `};
 `;
 
-export const Card = forwardRef(
+export const Card = forwardRef<HTMLDivElement, CardProps>(
   (
     {
       color = 'neutral',
@@ -46,8 +46,8 @@ export const Card = forwardRef(
       children,
       style,
       ...props
-    }: CardProps,
-    ref: ForwardedRef<HTMLDivElement>,
+    },
+    ref,
   ) => {
     return (
       <GeneCard

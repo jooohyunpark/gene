@@ -9,19 +9,19 @@ const colors = {
       background: color.blue30,
       text: color.white,
       hover: color.blue40,
-      shahdow: color.blue40,
+      shadow: color.blue40,
     },
     outline: {
       background: color.blue30,
       text: color.blue30,
       hover: `${color.blue20}40`, // 25% opacity
-      shahdow: color.blue40,
+      shadow: color.blue40,
     },
     subtle: {
       background: 'transparent',
       text: color.blue30,
       hover: `${color.blue20}40`,
-      shahdow: color.blue40,
+      shadow: color.blue40,
     },
   },
   base: {
@@ -29,19 +29,19 @@ const colors = {
       background: color.white,
       text: color.gray100,
       hover: color.gray10,
-      shahdow: color.gray30,
+      shadow: color.gray30,
     },
     outline: {
       background: color.white,
       text: color.white,
       hover: `${color.gray20}40`,
-      shahdow: color.gray30,
+      shadow: color.gray30,
     },
     subtle: {
       background: 'transparent',
       text: color.white,
       hover: `${color.gray20}40`,
-      shahdow: color.gray30,
+      shadow: color.gray30,
     },
   },
 };
@@ -65,7 +65,7 @@ const GeneButton = styled.button<GeneButtonProps>`
     const backgroundColor = colors[$color][$variant].background;
     const textColor = colors[$color][$variant].text;
     const hoverColor = colors[$color][$variant].hover;
-    const shadowColor = colors[$color][$variant].shahdow;
+    const shadowColor = colors[$color][$variant].shadow;
 
     switch ($variant) {
       case 'outline':
@@ -153,7 +153,10 @@ const GeneButton = styled.button<GeneButtonProps>`
   }
 `;
 
-export const Button = forwardRef(
+export const Button = forwardRef<
+  HTMLButtonElement | HTMLAnchorElement,
+  ButtonProps
+>(
   (
     {
       color = 'primary',
@@ -162,8 +165,8 @@ export const Button = forwardRef(
       href = undefined,
       children,
       ...props
-    }: ButtonProps,
-    ref: ForwardedRef<HTMLButtonElement | HTMLAnchorElement>,
+    },
+    ref,
   ) => {
     const component = href ? 'a' : 'button';
 

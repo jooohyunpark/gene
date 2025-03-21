@@ -1,4 +1,4 @@
-import { forwardRef, ForwardedRef, HTMLAttributes } from 'react';
+import { forwardRef, HTMLAttributes } from 'react';
 import styled, { css } from 'styled-components';
 import { color, space, typography } from '@jooohyunpark/gene-token';
 import {
@@ -72,33 +72,25 @@ const GeneTableCell = styled.td<GeneTableCellProps>`
   text-align: ${({ $align }) => $align};
 `;
 
-export const TableContainer = forwardRef(
-  (
-    { children, ...props }: HTMLAttributes<HTMLDivElement>,
-    ref: ForwardedRef<HTMLDivElement>,
-  ) => {
-    return (
-      <GeneTableContainer ref={ref as ForwardedRef<HTMLDivElement>} {...props}>
-        {children}
-      </GeneTableContainer>
-    );
-  },
-);
+export const TableContainer = forwardRef<
+  HTMLDivElement,
+  HTMLAttributes<HTMLDivElement>
+>(({ children, ...props }, ref) => {
+  return (
+    <GeneTableContainer ref={ref} {...props}>
+      {children}
+    </GeneTableContainer>
+  );
+});
 
-const TableBase = forwardRef(
+const TableBase = forwardRef<HTMLTableElement, TableProps>(
   (
-    {
-      color = 'primary',
-      expressive = true,
-      zebra = false,
-      children,
-      ...props
-    }: TableProps,
-    ref: ForwardedRef<HTMLTableElement>,
+    { color = 'primary', expressive = true, zebra = false, children, ...props },
+    ref,
   ) => {
     return (
       <TableContext.Provider value={{ color, expressive, zebra }}>
-        <GeneTable ref={ref as ForwardedRef<HTMLTableElement>} {...props}>
+        <GeneTable ref={ref} {...props}>
           {children}
         </GeneTable>
       </TableContext.Provider>
@@ -106,78 +98,57 @@ const TableBase = forwardRef(
   },
 );
 
-export const TableHead = forwardRef(
-  (
-    { children, ...props }: HTMLAttributes<HTMLTableSectionElement>,
-    ref: ForwardedRef<HTMLTableSectionElement>,
-  ) => {
-    const { color } = useTableContext();
+export const TableHead = forwardRef<
+  HTMLTableSectionElement,
+  HTMLAttributes<HTMLTableSectionElement>
+>(({ children, ...props }, ref) => {
+  const { color } = useTableContext();
 
-    return (
-      <TableSectionContext.Provider value={{ section: 'head' }}>
-        <GeneTableHead
-          ref={ref as ForwardedRef<HTMLTableSectionElement>}
-          $color={color}
-          {...props}
-        >
-          {children}
-        </GeneTableHead>
-      </TableSectionContext.Provider>
-    );
-  },
-);
-
-export const TableBody = forwardRef(
-  (
-    { children, ...props }: HTMLAttributes<HTMLTableSectionElement>,
-    ref: ForwardedRef<HTMLTableSectionElement>,
-  ) => {
-    return (
-      <TableSectionContext.Provider value={{ section: 'body' }}>
-        <GeneTableBody
-          ref={ref as ForwardedRef<HTMLTableSectionElement>}
-          {...props}
-        >
-          {children}
-        </GeneTableBody>
-      </TableSectionContext.Provider>
-    );
-  },
-);
-
-export const TableRow = forwardRef(
-  (
-    { children, ...props }: HTMLAttributes<HTMLTableRowElement>,
-    ref: ForwardedRef<HTMLTableRowElement>,
-  ) => {
-    const { expressive, zebra } = useTableContext();
-    const { section } = useTableSectionContext();
-
-    return (
-      <GeneTableRow
-        ref={ref as ForwardedRef<HTMLTableRowElement>}
-        $section={section}
-        $borderBottom={section === 'body' ? !zebra : false}
-        $expressive={section === 'body' ? expressive : false}
-        $zebra={section === 'body' ? zebra : false}
-        {...props}
-      >
+  return (
+    <TableSectionContext.Provider value={{ section: 'head' }}>
+      <GeneTableHead ref={ref} $color={color} {...props}>
         {children}
-      </GeneTableRow>
-    );
-  },
-);
+      </GeneTableHead>
+    </TableSectionContext.Provider>
+  );
+});
 
-export const TableCell = forwardRef(
+export const TableBody = forwardRef<
+  HTMLTableSectionElement,
+  HTMLAttributes<HTMLTableSectionElement>
+>(({ children, ...props }, ref) => (
+  <TableSectionContext.Provider value={{ section: 'body' }}>
+    <GeneTableBody ref={ref} {...props}>
+      {children}
+    </GeneTableBody>
+  </TableSectionContext.Provider>
+));
+
+export const TableRow = forwardRef<
+  HTMLTableRowElement,
+  HTMLAttributes<HTMLTableRowElement>
+>(({ children, ...props }, ref) => {
+  const { expressive, zebra } = useTableContext();
+  const { section } = useTableSectionContext();
+
+  return (
+    <GeneTableRow
+      ref={ref}
+      $section={section}
+      $borderBottom={section === 'body' ? !zebra : false}
+      $expressive={section === 'body' ? expressive : false}
+      $zebra={section === 'body' ? zebra : false}
+      {...props}
+    >
+      {children}
+    </GeneTableRow>
+  );
+});
+
+export const TableCell = forwardRef<HTMLTableCellElement, TableCellProps>(
   (
-    {
-      component = 'td',
-      scope = 'col',
-      align = 'left',
-      children,
-      ...props
-    }: TableCellProps,
-    ref: ForwardedRef<HTMLTableCellElement>,
+    { component = 'td', scope = 'col', align = 'left', children, ...props },
+    ref,
   ) => {
     const { section } = useTableSectionContext();
 
@@ -186,7 +157,7 @@ export const TableCell = forwardRef(
 
     return (
       <GeneTableCell
-        ref={ref as ForwardedRef<HTMLTableCellElement>}
+        ref={ref}
         as={componentProp}
         $align={align}
         {...scopeProp}

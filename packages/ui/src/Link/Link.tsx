@@ -1,4 +1,4 @@
-import { forwardRef, ForwardedRef } from 'react';
+import { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import { color } from '@jooohyunpark/gene-token';
 import type { LinkProps, GeneLinkProps } from './Link.types';
@@ -57,7 +57,7 @@ const GeneLink = styled.a<GeneLinkProps>`
   }
 `;
 
-export const Link = forwardRef(
+export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
   (
     {
       href = '',
@@ -66,8 +66,8 @@ export const Link = forwardRef(
       underline = true,
       children,
       ...props
-    }: LinkProps,
-    ref: ForwardedRef<HTMLAnchorElement>,
+    },
+    ref,
   ) => {
     return (
       <GeneLink

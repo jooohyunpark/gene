@@ -40,27 +40,25 @@ const GeneTag = styled.div<GeneTagProps>`
     `};
 `;
 
-export const Tag = forwardRef(
-  (
-    { href, color = 'neutral', onClick, children, ...props }: TagProps,
-    ref: ForwardedRef<HTMLDivElement | HTMLAnchorElement | HTMLButtonElement>,
-  ) => {
-    const as = href ? 'a' : onClick ? 'button' : 'div';
+export const Tag = forwardRef<
+  HTMLDivElement | HTMLAnchorElement | HTMLButtonElement,
+  TagProps
+>(({ href, color = 'neutral', onClick, children, ...props }, ref) => {
+  const as = href ? 'a' : onClick ? 'button' : 'div';
 
-    return (
-      <GeneTag
-        ref={
-          ref as ForwardedRef<
-            HTMLDivElement & HTMLAnchorElement & HTMLButtonElement
-          >
-        }
-        as={as}
-        href={href}
-        $color={color}
-        {...props}
-      >
-        {children}
-      </GeneTag>
-    );
-  },
-);
+  return (
+    <GeneTag
+      ref={
+        ref as ForwardedRef<
+          HTMLDivElement & HTMLAnchorElement & HTMLButtonElement
+        >
+      }
+      as={as}
+      href={href}
+      $color={color}
+      {...props}
+    >
+      {children}
+    </GeneTag>
+  );
+});
