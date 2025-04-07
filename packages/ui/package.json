@@ -51,10 +51,10 @@
     "typescript": "^5.7.2"
   },
   "peerDependencies": {
-    "react": "^18.0.0"
+    "react": "^18.0.0",
+    "styled-components": "^6.0.0"
   },
   "dependencies": {
-    "@jooohyunpark/gene-token": "*",
-    "styled-components": "^6.1.14"
+    "@jooohyunpark/gene-token": "*"
   }
 }
