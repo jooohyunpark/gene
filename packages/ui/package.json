@@ -52,10 +52,10 @@
   },
   "peerDependencies": {
     "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "styled-components": "^6.0.0"
+    "react-dom": "^18.0.0"
   },
   "dependencies": {
-    "@jooohyunpark/gene-token": "*"
+    "@jooohyunpark/gene-token": "*",
+    "styled-components": "^6.0.0"
   }
 }
