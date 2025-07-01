@@ -6,11 +6,11 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "build:ui": "yarn --cwd packages/ui build",
-    "build:docs": "yarn --cwd apps/docs build",
-    "build:storybook": "yarn --cwd packages/ui build:storybook",
-    "dev:docs": "yarn --cwd apps/docs dev",
-    "storybook": "yarn --cwd packages/ui storybook"
+    "build:ui": "pnpm --filter @jooohyunpark/gene-ui build",
+    "build:docs": "pnpm --filter docs build",
+    "build:storybook": "pnpm --filter @jooohyunpark/gene-ui build:storybook",
+    "dev:docs": "pnpm --filter docs dev",
+    "storybook": "pnpm --filter @jooohyunpark/gene-ui storybook"
   },
   "license": "MIT",
   "workspaces": [

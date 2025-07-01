@@ -1,5 +1,5 @@
 {
-  "extends": "@jooohyunpark/gene-config/tsconfig.base.json",
+  "extends": "../../packages/config/tsconfig.base.json",
   "compilerOptions": {
     "target": "ES2020",
     "moduleResolution": "bundler",

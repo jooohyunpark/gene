@@ -25,9 +25,11 @@
     "@babel/preset-typescript": "^7.26.0",
     "@chromatic-com/storybook": "^3.2.3",
     "@rollup/plugin-babel": "^6.0.4",
+    "@jooohyunpark/gene-config": "workspace:*",
     "@rollup/plugin-commonjs": "^28.0.2",
     "@rollup/plugin-node-resolve": "^16.0.0",
     "@rollup/plugin-typescript": "^12.1.2",
+    "@storybook/addon-actions": "^8.4.7",
     "@storybook/addon-essentials": "^8.4.7",
     "@storybook/addon-interactions": "^8.4.7",
     "@storybook/addon-onboarding": "^8.4.7",
@@ -55,7 +57,7 @@
     "react-dom": "^18.0.0"
   },
   "dependencies": {
-    "@jooohyunpark/gene-token": "*",
+    "@jooohyunpark/gene-token": "workspace:*",
     "styled-components": "^6.0.0"
   }
 }
