@@ -1,4 +1,5 @@
 import path from 'path';
+import { fileURLToPath } from 'url';
 import typescript from '@rollup/plugin-typescript';
 import { babel } from '@rollup/plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
@@ -6,45 +7,46 @@ import commonjs from '@rollup/plugin-commonjs';
 import styles from 'rollup-plugin-styles';
 import { terser } from 'rollup-plugin-terser';
 
-// Resolve __dirname in ES modules
-import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default {
-  input: path.join(__dirname, 'src/index.ts'), // The entry point of your UI package
+  input: path.join(__dirname, 'src/index.ts'),
   output: [
     {
-      file: path.resolve(__dirname, 'dist/index.js'),
-      format: 'cjs', // CommonJS for Node.js compatibility
+      file: path.join(__dirname, 'dist/index.js'),
+      format: 'cjs',
       sourcemap: true,
     },
     {
-      file: path.resolve(__dirname, 'dist/index.esm.js'),
-      format: 'esm', // ES Module for bundlers like Webpack or Rollup
+      file: path.join(__dirname, 'dist/index.esm.js'),
+      format: 'esm',
       sourcemap: true,
     },
   ],
+  external: (id) =>
+    /^react($|\/)/.test(id) ||
+    /^react-dom($|\/)/.test(id) ||
+    /^styled-components($|\/)/.test(id) ||
+    /^@babel\/runtime($|\/)/.test(id),
+
   plugins: [
-    resolve(), // Resolves dependencies from node_modules
-    commonjs(), // Converts CommonJS modules to ES6
+    resolve({ extensions: ['.js', '.jsx', '.ts', '.tsx'] }),
+    commonjs(),
     typescript(),
     babel({
-      exclude: 'node_modules/**',
-      presets: ['@babel/preset-react', '@babel/preset-typescript'],
-      plugins: [
-        [
-          'babel-plugin-styled-components',
-          {
-            displayName: true,
-            fileName: false,
-          },
-        ],
-      ],
-      babelHelpers: 'bundled',
       extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      babelHelpers: 'runtime',
+      exclude: 'node_modules/**',
+      presets: [
+        ['@babel/preset-react', { runtime: 'automatic' }],
+        '@babel/preset-typescript',
+      ],
+      plugins: [
+        ['@babel/plugin-transform-runtime', { useESModules: true }],
+        ['babel-plugin-styled-components', { displayName: true }],
+      ],
     }),
-    styles(), // Bundle CSS (including for styled-components)
-    terser(), // Minify the output for production builds
+    styles(),
+    terser(),
   ],
-  external: ['react', 'react-dom', 'styled-components'], // Mark peer dependencies as external
 };
