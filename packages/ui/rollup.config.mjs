@@ -10,6 +10,12 @@ import { terser } from 'rollup-plugin-terser';
 import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
+const globals = {
+  react: 'React',
+  'react-dom': 'ReactDOM',
+  'styled-components': 'styled',
+};
+
 export default {
   input: path.join(__dirname, 'src/index.ts'), // The entry point of your UI package
   output: [
@@ -17,26 +23,44 @@ export default {
       file: path.resolve(__dirname, 'dist/index.js'),
       format: 'cjs', // CommonJS for Node.js compatibility
       sourcemap: true,
+      globals,
+      exports: 'named',
     },
     {
       file: path.resolve(__dirname, 'dist/index.esm.js'),
       format: 'esm', // ES Module for bundlers like Webpack or Rollup
       sourcemap: true,
+      globals,
+      exports: 'named',
     },
   ],
   plugins: [
-    resolve(), // Resolves dependencies from node_modules
-    commonjs(), // Converts CommonJS modules to ES6
-    typescript(),
+    resolve({
+      extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      mainFields: ['browser', 'module', 'main'],
+    }),
+    commonjs({
+      include: /node_modules/,
+      requireReturnsDefault: 'auto',
+    }),
+    typescript({
+      tsconfig: './tsconfig.json',
+      declaration: true,
+      declarationDir: 'dist/types',
+    }),
     babel({
       exclude: 'node_modules/**',
-      presets: ['@babel/preset-react', '@babel/preset-typescript'],
+      presets: [
+        '@babel/preset-typescript',
+        ['@babel/preset-react', { runtime: 'automatic' }],
+      ],
       plugins: [
         [
           'babel-plugin-styled-components',
           {
             displayName: true,
             fileName: false,
+            pure: true,
           },
         ],
       ],
@@ -46,5 +70,5 @@ export default {
     styles(), // Bundle CSS (including for styled-components)
     terser(), // Minify the output for production builds
   ],
-  external: ['react', 'react-dom', 'styled-components'], // Mark peer dependencies as external
+  external: ['react', 'react-dom', 'styled-components', /^@babel\/runtime/], // Mark peer dependencies as external
 };
