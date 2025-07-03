@@ -23,8 +23,11 @@ export default {
       sourcemap: true,
     },
   ],
-  external: ['react', 'react-dom', 'styled-components', '@babel/runtime'],
-
+  external: (id) =>
+    /^react($|\/)/.test(id) ||
+    /^react-dom($|\/)/.test(id) ||
+    /^styled-components($|\/)/.test(id) ||
+    /^@babel\/runtime($|\/)/.test(id),
   plugins: [
     resolve({ extensions: ['.js', '.jsx', '.ts', '.tsx'] }),
     commonjs(),
