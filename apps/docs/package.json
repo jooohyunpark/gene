@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "pnpm --filter @jooohyunpark/gene-token build && pnpm --filter @jooohyunpark/gene-ui build && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },

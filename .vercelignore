@@ -1,0 +1,9 @@
+node_modules
+.git
+.DS_Store
+*.log
+packages/*/node_modules
+apps/*/node_modules
+packages/*/dist
+apps/*/dist
+storybook-dist 
