@@ -1,5 +1,5 @@
 {
-  "buildCommand": "pnpm build:storybook",
+  "buildCommand": "pnpm --filter @jooohyunpark/gene-token build && pnpm build:storybook",
   "outputDirectory": "storybook-dist",
   "installCommand": "pnpm install",
   "framework": "storybook"
