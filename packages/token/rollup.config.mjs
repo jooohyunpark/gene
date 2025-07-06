@@ -1,11 +1,5 @@
-import path from 'path';
 import typescript from '@rollup/plugin-typescript';
-import { terser } from 'rollup-plugin-terser';
 import dts from 'rollup-plugin-dts';
-
-// Resolve __dirname in ES modules
-import { fileURLToPath } from 'url';
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const config = [
   {
@@ -28,7 +22,6 @@ const config = [
         declaration: true,
         declarationDir: './dist/types',
       }),
-      terser(),
     ],
   },
   {

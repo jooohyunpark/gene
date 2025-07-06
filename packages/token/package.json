@@ -3,6 +3,7 @@
   "version": "0.0.4",
   "type": "module",
   "main": "./dist/index.js",
+  "module": "./dist/index.esm.js",
   "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
@@ -13,9 +14,12 @@
     "./scss": "./scss/index.scss"
   },
   "scripts": {
-    "build": "rollup --config rollup.config.mjs"
+    "build": "rollup --config rollup.config.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "devDependencies": {
+    "@jooohyunpark/gene-config": "workspace:*",
     "@rollup/plugin-commonjs": "^28.0.2",
     "@rollup/plugin-node-resolve": "^16.0.0",
     "@rollup/plugin-typescript": "^12.1.2",
