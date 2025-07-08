@@ -6,16 +6,17 @@
   "main": "index.js",
   "private": true,
   "scripts": {
+    "preinstall": "pnpm setup-npmrc",
     "build:token": "pnpm --filter @jooohyunpark/gene-token build",
     "build:ui": "pnpm --filter @jooohyunpark/gene-ui build",
     "build:docs": "pnpm --filter docs build",
     "build": "pnpm build:token && pnpm build:ui && pnpm build:docs",
     "build:storybook": "pnpm --filter @jooohyunpark/gene-ui build:storybook",
-    "setup": "node scripts/setup-npmrc.js",
-    "publish:token": "node scripts/publish-token.js",
-    "publish:ui": "node scripts/publish-ui.js",
+    "publish:token": "pnpm --filter @jooohyunpark/gene-token publish",
+    "publish:ui": "pnpm --filter @jooohyunpark/gene-ui publish",
     "dev:docs": "pnpm --filter docs dev",
-    "storybook": "pnpm --filter @jooohyunpark/gene-ui storybook"
+    "storybook": "pnpm --filter @jooohyunpark/gene-ui storybook",
+    "setup-npmrc": "node scripts/setup-npmrc.js"
   },
   "license": "MIT",
   "workspaces": [
@@ -25,6 +26,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jooohyunpark/gene.git"
-  },
-  "devDependencies": {}
+  }
 }

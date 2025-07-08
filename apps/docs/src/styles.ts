@@ -1,5 +1,5 @@
-import styled, { createGlobalStyle, css } from 'styled-components';
-import { typography, color } from '@jooohyunpark/gene-token';
+import styled, { createGlobalStyle, css } from "styled-components";
+import { typography, color } from "@jooohyunpark/gene-token";
 import {
   navWidth,
   MediaAbove,
@@ -7,7 +7,7 @@ import {
   textColor,
   headerHeight,
   contentMaxWidth,
-} from '@/styles/helper';
+} from "@/styles/helper";
 
 export const GlolbalStyle = createGlobalStyle`
 ${css`
@@ -55,7 +55,7 @@ export const StyledLayout = styled.div`
   max-width: 100vw;
   overflow-x: hidden;
 
-  ${MediaAbove('md')} {
+  ${MediaAbove("md")} {
     padding-left: ${navWidth}px;
   }
 `;
@@ -68,7 +68,7 @@ export const StyledContentArea = styled.div`
   min-height: calc(100vh - ${headerHeight}px);
   min-height: calc(100vh - ${headerHeight}px);
 
-  ${MediaAbove('md')} {
+  ${MediaAbove("md")} {
     min-height: 100vh;
     min-height: 100dvh;
   }
