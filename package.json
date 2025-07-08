@@ -6,7 +6,6 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "preinstall": "pnpm setup-npmrc",
     "build:token": "pnpm --filter @jooohyunpark/gene-token build",
     "build:ui": "pnpm --filter @jooohyunpark/gene-ui build",
     "build:docs": "pnpm --filter docs build",
@@ -16,7 +15,7 @@
     "publish:ui": "pnpm --filter @jooohyunpark/gene-ui publish",
     "dev:docs": "pnpm --filter docs dev",
     "storybook": "pnpm --filter @jooohyunpark/gene-ui storybook",
-    "setup-npmrc": "bash -c 'export $(grep -v '^#' .env | xargs) && envsubst < .npmrc.template > .npmrc'"
+    "setup-npmrc": "node scripts/setup-npmrc.js"
   },
   "license": "MIT",
   "workspaces": [
@@ -26,5 +25,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jooohyunpark/gene.git"
+  },
+  "devDependencies": {
+    "dotenv": "^17.1.0"
   }
 }
