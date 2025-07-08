@@ -71,6 +71,9 @@ importers:
       eslint:
         specifier: ^9.17.0
         version: 9.30.1
+      prettier:
+        specifier: ^3.6.2
+        version: 3.6.2
       sass:
         specifier: ^1.83.1
         version: 1.89.2
