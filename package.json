@@ -11,8 +11,9 @@
     "build:docs": "pnpm --filter docs build",
     "build": "pnpm build:token && pnpm build:ui && pnpm build:docs",
     "build:storybook": "pnpm --filter @jooohyunpark/gene-ui build:storybook",
-    "publish:token": "GITHUB_TOKEN=${GITHUB_TOKEN} pnpm --filter @jooohyunpark/gene-token publish",
-    "publish:ui": "GITHUB_TOKEN=${GITHUB_TOKEN} pnpm --filter @jooohyunpark/gene-ui publish",
+    "setup": "node scripts/setup-npmrc.js",
+    "publish:token": "node scripts/publish-token.js",
+    "publish:ui": "node scripts/publish-ui.js",
     "dev:docs": "pnpm --filter docs dev",
     "storybook": "pnpm --filter @jooohyunpark/gene-ui storybook"
   },
@@ -25,7 +26,5 @@
     "type": "git",
     "url": "https://github.com/jooohyunpark/gene.git"
   },
-  "devDependencies": {
-    "dotenv": "^17.1.0"
-  }
+  "devDependencies": {}
 }

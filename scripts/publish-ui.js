@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
-// Load environment variables from .env file
-require("dotenv").config();
-
 const { execSync } = require("child_process");
 
 // Check if GITHUB_TOKEN is set
 if (!process.env.GITHUB_TOKEN) {
   console.error("❌ GITHUB_TOKEN environment variable is not set");
-  console.error("Please create a .env file with your GitHub token:");
-  console.error("GITHUB_TOKEN=your_github_token_here");
+  console.error("Please set your GitHub token as an environment variable:");
+  console.error("export GITHUB_TOKEN=your_github_token_here");
+  console.error(
+    "Or run the script with: GITHUB_TOKEN=your_token node scripts/publish-ui.js"
+  );
   process.exit(1);
 }
 
