@@ -1,0 +1,39 @@
+:root {
+  /* Font Sizes */
+  --font-size-10: 0.75rem; /* calc(12 / 16) * 1rem */
+  --font-size-20: 0.875rem; /* calc(14 / 16) * 1rem */
+  --font-size-30: 1rem; /* calc(16 / 16) * 1rem */
+  --font-size-40: 1.125rem; /* calc(18 / 16) * 1rem */
+  --font-size-50: 1.25rem; /* calc(20 / 16) * 1rem */
+  --font-size-60: 1.5rem; /* calc(24 / 16) * 1rem */
+  --font-size-70: 2rem; /* calc(32 / 16) * 1rem */
+  --font-size-80: 2.5rem; /* calc(40 / 16) * 1rem */
+  --font-size-90: 3rem; /* calc(48 / 16) * 1rem */
+  --font-size-100: 4rem; /* calc(64 / 16) * 1rem */
+
+  /* Line Heights */
+  --line-height-10: 1;
+  --line-height-20: 1.2;
+  --line-height-30: 1.5;
+  --line-height-40: 1.6;
+
+  /* Font Weights */
+  --font-weight-100: 100;
+  --font-weight-200: 200;
+  --font-weight-300: 300;
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+  --font-weight-800: 800;
+  --font-weight-900: 900;
+
+  /* Letter Spacing */
+  --letter-spacing-negative-30: -0.03em;
+  --letter-spacing-negative-20: -0.02em;
+  --letter-spacing-negative-10: -0.01em;
+  --letter-spacing-0: 0;
+  --letter-spacing-10: 0.01em;
+  --letter-spacing-20: 0.02em;
+  --letter-spacing-30: 0.03em;
+}

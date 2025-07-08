@@ -11,7 +11,8 @@
       "import": "./dist/index.esm.js",
       "default": "./dist/index.js"
     },
-    "./scss": "./scss/index.scss"
+    "./scss": "./scss/index.scss",
+    "./css": "./css/index.css"
   },
   "files": [
     "dist",
