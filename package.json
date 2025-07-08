@@ -11,8 +11,8 @@
     "build:docs": "pnpm --filter docs build",
     "build": "pnpm build:token && pnpm build:ui && pnpm build:docs",
     "build:storybook": "pnpm --filter @jooohyunpark/gene-ui build:storybook",
-    "publish:token": "pnpm --filter @jooohyunpark/gene-token publish",
-    "publish:ui": "pnpm --filter @jooohyunpark/gene-ui publish",
+    "publish:token": "node -r dotenv/config scripts/publish-token.js",
+    "publish:ui": "node -r dotenv/config scripts/publish-ui.js",
     "dev:docs": "pnpm --filter docs dev",
     "storybook": "pnpm --filter @jooohyunpark/gene-ui storybook"
   },
