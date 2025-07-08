@@ -14,8 +14,7 @@
     "publish:token": "pnpm --filter @jooohyunpark/gene-token publish",
     "publish:ui": "pnpm --filter @jooohyunpark/gene-ui publish",
     "dev:docs": "pnpm --filter docs dev",
-    "storybook": "pnpm --filter @jooohyunpark/gene-ui storybook",
-    "setup-npmrc": "node scripts/setup-npmrc.js"
+    "storybook": "pnpm --filter @jooohyunpark/gene-ui storybook"
   },
   "license": "MIT",
   "workspaces": [
