@@ -26,4 +26,6 @@ dist-ssr
 *storybook.log
 storybook-dist
 
+
+.npmrc
 .env
