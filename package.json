@@ -6,14 +6,15 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "preinstall": "source .env && echo \"GITHUB_TOKEN=$GITHUB_TOKEN\"",
+    "preinstall": "pnpm setup-npmrc",
     "build:token": "pnpm --filter @jooohyunpark/gene-token build",
     "build:ui": "pnpm --filter @jooohyunpark/gene-ui build",
     "build:docs": "pnpm --filter docs build",
     "build": "pnpm build:token && pnpm build:ui && pnpm build:docs",
     "build:storybook": "pnpm --filter @jooohyunpark/gene-ui build:storybook",
     "dev:docs": "pnpm --filter docs dev",
-    "storybook": "pnpm --filter @jooohyunpark/gene-ui storybook"
+    "storybook": "pnpm --filter @jooohyunpark/gene-ui storybook",
+    "setup-npmrc": "bash -c 'export $(grep -v '^#' .env | xargs) && envsubst < .npmrc.template > .npmrc'"
   },
   "license": "MIT",
   "workspaces": [
