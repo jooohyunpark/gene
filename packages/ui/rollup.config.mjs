@@ -42,7 +42,10 @@ export default {
       ],
       plugins: [
         ['@babel/plugin-transform-runtime', { useESModules: true }],
-        ['babel-plugin-styled-components', { displayName: true }],
+        [
+          'babel-plugin-styled-components',
+          { displayName: true, ssr: true, pure: true },
+        ],
       ],
     }),
     styles(),
