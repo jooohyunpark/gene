@@ -6,6 +6,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
+    "preinstall": "source .env && echo \"GITHUB_TOKEN=$GITHUB_TOKEN\"",
     "build:token": "pnpm --filter @jooohyunpark/gene-token build",
     "build:ui": "pnpm --filter @jooohyunpark/gene-ui build",
     "build:docs": "pnpm --filter docs build",
